@@ -1,8 +1,8 @@
 {
-    "name": "ghost-starter-theme",
+    "name": "ghostelli",
     "description": "A custom theme for ghost",
     "demo": "https://starter.ghost.io",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
@@ -21,28 +21,28 @@
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Alessandro Belli",
+        "email": "alessandrobelli90@gmail.com",
+        "url": "https://alessandrobelli.it"
     },
     "gpm": {
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine"
+            "Magazine",
+            "Portfolio"
         ]
     },
     "keywords": [
         "ghost",
         "theme",
-        "ghost-theme"
+        "ghost-theme",
+        "Portfolio"
     ],
     "repository": {
         "type": "git",
         "url": "https://github.com/TryGhost/Starter.git"
     },
-    "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "10.2.5",
         "cssnano": "5.0.1",
@@ -83,5 +83,10 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "@tailwindcss/typography": "^0.4.0",
+        "postcss": "^8.2.10",
+        "tailwindcss": "^2.1.1"
     }
 }

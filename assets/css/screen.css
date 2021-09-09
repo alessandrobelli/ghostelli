@@ -9,8 +9,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 /* Base components */
-@import "vars.css";
-@import "components/global.css";
 @import "components/forms.css";
 @import "components/buttons.css";
 
@@ -22,6 +20,28 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: 'Catamaran';
+  font-weight: 400;
+  src: url('../fonts/Catamaran-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Gudea';
+  font-weight: 400;
+  src: url('../fonts/Gudea-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Gudea';
+  font-weight: 700;
+  src: url('../fonts/Gudea-Bold.ttf');
+}
 
 
 
