@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset " built/screen.css"}}" />
 
     <title>{{meta_title}} is this up? now</title>
 
@@ -20,20 +20,19 @@
 
 <body class="{{body_class}}">
 
-<div class="w-full mx-auto flex flex-wrap -mx-2 overflow-hidden sm:-mx-px md:-mx-1 lg:-mx-2 xl:-mx-2">
+    <div class="w-full mx-auto flex flex-wrap -mx-2 overflow-hidden sm:-mx-px md:-mx-1 lg:-mx-2 xl:-mx-2">
 
-    <div
-        class="font-header my-2 px-2 w-full overflow-hidden sm:my-px sm:px-px sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2"
-        id="menu">
-        {{navigation}}
-        {{!-- <div id="hamburgerbtn" class="md:hidden text-xs w-full pb-4">
-            {{>
-            "icons/hamburger"}}
-        </div> --}}
-                    {{!-- {{#if @site.youtube}}
-                        {{!-- <a href="{{youtube_url @site.youtube}}" title="Youtube" target="_blank" rel="noopener">{{>
-                            "icons/youtube"}}</a>
-                        {{/if}}--}}
+        <div class="font-header my-2 px-2 w-full overflow-hidden sm:my-px sm:px-px sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2"
+            id="menu">
+            {{navigation}}
+            {{!-- <div id="hamburgerbtn" class="md:hidden text-xs w-full pb-4">
+                {{>
+                "icons/hamburger"}}
+            </div> --}}
+            {{!-- {{#if @site.youtube}}
+            {{!-- <a href="{{youtube_url @site.youtube}}" title="Youtube" target="_blank" rel="noopener">{{>
+                "icons/youtube"}}</a>
+            {{/if}}--}}
             {{!-- <div class="hidden md:block md:w-1/3 overflow-hidden">
 
                 {{#if @site.twitter}}
@@ -44,32 +43,33 @@
                 <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{>
                     "icons/facebook"}}</a>
                 {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{>
+                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank"
+                    rel="noopener">{{>
                     "icons/rss"}}</a>
             </div> --}}
-    </div>
-        <div class="w-full overflow-hidden italic font-subheader">
-            {{@site.description}}
+
+            <div class="w-full overflow-hidden italic font-subheader">
+                {{@site.description}}
+            </div>
+            <div
+                class="my-2 px-2 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2">
+                <main class="w-full p-2 md:p-0 md:w-2/3 lg:w-1/2 mx-auto">
+                    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+                    {{{body}}}
+                </main>
+            </div>
+
+            <div
+                class="my-2 px-2 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2">
+                aaaa
+            </div>
+
         </div>
-    <div
-        class="my-2 px-2 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2">
-        <main class="w-full p-2 md:p-0 md:w-2/3 lg:w-1/2 mx-auto">
-        {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-    {{{body}}}
-    </main>
-    </div>
-    
-    <div
-        class="my-2 px-2 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2">
-   aaaa
-    </div>
-
-
 
 
         <footer class="w-full">
             <div class="">
-aaa
+                aaa
             </div>
         </footer>
 
@@ -77,13 +77,13 @@ aaa
 
     {{!-- <foot> --}}
 
-        <script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
+        <script src="{{asset " built/jquery-3.4.1.min.js"}}"></script>
 
         {{#if pagination.pages}}
         <script>
             var maxPages = parseInt('{{pagination.pages}}');
         </script>
-        <script src="{{asset "built/infinitescroll.js"}}"></script>
+        <script src="{{asset " built/infinitescroll.js"}}"></script>
         {{/if}}
 
         <script>
@@ -94,7 +94,7 @@ aaa
 
                 hamburger.addEventListener('click', function () {
                     mobileMenu.classList.toggle('hidden');
-          
+
                     mobileMenu.classList.toggle('top-0');
                     mobileMenu.classList.toggle('pt-6');
                 });
@@ -102,7 +102,7 @@ aaa
         </script>
 
         {{#is "post, page"}}
-        <script src="{{asset "built/jquery.fitvids.js"}}"></script>
+        <script src="{{asset " built/jquery.fitvids.js"}}"></script>
         <script>
             var images = document.querySelectorAll('.kg-gallery-image img');
             images.forEach(function (image) {
