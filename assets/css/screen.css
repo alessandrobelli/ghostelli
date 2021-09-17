@@ -5,14 +5,18 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 */
 
+
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
+
 /* Base components */
+
 @import "components/forms.css";
 @import "components/buttons.css";
 
 /* Ghost components */
+
 @import "ghost/header.css";
 @import "ghost/content.css";
 @import "ghost/readmore.css";
@@ -20,36 +24,41 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
-
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap');
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 @font-face {
-  font-family: 'Catamaran';
-  font-weight: 400;
-  src: url('../fonts/Catamaran-VariableFont_wght.ttf');
+    font-family: 'Catamaran';
+    font-weight: 400;
+    src: url('../fonts/Catamaran-VariableFont_wght.ttf');
 }
 
 @font-face {
-  font-family: 'Gudea';
-  font-weight: 400;
-  src: url('../fonts/Gudea-Regular.ttf');
+    font-family: 'Gudea';
+    font-weight: 400;
+    src: url('../fonts/Gudea-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Gudea';
-  font-weight: 700;
-  src: url('../fonts/Gudea-Bold.ttf');
+    font-family: 'Gudea';
+    font-weight: 700;
+    src: url('../fonts/Gudea-Bold.ttf');
 }
 
+form[data-members-form] .message-loading,
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
+    display: none;
+}
 
+form[data-members-form].loading .message-loading,
+form[data-members-form].success .message-success,
+form[data-members-form].error .message-error {
+    display: block;
+}
 
-
-
-
+Ì
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
@@ -105,6 +114,7 @@ html,
     height: 2rem;
 }
 
+
 /* Index
 /* ---------------------------------------------------------- */
 
@@ -146,7 +156,7 @@ html,
     padding: 0 6vmin;
 }
 
-.gh-card-content > strong {
+.gh-card-content>strong {
     display: inline-block;
     padding: 1px 0;
     font-weight: 500;
@@ -168,7 +178,7 @@ html,
     margin: 4vmin 0 0 0;
 }
 
-.gh-page-head > p {
+.gh-page-head>p {
     max-width: 720px;
     margin: 0.3em auto 0;
     padding: 0 6vmin;
@@ -178,7 +188,7 @@ html,
 }
 
 @media (max-width: 700px) {
-    .gh-page-head > p {
+    .gh-page-head>p {
         font-size: 1.6rem;
     }
 }
@@ -246,13 +256,13 @@ html,
     margin: 0 0.75vmin;
 }
 
-.gh-author-links a + a:before {
+.gh-author-links a+a:before {
     display: block;
     content: "";
     margin: 0 1.25vmin 0 0;
     height: 1em;
     width: 1px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transform: rotate(20deg);
 }
 
