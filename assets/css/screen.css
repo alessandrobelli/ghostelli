@@ -21,6 +21,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/footer.css";
 @import "ghost/badge.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap');
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -43,7 +45,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
   src: url('../fonts/Gudea-Bold.ttf');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap');
 
 
 
