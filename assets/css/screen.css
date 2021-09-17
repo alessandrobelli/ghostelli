@@ -55,12 +55,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
   src: url('../fonts/LilitaOne-Regular.ttf');
 }
 
-@font-face {
-  font-family: 'Arvo';
-  font-weight: 700;
-  src: url('../fonts/Arvo-Bold.ttf');
-}
-
 
 
 
