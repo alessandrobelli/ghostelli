@@ -15,9 +15,9 @@ module.exports = {
 
       },
       fontFamily:{
-        'text': ['Roboto Mono', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
-        'header': ['Roboto'],
-        'subheader': ['Gudea'],
+        'text': ['Arvo', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+        'header': ['Lilita'],
+        'subheader': ['Arvo'],
       },
       screens: {
       }},
