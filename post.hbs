@@ -5,7 +5,7 @@
 <article class="gh-article {{post_class}}">
 
     <header class="gh-header gh-canvas">
-        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        <span class="gh-post-meta"><time datetime="{{date format="DD-MM-YYYY"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
         <h1 class="gh-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
@@ -13,7 +13,7 @@
         {{/if}}
 
         {{#if feature_image}}
-        <img class="gh-feature-image"
+        <img class="gh-feature-image font-header text-2xl"
             srcset="{{img_url feature_image size="s"}} 300w,
                     {{img_url feature_image size="m"}} 600w,
                     {{img_url feature_image size="l"}} 1000w,
@@ -49,11 +49,11 @@
 <aside class="gh-readmore">
     <div class="gh-readmore-inner gh-container">
         <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
+            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h6>{{title}}</h6></a>{{/next_post}}
         </div>
         <div class="gh-readmore-prev">
             {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
+                <h6>{{title}}</h6> {{> "icons/arrow-right"}}
             </a>{{/prev_post}}
         </div>
     </div>
