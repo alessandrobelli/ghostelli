@@ -1,23 +1,17 @@
-<div style="background-color: #f8f8f8;border-radius: 3px;" class="text-center p-5">
-    <h2 style="margin:0 0 20px">Subscribe to the newsletter</h2>
-
-    <form class="subscribe-form" data-members-form="subscribe">
-        <div class="subscribe-form-fields">
-            <input class="tc" data-members-email="" placeholder="your@email.com" autocomplete="false" required>
-            <button type="submit">
-                <span style="">Subscribe</span>
+<div class="subscribe-form">
+    <form class="d-flex flex-row mb-2 p-1 bg-white input-group" data-members-form="subscribe">
+        <div class="form-group input-group">
+            <input class="subscribe-email form-control rounded-0 border" data-members-email placeholder="youremail@example.com" autocomplete="false" />
+            <button class="button primary btn btn-info flex-shrink-0 rounded-0 py-0 px-3" type="submit">
+                <span class="button-content fs-4 lh-1">{{> icons/arrow-right}}</span>
+                <span class="button-loader spinner-border text-light"></span>
             </button>
         </div>
-        <div class="message-success">
-            <strong>Great!</strong> Check your inbox (or spam folder) and click the link to confirm your subscription.
+        <div class="message-success text-success mt-2">
+            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
         </div>
-        <div class="message-error">
-            Sorry, something went wrong. Please try again.
+        <div class="message-error text-danger mt-2">
+            Please enter a valid email address!
         </div>
-	</form>
+    </form>
 </div>
-<style>
-    .subscribe-form.success .message-success {display:block}
-    .subscribe-form.success .subscribe-form-fields {display:none}
-    .subscribe-form.error .message-error {display:block}
-</style>
