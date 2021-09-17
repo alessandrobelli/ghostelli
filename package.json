@@ -1,7 +1,7 @@
 {
     "name": "ghostelli",
-    "description": "A custom theme for ghost",
-    "demo": "https://starter.ghost.io",
+    "description": "A custom theme for ghost, made by Alessandro Belli",
+    "demo": "https://isthisup.eu",
     "version": "0.0.1",
     "engines": {
         "ghost": ">=4.0.0",
@@ -29,7 +29,6 @@
         "type": "theme",
         "categories": [
             "Minimal",
-            "Magazine",
             "Portfolio"
         ]
     },
@@ -37,7 +36,8 @@
         "ghost",
         "theme",
         "ghost-theme",
-        "Portfolio"
+        "Portfolio",
+        "Alessandro Belli"
     ],
     "repository": {
         "type": "git",
