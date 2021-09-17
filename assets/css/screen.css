@@ -43,6 +43,26 @@ production stylesheet in assets/built/screen.css using: gulp dev
   src: url('../fonts/Gudea-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'Arvo';
+  font-weight: 400;
+  src: url('../fonts/Arvo-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Lilita One';
+  font-weight: 400;
+  src: url('../fonts/LilitaOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Arvo';
+  font-weight: 700;
+  src: url('../fonts/Arvo-Bold.ttf');
+}
+
+
+
 
 
 /* Main - Your styles here! Edit below
