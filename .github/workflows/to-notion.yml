@@ -1,3 +1,4 @@
+name: Sync to Notion
 on: [push]
 
 jobs:

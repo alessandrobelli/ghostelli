@@ -15,9 +15,9 @@ module.exports = {
 
       },
       fontFamily:{
-        'text': ['Arvo-Regular', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
-        'header': ['Lilita'],
-        'subheader': ['Arvo-Regular'],
+        'text': ['Arvo','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+        'header': ['Lilita One', 'cursive'],
+        'subheader': ['Arvo','serif'],
       },
       screens: {
       }},
