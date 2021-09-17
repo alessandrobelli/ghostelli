@@ -14,7 +14,7 @@ var autoprefixer = require('autoprefixer');
 var colorFunction = require('postcss-color-mod-function');
 var cssnano = require('cssnano');
 var easyimport = require('postcss-easy-import');
-
+tailwind({ config: './tailwind.config.js' })
 
 function serve(done) {
     livereload.listen();
