@@ -1,45 +1,11 @@
-{{#if @member}}
-<div class="text-center p-6 text-black bg-white">
-    You're a member!
-</div>
-{{else}}
-
-<div class="text-center p-6 text-black bg-white font-header">
-    <h2 style="margin:0 0 20px">Subscribe to the newsletter</h2>
-
-    <form class="subscribe-form" data-members-form="subscribe">
-        <div class="subscribe-form-fields">
-            <input
-                class="shadow appearance-none border-solid border-black border rounded w-64 py-2 px-3 text-gray-700 leading-tight"
-                data-members-email="" placeholder="your@email.com" autocomplete="false" required>
-            <button type="submit" class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">
-                <span style="">Subscribe</span>
-            </button>
-        </div>
-        <div class="message-success p-6 text-black block relative bg-gray-400">
-            <strong>Great!</strong> Check your inbox (or spam folder) and click the link to confirm your subscription.
-        </div>
-        <div class="message-error">
-            <p class="p-6 text-red-600 block relative bg-gray-400">
-                Sorry, something went wrong. Please try again.
-
-            </p>
-        </div>
-
-    </form>
-</div>
-<style>
-    .subscribe-form.success .message-success {
-        display: block
-    }
-
-    .subscribe-form.success .subscribe-form-fields {
-        display: none
-    }
-
-    .subscribe-form.error .message-error {
-        display: block
-    }
-</style>
-
-{{/if}}
+    <div class="header-right hidden-xs hidden-sm hidden-md">
+        {{#if @member}}
+            <button class="button-text menu-item members-account" data-portal="account">Account</button>
+            {{#unless @member.paid}}
+                <button class="button-text menu-item menu-item-cta members-upgrade" data-portal="account/plans">Upgrade</button>
+            {{/unless}}
+        {{else}}
+            <button class="button-text menu-item members-login" data-portal="signin">Login</button>
+            <button class="button-text menu-item menu-item-cta members-subscribe" data-portal="signup">Subscribe</button>
+        {{/if}}
+    </div>
