@@ -20,15 +20,15 @@
 
 <body class="{{body_class}} bg-gray-100 font-sans leading-normal tracking-normal">
 
-    <nav id="header" class="fixed w-full z-10 top-0">
+    <nav id="header" class="fixed top-0 z-10 w-full">
 
-        <div id="progress" class="h-1 z-20 top-0"
+        <div id="progress" class="top-0 z-20 h-1"
             style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
 
-        <div class="w-full md:w-1/2 mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+        <div class="flex flex-wrap items-center justify-between w-full py-3 mx-auto mt-0 md:w-1/2">
 
             <div class="pr-8">
-                <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold font-header"
+                <a class="text-base font-extrabold text-gray-900 no-underline hover:no-underline font-header sm:text-center"
                     href="{{@site.url}}">
                     {{#if @site.logo}}
                     <img class="h-12" src="{{@site.logo}}" alt="{{@site.title}}" />
@@ -40,15 +40,15 @@
 
             <div class="block lg:hidden">
                 <button id="nav-toggle"
-                    class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    class="flex items-center px-3 py-2 text-gray-500 border border-gray-600 rounded appearance-none hover:text-gray-900 hover:border-green-500 focus:outline-none">
+                    <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <title>Menu</title>
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                     </svg>
                 </button>
             </div>
 
-            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20"
+            <div class="z-20 flex-grow hidden w-full mt-2 bg-gray-100 lg:flex lg:items-center lg:w-auto lg:mt-0 md:bg-transparent"
                 id="nav-content">
                 {{navigation}}
             </div>
@@ -56,7 +56,7 @@
     </nav>
 
     <!--Container-->
-    <div class="container w-full md:w-1/2 mx-auto pt-20 h-screen">
+    <div class="container w-full h-screen pt-20 mx-auto md:w-1/2">
 
 
         {{{body}}}
@@ -65,13 +65,13 @@
     <!--/container-->
 
     <footer class="bg-white border-t border-gray-400 shadow">
-        <div class="container max-w-4xl mx-auto flex py-8">
+        <div class="container flex max-w-4xl py-8 mx-auto">
 
-            <div class="w-full mx-auto flex flex-wrap">
+            <div class="flex flex-wrap w-full mx-auto">
                 <div class="flex w-full md:w-1/2 ">
                     <div class="px-8">
                         <h3 class="font-bold text-gray-900">{{@site.title}}</h3>
-                        <p class="py-4 text-gray-600 text-sm">
+                        <p class="py-4 text-sm text-gray-600">
                             {{@site.description}}
                         </p>
                     </div>
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <div class="container max-w-4xl mx-auto flex py-8">
+        <div class="container flex max-w-4xl py-8 mx-auto">
             <span class="px-8 text-sm text-gray-400">
                 Ghost theme template by
                 <a class="underline" href="#" target="_blank" rel="noopener">
