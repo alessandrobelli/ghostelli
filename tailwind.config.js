@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -20,6 +22,8 @@ module.exports = {
         'subheader': ['"Source Sans Pro"','serif'],
       },
       screens: {
+              'xs': '475px',
+              ...defaultTheme.screens,
       }},
   },
   variants: {
