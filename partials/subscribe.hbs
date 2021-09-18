@@ -1,4 +1,10 @@
-<div style="background-color: #f8f8f8;padding: 30px;border-radius: 3px;text-align:center;">
+    {{#if @member}}
+<div class="text-center p-6 text-black bg-white">
+  You're a member!
+</div>
+        {{else}}
+
+<div class="text-center p-6 text-black bg-white">
     <h2 style="margin:0 0 20px">Subscribe to the newsletter</h2>
 
     <form class="subscribe-form" data-members-form="subscribe">
@@ -8,7 +14,7 @@
                 <span style="">Subscribe</span>
             </button>
         </div>
-        <div class="message-success">
+        <div class="subscribe-form success">
             <strong>Great!</strong> Check your inbox (or spam folder) and click the link to confirm your subscription.
         </div>
         <div class="message-error">
@@ -21,3 +27,5 @@
     .subscribe-form.success .subscribe-form-fields {display:none}
     .subscribe-form.error .message-error {display:block}
 </style>
+
+    {{/if}}
