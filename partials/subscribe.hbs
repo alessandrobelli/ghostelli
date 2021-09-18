@@ -1,11 +1,25 @@
-    <div class="header-right hidden-xs hidden-sm hidden-md">
+        {{#if @site.navigation}}
+    <div class="text-xs font-header lg:hidden">
         {{#if @member}}
-            <button class="button-text menu-item members-account" data-portal="account">Account</button>
+            <button class="px-4 py-2 font-bold text-white bg-pink-500 rounded hover:bg-pink-700 members-account" data-portal="account">Account</button>
             {{#unless @member.paid}}
-                <button class="button-text menu-item menu-item-cta members-upgrade" data-portal="account/plans">Upgrade</button>
+                <button class="px-4 py-2 font-bold text-white bg-pink-500 rounded hover:bg-pink-700 members-upgrade" data-portal="account/plans">Upgrade</button>
             {{/unless}}
         {{else}}
-            <button class="button-text menu-item members-login" data-portal="signin">Login</button>
-            <button class="button-text menu-item menu-item-cta members-subscribe" data-portal="signup">Subscribe</button>
+            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 members-login" data-portal="signin">Login</button>
+            <button class="px-4 py-2 font-bold text-white bg-pink-500 rounded hover:bg-pink-700 members-subscribe" data-portal="signup">Subscribe</button>
+        {{/if}}
+    </div>
+    {{/if}}
+
+    <div class="text-base font-header sm:hidden">
+        {{#if @member}}
+            <button class="px-4 py-2 font-bold text-white bg-pink-500 rounded hover:bg-pink-700 members-account" data-portal="account">Account</button>
+            {{#unless @member.paid}}
+                <button class="px-4 py-2 font-bold text-white bg-pink-500 rounded hover:bg-pink-700 members-upgrade" data-portal="account/plans">Upgrade</button>
+            {{/unless}}
+        {{else}}
+            <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 members-login" data-portal="signin">Login</button>
+            <button class="px-4 py-2 font-bold text-white bg-pink-500 rounded hover:bg-pink-700 members-subscribe" data-portal="signup">Subscribe</button>
         {{/if}}
     </div>
