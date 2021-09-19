@@ -5,15 +5,15 @@
 <article class="gh-article {{post_class}}">
 
     <header class="gh-header gh-canvas">
-        <span class="gh-post-meta"><time datetime="{{date format="DD-MM-YYYY"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title">{{title}}</h1>
 
+        <h1 class="text-xl gh-title font-header">{{title}}</h1>
+        <span class="text-sm gh-post-meta font-text"><time datetime="{{date format="DD-MM-YYYY"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
         {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
+        <p class="text-sm gh-excerpt font-text">{{custom_excerpt}}</p>
         {{/if}}
 
         {{#if feature_image}}
-        <img class="gh-feature-image font-header text-2xl"
+        <img class="text-2xl gh-feature-image font-header"
             srcset="{{img_url feature_image size="s"}} 300w,
                     {{img_url feature_image size="m"}} 600w,
                     {{img_url feature_image size="l"}} 1000w,
@@ -26,7 +26,7 @@
         {{/if}}
     </header>
 
-    <div class="gh-content gh-canvas">
+    <div class="text-sm gh-content gh-canvas font-text">
         {{content}}
     </div>
 
