@@ -2,14 +2,14 @@
 
 {{#post}}
 
-<article class="gh-article {{post_class}} font-text text-xs">
+<article class="gh-article {{post_class}} font-text">
 
     <header class="gh-header gh-canvas">
 
         <h1 class="text-2xl gh-title font-header">{{title}}</h1>
-        <span class="text-xs gh-post-meta"><time datetime="{{date format="DD-MM-YYYY"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+        <span class="text-sm gh-post-meta"><time datetime="{{date format="DD-MM-YYYY"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
         {{#if custom_excerpt}}
-        <p class="text-xs gh-excerpt">{{custom_excerpt}}</p>
+        <p class="text-sm gh-excerpt">{{custom_excerpt}}</p>
         {{/if}}
 
         {{#if feature_image}}
@@ -26,7 +26,7 @@
         {{/if}}
     </header>
 
-    <div class="text-sm gh-content gh-canvas font-text">
+    <div class="text-sm gh-content font-text">
         {{content}}
     </div>
 
