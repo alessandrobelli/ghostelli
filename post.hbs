@@ -33,7 +33,7 @@
     <footer class="pt-4">
 
         <div class="text-sm gh-post-authors text-header">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
+            Written by {{#foreach authors}}<a href="{{url}}" class="font-bold">{{name}}</a>{{/foreach}}
         </div>
 
         {{!--
@@ -46,7 +46,7 @@
 
 </article>
 
-<aside class="gh-readmore">
+<aside class="p-0 gh-readmore">
     <div class="text-base gh-readmore-inner gh-container font-header">
         <div class="gh-readmore-next">
             {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <p>{{title}}</p></a>{{/next_post}}
