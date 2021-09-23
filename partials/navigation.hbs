@@ -1,8 +1,8 @@
 <div class="w-full">
-  <ul class="text-black">
+  <ul class="text-grayPrimary">
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}}{{#if current}} nav-current font-bold{{/if}} md:py-0 py-2  md:inline pr-2 hover:underline"><a class="text-black" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="nav-{{slug}}{{#if current}} nav-current font-bold{{/if}} md:py-0 py-2  md:inline pr-2 hover:underline hover:text-graySecondary"><a class="text-black" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>
