@@ -1,10 +1,10 @@
 {{!--
 Re-usable card for linking to posts
 --}}
-<article class="my-1 p-4 w-full overflow-hidden">
+<article class="w-full p-4 my-1 overflow-hidden">
     <a class="" href="{{url}}">
         {{#if feature_image}}
-            <img class="object-cover h-32 md:h-64 w-full inline-block align-middle"
+            <img class="inline-block object-cover w-full h-32 align-middle md:h-64"
                 srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
                         {{img_url feature_image size="l"}} 1000w,
@@ -15,10 +15,10 @@ Re-usable card for linking to posts
             />
         {{/if}}
         <div class="w-full">
-            <div class="font-bold font-mono text-xs text-center mx-auto py-2"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</div>
-            <h2 class="font-header text-2xl">{{title}}</h2>
-            <p class="font-text text-xs pb-4">{{excerpt}} ...</p>
-            <div class="w-full mx-auto text-center"><button class="p-2 text-sm font-text antialiased text-white bg-secondary rounded-none hover:bg-secondarydarker">Read more</button>
+            <div class="py-2 mx-auto text-xs font-bold text-center font-text text-grayPrimary"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</div>
+            <h2 class="text-2xl font-header text-mypink">{{title}}</h2>
+            <p class="pb-4 text-xs font-text">{{excerpt}} ...</p>
+            <div class="w-full mx-auto text-center"><button class="p-2 text-sm antialiased rounded-none text-grayPrimary font-text bg-secondary hover:bg-secondarydarker">Read more</button>
             </div>
         </div>
     </a>
