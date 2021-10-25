@@ -208,17 +208,17 @@ html,
     text-align: center;
 }
 
-.gh-header h1{
+.gh-content h1{
 	font-size: 2.25rem;
     line-height: 2.5rem;
 }
 
-.gh-header h2{
+.gh-content h2{
 	font-size: 1.875rem;
     line-height: 2.25rem;
 }
 
-.gh-header h3{
+.gh-content h3{
 	font-size: 1.5rem;
     line-height: 2rem;
 }
