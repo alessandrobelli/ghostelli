@@ -2,7 +2,7 @@
   <ul class="text-lg">
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}} {{#if current}}border-b-4 border-green-500 nav-current font-bold {{/if}} border-solid  hover:border-b-4 hover:border-green-500 md:py-0 py-2  md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="nav-{{slug}} {{#if current}}border-b-4 border-primary nav-current font-bold {{/if}} border-solid  hover:border-b-4 hover:border-primary md:py-0 py-2  md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>

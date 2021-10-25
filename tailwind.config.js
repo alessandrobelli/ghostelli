@@ -5,18 +5,6 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: '#A2A2A6',
-      indigo: '#6161F0',
-      red: '#F061A8',
-      yellow: '#F0F061',
-      green: '#61F0A9',
-      pink: '#F061A8'
-    },
     extend: {
       colors: {
         graySecondary: '#A2A2A6',

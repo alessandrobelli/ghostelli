@@ -1,25 +1,25 @@
         {{#if @site.navigation}}
     <div class="w-2/3 py-2 mx-auto text-xs antialiased text-center font-text sm:block md:hidden lg:hidden">
         {{#if @member}}
-            <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-account" data-portal="account">Account</button>
+            <button class="px-4 py-2 font-bold text-white rounded bg-primary hover:bg-green-700 members-account" data-portal="account">Account</button>
             {{#unless @member.paid}}
-                <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-upgrade" data-portal="account/plans">Upgrade</button>
+                <button class="px-4 py-2 font-bold text-white rounded bg-mypink hover:bg-red-700 members-upgrade" data-portal="account/plans">Upgrade</button>
             {{/unless}}
         {{else}}
-            <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-login" data-portal="signin">Login</button>
-            <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-subscribe" data-portal="signup">Subscribe</button>
+            <button class="px-4 py-2 font-bold text-white rounded bg-primary hover:bg-green-700 members-login" data-portal="signin">Login</button>
+            <button class="px-4 py-2 font-bold text-white rounded bg-mypink hover:bg-red-700 members-subscribe" data-portal="signup">Subscribe</button>
         {{/if}}
     </div>
     {{/if}}
 
     <div class="hidden w-2/3 py-2 mx-auto text-base antialiased text-center font-header md:block lg:block">
         {{#if @member}}
-            <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-account" data-portal="account">Account</button>
+            <button class="px-4 py-2 font-bold text-white rounded bg-primary hover:bg-green-700 members-account" data-portal="account">Account</button>
             {{#unless @member.paid}}
-                <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-upgrade" data-portal="account/plans">Upgrade</button>
+                <button class="px-4 py-2 font-bold text-white rounded bg-primary hover:bg-green-700 members-upgrade" data-portal="account/plans">Upgrade</button>
             {{/unless}}
         {{else}}
-            <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-login" data-portal="signin">Login</button>
-            <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700 members-subscribe" data-portal="signup">Subscribe</button>
+            <button class="px-4 py-2 font-bold text-white rounded bg-primary hover:bg-green-700 members-login" data-portal="signin">Login</button>
+            <button class="px-4 py-2 font-bold text-white rounded bg-mypink hover:bg-red-700 members-subscribe" data-portal="signup">Subscribe</button>
         {{/if}}
     </div>
