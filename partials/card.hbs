@@ -1,7 +1,7 @@
 {{!--
 Re-usable card for linking to posts
 --}}
-<article class="w-full p-4 my-1 overflow-hidden">
+<article class="w-full overflow-hidden">
     <a class="" href="{{url}}">
         {{#if feature_image}}
             <img class="inline-block object-cover w-full h-32 align-middle md:h-64"
@@ -16,9 +16,9 @@ Re-usable card for linking to posts
         {{/if}}
         <div class="w-full">
             <div class="py-2 mx-auto text-xs font-bold text-center font-text text-grayPrimary"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</div>
-            <h2 class="text-2xl font-header text-mypink">{{title}}</h2>
-            <p class="pb-4 text-xs font-text">{{excerpt}} ...</p>
-            <div class="w-full mx-auto text-center"><button class="p-2 text-sm antialiased rounded-none text-grayPrimary font-text bg-secondary hover:bg-secondarydarker">Read more</button>
+            <h2 class="text-2xl font-header text-grayPrimary hover:text-primary">{{title}}</h2>
+            <p class="pb-4 text-xs font-text text-grayPrimary">{{excerpt}} ...</p>
+            <div class="w-full mx-auto text-center"><button class="p-2 text-sm antialiased border-2 rounded-none border-grayPrimary text-grayPrimary font-subheader ">Read more</button>
             </div>
         </div>
     </a>
