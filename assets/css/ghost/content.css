@@ -41,7 +41,7 @@
 /* ---------------------------------------------------------- */
 
 .gh-content > * + * {
-    margin-top: 4vmin;
+    margin-top: 2vmin;
 }
 
 .gh-content [id]:not(:first-child) {
@@ -126,7 +126,6 @@
 .kg-card figcaption {
     text-align: center;
     color: rgba(0,0,0,0.5);
-    font-weight: 600;
     line-height: 1.4em;
 }
 
