@@ -17,9 +17,9 @@ module.exports = {
 
       },
       fontFamily:{
-        'text': ['"Source Sans Pro"','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
-        'header': ['Arvo', 'cursive'],
-        'subheader': ['"Source Sans Pro"','serif'],
+        'text': ['Prompt','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+        'header': ['Mukta', 'cursive'],
+        'subheader': ['"Libre Franklin"','serif'],
       },
       screens: {
               'xs': '475px',
