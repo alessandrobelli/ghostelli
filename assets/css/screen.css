@@ -28,23 +28,24 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@font-face {
-    font-family: 'Catamaran';
-    font-weight: 400;
-    src: url('../fonts/Catamaran-VariableFont_wght.ttf');
+
+/* Rebuild base elements like lists or anchors
+/* ---------------------------------------------------------- */
+
+li {
+    list-style:initial;
 }
 
-@font-face {
-    font-family: 'Gudea';
-    font-weight: 400;
-    src: url('../fonts/Gudea-Regular.ttf');
+a {
+    color: var(--branding-4);
 }
 
-@font-face {
-    font-family: 'Gudea';
-    font-weight: 700;
-    src: url('../fonts/Gudea-Bold.ttf');
+a :hover{
+    color: var(--branding-3);
 }
+
+/* ---------------------------------------------------------- */
+
 
 form[data-members-form] .message-loading,
 form[data-members-form] .message-success,
