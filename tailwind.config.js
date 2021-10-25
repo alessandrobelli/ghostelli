@@ -10,9 +10,9 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.trueGray,
+      gray: '#A2A2A6',
       indigo: '#6161F0',
-      red: colors.rose,
+      red: '#F061A8',
       yellow: '#F0F061',
       green: '#61F0A9',
       pink: '#F061A8'
