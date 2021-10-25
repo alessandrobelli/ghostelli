@@ -66,6 +66,15 @@ a:focus{
   height: 100%;
 }
 
+article-tag::after{
+  content:"...";
+  font-size: 50px;
+  color: #61F0A9;
+  display: block;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
 /* ---------------------------------------------------------- */
 
 
