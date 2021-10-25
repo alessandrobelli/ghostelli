@@ -57,7 +57,7 @@ li {
 
 .gh-content [id] + .kg-card,
 .gh-content blockquote + .kg-card {
-    margin-top: 6vmin;
+    margin-top: 4vmin;
 }
 
 .gh-canvas > blockquote,
@@ -88,6 +88,8 @@ li {
 .gh-content blockquote {
     position: relative;
     font-style: italic;
+    border-left: 4px solid #61F0A9;
+    margin-left: 4px;
 }
 
 .gh-content blockquote::before {
@@ -119,11 +121,11 @@ li {
 /* ---------------------------------------------------------- */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-    margin-top: 6vmin;
+    margin-top: 4vmin;
 }
 
 .gh-content .kg-card + :not(.kg-card) {
-    margin-top: 6vmin;
+    margin-top: 4vmin;
 }
 
 .kg-card figcaption {
