@@ -129,12 +129,12 @@ li {
 .kg-card figcaption {
     font-family: 'Prompt','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     text-align: center;
-    color: '#A2A2A6';
+    color: #A2A2A6;
     line-height: 1.4em;
 }
 
 .kg-card figcaption strong {
-     color: '#28282F';
+     color: #28282F;
 }
 
 .gh-canvas :not(pre) code {
