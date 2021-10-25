@@ -2,7 +2,7 @@
   <ul class="text-black">
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}} md:py-0 py-2  md:inline pr-2"><a class="text-black" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}} md:py-0 py-2  md:inline pr-2"><a class="box-border block px-0 py-2 leading-6 text-left text-white no-underline lowercase bg-transparent cursor-pointer lg:px-2 hover:text-blue-800 hover:no-underline focus-within:no-underline" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>
