@@ -18,20 +18,20 @@
 
     </head>
 
-<body class="{{body_class}} bg-white font-text leading-normal tracking-normal">
+<body class="{{body_class}} bg-white font-text leading-normal tracking-normal text-grayPrimary">
 
     <nav id="header" class="fixed top-0 z-10 w-full">
 
         <div id="progress" class="top-0 z-20 h-1"
             style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
 
-        <div class="flex flex-wrap items-center justify-between w-full py-3 mx-auto mt-0 md:w-1/2 ">
+        <div class="flex flex-wrap w-full py-3 mx-auto mt-0">
 
             <div class="w-full pr-8 text-center sm:w-full lg:w-auto xl:w-auto">
                 <a class="text-xl antialiased font-bold no-underline text-grayPrimary hover:no-underline font-header sm:text-center"
                     href="{{@site.url}}">
                     {{#if @site.logo}}
-                    <img class="h-12" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    <img class="w-64 h-12" src="{{@site.logo}}" alt="{{@site.title}}" />
                     {{else}}
                     {{@site.title}}
                     {{/if}}
@@ -48,7 +48,7 @@
                 </button>
             </div>
 
-            <div class="z-20 flex-grow hidden w-full mt-2 bg-gray-100 lg:flex lg:items-center lg:w-auto lg:mt-0 md:bg-transparent"
+            <div class="z-20 flex-grow hidden w-full mt-2 text-right bg-gray-100 lg:flex lg:items-center lg:w-auto lg:mt-0 md:bg-transparent"
                 id="nav-content">
                 {{navigation}}
             </div>
@@ -56,7 +56,7 @@
     </nav>
 
     <!--Container-->
-    <div class="container w-full h-auto pt-20 mx-auto md:w-1/2">
+    <div class="container w-full h-auto pt-20 mx-auto mt-2 md:w-1/2">
 
 
         {{{body}}}
