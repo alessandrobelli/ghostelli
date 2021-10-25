@@ -64,7 +64,7 @@ form[data-members-form].error .message-error {
     display: block;
 }
 
-Ì
+
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
@@ -87,11 +87,11 @@ html,
 }
 
 .gh-article {
-    padding: 8vmin 0;
+    padding: 4vmin 0;
 }
 
 .gh-postfeed {
-    padding: 8vmin 0;
+    padding: 4vmin 0;
 }
 
 .gh-container {
