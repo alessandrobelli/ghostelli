@@ -19,6 +19,7 @@
   }
 
   function initYouTubeVideos() {
+    console.log("initialized")
     var playerElements = document.getElementsByClassName('youtube-player');
     for (var n = 0; n < playerElements.length; n++) {
       var videoId = playerElements[n].dataset.id;
