@@ -71,6 +71,11 @@
     {{ghost_foot}}
 
     <script>
+  document.addEventListener('DOMContentLoaded', detectDarkMode);
+
+        function detectDarkMode()
+        {
+
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark')
@@ -87,8 +92,10 @@ localStorage.theme = 'dark'
 // Whenever the user explicitly chooses to respect the OS preference
 localStorage.removeItem('theme')
 
+        }
 document.addEventListener('click', function (event) {
-
+    console.log("toggle pressed");
+    console.log(event.target);
 	// If the clicked element doesn't have the right selector, bail
 	if (!event.target.matches('#toggleDark')) return;
 
