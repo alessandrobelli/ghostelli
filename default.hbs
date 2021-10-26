@@ -70,7 +70,47 @@
     <!--/container-->
     {{ghost_foot}}
 
-  
+    <script>
+  document.addEventListener('DOMContentLoaded', detectDarkMode);
+
+        function detectDarkMode()
+        {
+
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+  document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
+  localStorage.theme = 'dark'
+  document.getElementById("toggleDark").checked = true;
+} else {
+    document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
+    
+  localStorage.theme = 'light'
+  document.documentElement.classList.remove('dark')
+}
+
+        }
+document.addEventListener('click', function (event) {
+	// If the clicked element doesn't have the right selector, bail
+	if (event.target.matches('#toggleDark')){
+         let htmlClasses = document.querySelector('html').classList;
+
+  if(localStorage.theme === 'dark'){
+          document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
+                        htmlClasses.remove('dark');
+              localStorage.theme = 'light'
+  }else if (localStorage.theme === 'light'){
+        document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
+            htmlClasses.add('dark');
+            localStorage.theme = 'dark';
+
+      localStorage.theme = 'dark'
+  }    
+    }
+
+
+}, false);
+    </script>
 </body>
 
 </html>
