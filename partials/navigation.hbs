@@ -1,11 +1,12 @@
 <div class="w-full pl-2">
   <ul class="text-lg">
 
+<li class="nav-{{slug}} md:py-0 py-2 md:inline mr-4">
   <label for="toggleB" class="flex items-center cursor-pointer">
     <!-- toggle -->
     <div class="relative">
       <!-- input -->
-      <input type="checkbox" id="toggleB" class="sr-only">
+      <input type="checkbox" id="toggleDark" class="sr-only">
       <!-- line -->
       <div class="block h-8 bg-gray-600 rounded-full w-14"></div>
       <!-- dot -->
@@ -15,6 +16,7 @@
     <div class="ml-3 font-medium text-gray-700">
       Dark?
     </div>
+    </li>
   </label>
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}

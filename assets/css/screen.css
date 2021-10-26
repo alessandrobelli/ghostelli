@@ -29,9 +29,14 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Rebuild base elements like lists or anchors
+/* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+/* Toggle B */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
 li {
     list-style:initial;
 }

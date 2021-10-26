@@ -86,6 +86,22 @@ localStorage.theme = 'dark'
 
 // Whenever the user explicitly chooses to respect the OS preference
 localStorage.removeItem('theme')
+
+document.addEventListener('click', function (event) {
+
+	// If the clicked element doesn't have the right selector, bail
+	if (!event.target.matches('#toggleDark')) return;
+
+	// Don't follow the link
+	event.preventDefault();
+
+  if(localStorage.theme === 'dark'){
+      localStorage.theme = 'light'
+  }else{
+      localStorage.theme = 'dark'
+  }
+
+}, false);
     </script>
 </body>
 
