@@ -94,19 +94,17 @@ localStorage.removeItem('theme')
 
         }
 document.addEventListener('click', function (event) {
-    console.log("toggle pressed");
-    console.log(event.target);
-        console.log(event.target.matches('#toggleDark'));
-    console.log(event.target.matches('toggleDark'));
 	// If the clicked element doesn't have the right selector, bail
 	if (!event.target.matches('#toggleDark')) return;
-
-	// Don't follow the link
-	event.preventDefault();
+     let htmlClasses = document.querySelector('html').classList;
 
   if(localStorage.theme === 'dark'){
-      localStorage.theme = 'light'
+                        htmlClasses.remove('dark');
+            localStorage.removeItem('theme')
   }else{
+            htmlClasses.add('dark');
+            localStorage.theme = 'dark';
+
       localStorage.theme = 'dark'
   }
 
