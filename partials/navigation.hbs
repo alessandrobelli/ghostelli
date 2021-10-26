@@ -1,7 +1,7 @@
 <div class="w-full pl-2">
-  <ul class="text-base text-center md:text-lg sm:list-none">
+  <ul class="text-base text-center md:text-lg">
 
-<li class="nav-{{slug}} md:py-0 py-2 md:inline mr-4">
+<li class="nav-{{slug}} md:py-0 py-2 md:inline mr-4 list-none">
 <div
   class="relative hidden w-10 mr-2 align-middle transition duration-200 ease-in select-none xl:inline-block"
 >
@@ -21,7 +21,7 @@
 
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}} {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-dashed hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-dashed hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>
