@@ -79,8 +79,10 @@
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark')
+  document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
   localStorage.theme = 'dark'
 } else {
+    document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
     localStorage.removeItem('theme')
 
   document.documentElement.classList.remove('dark')
@@ -93,9 +95,11 @@ document.addEventListener('click', function (event) {
      let htmlClasses = document.querySelector('html').classList;
 
   if(localStorage.theme === 'dark'){
+          document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
                         htmlClasses.remove('dark');
             localStorage.removeItem('theme')
   }else{
+        document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
             htmlClasses.add('dark');
             localStorage.theme = 'dark';
 
