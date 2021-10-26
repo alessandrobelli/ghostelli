@@ -96,7 +96,7 @@ localStorage.removeItem('theme')
 document.addEventListener('click', function (event) {
     console.log("toggle pressed");
     console.log(event.target);
-    console.log(event.target.matches('#toggleDark'));
+        console.log(event.target.matches('#toggleDark'));
     console.log(event.target.matches('toggleDark'));
 	// If the clicked element doesn't have the right selector, bail
 	if (!event.target.matches('#toggleDark')) return;
