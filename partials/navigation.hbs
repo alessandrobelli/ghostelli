@@ -6,9 +6,9 @@
     <!-- toggle -->
     <div class="relative">
       <!-- input -->
-      <input type="checkbox" id="toggleDark" class="sr-only">
+      <input type="checkbox" id="inputToggle" class="sr-only">
       <!-- line -->
-      <div class="block h-8 bg-gray-600 rounded-full w-14"></div>
+      <div class="block h-8 bg-gray-600 rounded-full w-14" id="toggleDark"></div>
       <!-- dot -->
       <div class="absolute w-6 h-6 transition bg-white rounded-full dot left-1 top-1"></div>
     </div>
@@ -16,8 +16,9 @@
     <div class="ml-3 font-medium text-gray-700">
       Dark?
     </div>
+      </label>
     </li>
-  </label>
+
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
     <li class="nav-{{slug}} {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-dashed hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
