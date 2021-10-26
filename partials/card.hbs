@@ -1,7 +1,7 @@
 {{!--
 Re-usable card for linking to posts
 --}}
-<article class="w-full h-64 overflow-hidden md:w-1/5 md:mx-2 article-tag">
+<article class="w-full overflow-hidden md:w-1/4 md:px-2 article-tag">
     <a class="" href="{{url}}">
         {{#if feature_image}}
             <img class="inline-block object-cover w-full mb-1 align-middle h-26"
@@ -13,11 +13,21 @@ Re-usable card for linking to posts
                 src="{{img_url feature_image size="m"}}"
                 alt="{{title}}"
             />
+        {{else}}
+                    <img class="inline-block object-cover w-full mb-1 align-middle h-26"
+                srcset="{{'https://images.unsplash.com/photo-1508780709619-79562169bc64' feature_image size="s"}} 300w,
+                        {{'https://images.unsplash.com/photo-1508780709619-79562169bc64' feature_image size="m"}} 600w,
+                        {{'https://images.unsplash.com/photo-1508780709619-79562169bc64' feature_image size="l"}} 1000w,
+                        {{'https://images.unsplash.com/photo-1508780709619-79562169bc64' feature_image size="xl"}} 2000w"
+                sizes="(max-width: 600px) 400px, 600px"
+                src="{{img_url feature_image size="m"}}"
+                alt="{{title}}"
+            />
         {{/if}}
         <div class="w-full">
             <h2 class="text-2xl font-header text-grayPrimary hover:text-primary">{{title}}</h2>
                         <div class="py-1 mx-auto text-xs font-bold font-text text-grayPrimary"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD.MM.YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</div>
-            <p class="pb-4 text-xs font-text text-grayPrimary">{{excerpt}} ...</p>
+            <p class="pb-4 text-xs font-subheader text-grayPrimary">{{excerpt}} ...</p>
             <div class="w-full mx-auto mb-2 text-center"><button class="p-2 text-sm antialiased bg-white rounded-none border-grayPrimary text-grayPrimary font-subheader hover:bg-graySecondary">Read more</button>
             </div>
         </div>
