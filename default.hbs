@@ -18,7 +18,7 @@
 
     </head>
 
-<body class="{{body_class}} bg-white dark:bg-grayPrimary font-text leading-normal tracking-normal text-grayPrimary dark:text-graySecondary">
+<body class="{{body_class}}  h-screen bg-white dark:bg-grayPrimary font-text leading-normal tracking-normal text-grayPrimary dark:text-graySecondary">
 
     <nav id="header" class="fixed top-0 z-10 w-full">
 
@@ -31,7 +31,12 @@
                 <a class="text-xl antialiased font-bold no-underline text-grayPrimary hover:no-underline font-header sm:text-center"
                     href="{{@site.url}}">
                     {{#if @site.logo}}
-                    <img class="w-64 h-12" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    <picture>
+  <source
+    srcset="https://isthisup.eu/content/images/2021/10/Copy-of-Logo-Alessandro-Belli.svg"
+    media="(prefers-color-scheme: dark)">
+  <img class="w-64 h-12" src="{{@site.logo}}" alt= "{{@site.title}}">
+</picture>
                     {{else}}
                     {{@site.title}}
                     {{/if}}
