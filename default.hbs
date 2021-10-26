@@ -92,8 +92,8 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
         }
 document.addEventListener('click', function (event) {
 	// If the clicked element doesn't have the right selector, bail
-	if (!event.target.matches('#toggleDark')) return;
-     let htmlClasses = document.querySelector('html').classList;
+	if (event.target.matches('#toggleDark')){
+         let htmlClasses = document.querySelector('html').classList;
 
   if(localStorage.theme === 'dark'){
           document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
@@ -105,7 +105,9 @@ document.addEventListener('click', function (event) {
             localStorage.theme = 'dark';
 
       localStorage.theme = 'dark'
-  }
+  }    
+    }
+
 
 }, false);
     </script>
