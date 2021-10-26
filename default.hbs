@@ -81,6 +81,7 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   document.documentElement.classList.add('dark')
   document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
   localStorage.theme = 'dark'
+  document.getElementById("toggleDark").checked = true;
 } else {
     document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
     
