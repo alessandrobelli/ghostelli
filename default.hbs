@@ -83,8 +83,8 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   localStorage.theme = 'dark'
 } else {
     document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
-    localStorage.removeItem('theme')
-
+    
+  localStorage.theme = 'light'
   document.documentElement.classList.remove('dark')
 }
 
@@ -97,8 +97,8 @@ document.addEventListener('click', function (event) {
   if(localStorage.theme === 'dark'){
           document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
                         htmlClasses.remove('dark');
-            localStorage.removeItem('theme')
-  }else{
+              localStorage.theme = 'light'
+  }else if (localStorage.theme === 'light'){
         document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
             htmlClasses.add('dark');
             localStorage.theme = 'dark';
