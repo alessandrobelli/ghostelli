@@ -9,7 +9,7 @@
     type="checkbox"
     name="toggleDark"
               id="toggleDark"
-    class="absolute block w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
+    class="absolute hidden w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
   />
   <label
     for="toggle"
@@ -21,7 +21,7 @@
 
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-dashed hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="sm:w-1/2 sm:mx-auto nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-dashed hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>
