@@ -43,13 +43,16 @@ progress.reading-progress-bar[value]::-webkit-progress-value {
     background-color: #61F0A9;
 }
 
-body, html {
-    min-height: 100% !important;
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.home-template {
+    height: 100%;
+}
+
+.page-template {
+    min-height: 100%;
+}
+
+.tag-template {
+    min-height: 100%;
 }
 
 li {
