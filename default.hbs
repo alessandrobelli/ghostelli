@@ -20,8 +20,7 @@
 
     <nav id="header" class="fixed top-0 z-10 w-full h-auto bg-white dark:bg-grayPrimary">
 
-        <div id="progress" class="top-0 z-20 h-1"
-            style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+
 
         <div class="flex flex-wrap w-2/3 py-3 mx-auto mt-0">
 
@@ -62,6 +61,37 @@
 
     <script>
   document.addEventListener('DOMContentLoaded', detectDarkMode);
+
+const readingProgress = (contentArea, progressBar) => {
+    const content = document.querySelector(contentArea);
+    const progress = document.querySelector(progressBar);
+
+    const frameListening = () => {
+        const contentBox = content.getBoundingClientRect();
+        const midPoint = window.innerHeight / 2;
+        const minsRemaining = Math.round(progress.max - progress.value);
+
+        if (contentBox.top > midPoint) {
+            progress.value = 0;
+        }
+
+        if (contentBox.top < midPoint) {
+            progress.value = progress.max;
+        }
+
+        if (contentBox.top <= midPoint && contentBox.bottom >= midPoint) {
+            progress.value =
+                (progress.max * Math.abs(contentBox.top - midPoint)) /
+                contentBox.height;
+        }
+
+        window.requestAnimationFrame(frameListening);
+    };
+
+    window.requestAnimationFrame(frameListening);
+};
+
+readingProgress(".post-full-content", ".reading-progress-bar");
 
         function detectDarkMode()
         {
