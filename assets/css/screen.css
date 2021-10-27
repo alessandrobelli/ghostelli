@@ -29,7 +29,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 body, html {
-    height: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -144,9 +144,9 @@ html, .gh-viewport {
     flex-direction: column;
 }
 
-.gh-page {
+/* .gh-page {
     padding: 0 4vmin;
-}
+} */
 
 .gh-article {
     padding: 4vmin 0;
