@@ -5,16 +5,13 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 */
 
-
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
-
 
 /* Base components */
 
 @import "components/forms.css";
 @import "components/buttons.css";
-
 /* Ghost components */
 
 @import "ghost/header.css";
@@ -28,35 +25,35 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
-
-body,
-html {
-  height: 100%;
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-
 li {
-    list-style:initial;
+    list-style: initial;
 }
 
 a {
     color: #F061A8;
 }
 
-a:hover{
+a:hover {
     color: #6161F0 !important;
 }
 
-
-a:focus{
+a:focus {
     color: #6161F0 !important;
 }
 
- .youtube-player {
+.youtube-player {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -64,9 +61,9 @@ a:focus{
     max-width: 100%;
     background: #000;
     margin: 5px;
-  }
+}
 
-  .youtube-player iframe {
+.youtube-player iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -74,9 +71,9 @@ a:focus{
     height: 100%;
     z-index: 100;
     background: transparent;
-  }
+}
 
-  .youtube-player img {
+.youtube-player img {
     object-fit: cover;
     display: block;
     left: 0;
@@ -93,13 +90,13 @@ a:focus{
     -webkit-transition: 0.4s all;
     -moz-transition: 0.4s all;
     transition: 0.4s all;
-  }
+}
 
-  .youtube-player img:hover {
+.youtube-player img:hover {
     -webkit-filter: brightness(75%);
-  }
+}
 
-  .youtube-player .play {
+.youtube-player .play {
     height: 72px;
     width: 72px;
     left: 50%;
@@ -109,39 +106,32 @@ a:focus{
     position: absolute;
     background: url('//i.imgur.com/TxzC70f.png') no-repeat;
     cursor: pointer;
-  }
+}
 
-.article-tag::after{
-  content:"...";
-  font-size: 50px;
-  color: #61F0A9;
-  display: block;
-  text-align: center;
-  margin-top: -30px;
-  letter-spacing: 7px;
+.article-tag::after {
+    content: "...";
+    font-size: 50px;
+    color: #61F0A9;
+    display: block;
+    text-align: center;
+    margin-top: -30px;
+    letter-spacing: 7px;
 }
 
 /* ---------------------------------------------------------- */
 
-
-form[data-members-form] .message-loading,
-form[data-members-form] .message-success,
-form[data-members-form] .message-error {
+form[data-members-form] .message-loading, form[data-members-form] .message-success, form[data-members-form] .message-error {
     display: none;
 }
 
-form[data-members-form].loading .message-loading,
-form[data-members-form].success .message-success,
-form[data-members-form].error .message-error {
+form[data-members-form].loading .message-loading, form[data-members-form].success .message-success, form[data-members-form].error .message-error {
     display: block;
 }
-
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
-html,
-.gh-viewport {
+html, .gh-viewport {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -192,7 +182,6 @@ html,
     height: 2rem;
 }
 
-
 /* Index
 /* ---------------------------------------------------------- */
 
@@ -242,7 +231,6 @@ html,
     opacity: 0.5;
 }
 
-
 /* Page
 /* ---------------------------------------------------------- */
 
@@ -269,7 +257,6 @@ html,
     }
 }
 
-
 /* Post
 /* ---------------------------------------------------------- */
 
@@ -278,21 +265,21 @@ html,
     text-align: center;
 }
 
-.gh-content h1{
+.gh-content h1 {
     font-family: 'Mukta', 'cursive';
-	font-size: 2.25rem;
+    font-size: 2.25rem;
     line-height: 2.5rem;
 }
 
-.gh-content h2{
+.gh-content h2 {
     font-family: 'Mukta', 'cursive';
-	font-size: 1.875rem;
+    font-size: 1.875rem;
     line-height: 2.25rem;
 }
 
-.gh-content h3{
+.gh-content h3 {
     font-family: 'Mukta', 'cursive';
-	font-size: 1.5rem;
+    font-size: 1.5rem;
     line-height: 2rem;
 }
 
@@ -318,7 +305,6 @@ html,
 .gh-post-footer {
     margin: 2rem 0;
 }
-
 
 /* Author Archive
 /* ---------------------------------------------------------- */
