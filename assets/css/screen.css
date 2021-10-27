@@ -32,7 +32,9 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
-
+#ghost-portal-root{
+    background-color: #28282F;
+}
   
 li {
     list-style:initial;
