@@ -44,14 +44,10 @@ progress.reading-progress-bar[value]::-webkit-progress-value {
 }
 
 .home-template {
-    height: 100%;
+    height: 100% !important;
 }
 
-.page-template {
-    min-height: 100%;
-}
-
-.tag-template {
+.page-template, .tag-template {
     min-height: 100%;
 }
 
