@@ -4,11 +4,8 @@
 
 <script>
     const readingProgress = (contentArea, progressBar) => {
-        console.log(contentArea,progressBar);
     const content = document.querySelector(contentArea);
     const progress = document.querySelector(progressBar);
-console.log(content);
-console.log(progress);
     const frameListening = () => {
         const contentBox = content.getBoundingClientRect();
         const midPoint = window.innerHeight / 2;
@@ -42,7 +39,7 @@ readingProgress(".post-full-content", ".reading-progress-bar");
 
 </script>
 <article class="gh-article p-0 {{post_class}} font-text post-full-content">
-<progress class="reading-progress-bar"></progress>
+<progress class="absolute top-0 left-0 z-20 w-full reading-progress-bar"></progress>
     <header class="pb-2 text-center">
 
         <h1 class="text-4xl gh-title font-header">{{title}}</h1>
