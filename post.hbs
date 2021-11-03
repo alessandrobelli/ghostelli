@@ -4,9 +4,10 @@
 
 <script>
     const readingProgress = (contentArea, progressBar) => {
+        console.log(contentArea,progressBar);
     const content = document.querySelector(contentArea);
     const progress = document.querySelector(progressBar);
-
+console.log(content,progress);
     const frameListening = () => {
         const contentBox = content.getBoundingClientRect();
         const midPoint = window.innerHeight / 2;
