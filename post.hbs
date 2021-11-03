@@ -8,7 +8,7 @@
     const progress = document.querySelector(progressBar);
     const frameListening = () => {
         const contentBox = document.body.getBoundingClientRect();
-        const midPoint = window.innerHeight / 2.3;
+        const midPoint = window.innerHeight / 2.5;
         const minsRemaining = Math.round(progress.max - progress.value);
 
         if (contentBox.top > midPoint) {
