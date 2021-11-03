@@ -32,7 +32,9 @@ console.log(content,progress);
 
     window.requestAnimationFrame(frameListening);
 };
-document.addEventListener('DOMContentLoaded', readingProgress(".post-full-content", ".reading-progress-bar"));
+
+window.onload = readingProgress(".post-full-content", ".reading-progress-bar");
+
 </script>
 <article class="gh-article p-0 {{post_class}} font-text post-full-content">
 
