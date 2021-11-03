@@ -21,7 +21,7 @@
 
         if (contentBox.top <= midPoint && contentBox.bottom >= midPoint) {
             progress.value =
-                contentBox.top /
+                (progress.max * Math.abs(contentBox.top - midPoint)) /
                 contentBox.height;
         }
 
