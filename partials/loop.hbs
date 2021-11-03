@@ -1,0 +1,70 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+<div class="extra-pagination inner">
+  {{pagination}}
+</div>
+<div class="flex flex-wrap overflow-hidden gh-postfeed">
+  {{! This is the post loop - each post will be output using this markup }}
+  {{#foreach posts}}
+    <article class="w-full overflow-hidden md:w-1/4 md:px-2 article-tag">
+      <a class="" href="{{url}}">
+        {{#if feature_image}}
+          <img
+            class="inline-block object-cover w-full mb-1 align-middle h-26 hover:opacity80"
+            srcset="{{img_url feature_image size="s"}}
+               300w,
+              {{img_url feature_image size="m"}}
+               600w,
+              {{img_url feature_image size="l"}}
+               1000w,
+              {{img_url feature_image size="xl"}}
+               2000w"
+            sizes="(max-width: 600px) 400px, 600px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+          />
+        {{else}}
+          <img
+            class="inline-block object-cover w-full mb-1 align-middle h-26 hover:opacity80"
+            src="https://isthisup.eu/content/images/size/w1600/2021/10/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg"
+            sizes="(max-width: 600px) 400px, 600px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+          />
+        {{/if}}
+        <div class="w-full">
+          <h2
+            class="text-2xl text-center font-header text-mypink hover:text-primary dark:hover:text-primary"
+          >
+            {{title}}
+          </h2>
+          <div
+            class="py-1 mx-auto text-xs font-bold font-text text-grayPrimary dark:text-graySecondary"
+          >
+            <time datetime="{{date format="YYYY-MM-DD"}}">
+              {{date format="DD.MM.YYYY"}}
+            </time>
+            <span class="bull">
+              •
+            </span>
+            {{reading_time}}
+          </div>
+          <p
+            class="pb-4 text-xs font-subheader text-grayPrimary dark:text-graySecondary"
+          >
+            {{excerpt}}
+            ...
+          </p>
+          <div class="w-full mx-auto mb-2 text-center">
+            <button
+              class="p-2 text-sm antialiased bg-white rounded-none border-grayPrimary text-grayPrimary font-subheader hover:bg-graySecondary"
+            >
+              Read more
+            </button>
+          </div>
+        </div>
+      </a>
+    </article>
+  {{/foreach}}
+</div>
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}
