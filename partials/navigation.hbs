@@ -16,9 +16,7 @@
     class="block h-6 overflow-hidden bg-transparent rounded-full cursor-pointer toggle-label"
   ></label>
 </div>
-{{#if isSecondary}}
-<span></span>
-{{#else}}
+{{#unless isSecondary}}
 <label
   for="toggleDark"
   class="hidden text-xs xl:inline-block text-grayPrimary dark:text-graySecondary"
@@ -26,7 +24,7 @@
 >
   feeling Dark?
 </label>
-{{/if}}
+{{/unless}}
 
     </li>
 
