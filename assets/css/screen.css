@@ -41,8 +41,12 @@ progress.reading-progress-bar[value]::-webkit-progress-value {
     background-color: #61F0A9;
 }
 
-.home-template, .page-template {
+.home-template {
     height: 100% !important;
+}
+
+.page-template {
+    max-height: 100% !important;
 }
 
 .tag-template {
