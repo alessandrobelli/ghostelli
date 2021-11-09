@@ -5,18 +5,18 @@
 <div
   class="relative hidden w-10 mr-2 align-middle transition duration-200 ease-in select-none xl:inline-block"
 >
-  <input
-    type="checkbox"
-    name="toggleDark"
-              id="toggleDark"
-    class="absolute hidden w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
-  />
-  <label
-    for="toggle"
-    class="block h-6 overflow-hidden bg-transparent rounded-full cursor-pointer toggle-label"
-  ></label>
 </div>
 {{#unless isSecondary}}
+<input
+  type="checkbox"
+  name="toggleDark"
+  id="toggleDark"
+  class="absolute hidden w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
+/>
+<label
+  for="toggle"
+  class="block h-6 overflow-hidden bg-transparent rounded-full cursor-pointer toggle-label"
+></label>
 <label
   for="toggleDark"
   class="hidden text-xs xl:inline-block text-grayPrimary dark:text-graySecondary"
