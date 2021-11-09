@@ -1,38 +1,27 @@
 <div class="w-full pl-2">
   <ul class="text-base text-center md:text-lg">
 
-
-{{#unless isSecondary}}
 <li class="nav-{{slug}} md:py-0 py-2 md:inline mr-4 list-none">
 <div
   class="relative hidden w-10 mr-2 align-middle transition duration-200 ease-in select-none xl:inline-block"
 >
+  <input
+    type="checkbox"
+    name="toggleDark"
+              id="toggleDark"
+    class="absolute hidden w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
+  />
+  <label
+    for="toggle"
+    class="block h-6 overflow-hidden bg-transparent rounded-full cursor-pointer toggle-label"
+  ></label>
 </div>
-<input
-  type="checkbox"
-  name="toggleDark"
-  id="toggleDark"
-  class="absolute hidden w-6 h-6 bg-white border-4 rounded-full appearance-none cursor-pointer toggle-checkbox"
-/>
-<label
-  for="toggle"
-  class="block h-6 overflow-hidden bg-transparent rounded-full cursor-pointer toggle-label"
-></label>
-<label
-  for="toggleDark"
-  class="hidden text-xs xl:inline-block text-grayPrimary dark:text-graySecondary"
-  id="textToggleDark"
->
-  feeling Dark?
-</label>
+<label for="toggleDark" class="hidden text-xs xl:inline-block text-grayPrimary dark:text-graySecondary" id="textToggleDark">feeling Dark?</label>
     </li>
-{{/unless}}
-
-
 
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-solid hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-dashed hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>
