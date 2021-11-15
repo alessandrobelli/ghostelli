@@ -4,14 +4,14 @@
   >
     {{#if @member}}
       <button
-        class="px-4 py-2 font-bold rounded text-grayPrimary bg-primary hover:bg-green-700 members-account"
+        class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-account"
         data-portal="account"
       >
         Account
       </button>
       {{#unless @member.paid}}
         <button
-          class="px-4 py-2 font-bold rounded text-grayPrimary bg-mypink hover:bg-red-700 members-upgrade"
+          class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-mypink hover:bg-red-700 members-upgrade"
           data-portal="account/plans"
         >
           Upgrade
@@ -19,13 +19,13 @@
       {{/unless}}
     {{else}}
       <button
-        class="px-4 py-2 font-bold rounded text-grayPrimary bg-primary hover:bg-green-700 members-login"
+        class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-login"
         data-portal="signin"
       >
         Login
       </button>
       <button
-        class="px-4 py-2 font-bold rounded text-grayPrimary bg-mypink hover:bg-red-700 members-subscribe"
+        class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-mypink hover:bg-red-700 members-subscribe"
         data-portal="signup"
       >
         Subscribe
@@ -38,14 +38,14 @@
 >
   {{#if @member}}
     <button
-      class="px-4 py-2 font-bold rounded text-grayPrimary bg-primary hover:bg-green-700 members-account"
+      class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-account"
       data-portal="account"
     >
       Account
     </button>
     {{#unless @member.paid}}
       <button
-        class="px-4 py-2 font-bold rounded text-grayPrimary bg-primary hover:bg-green-700 members-upgrade"
+        class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-upgrade"
         data-portal="account/plans"
       >
         Upgrade
@@ -53,13 +53,13 @@
     {{/unless}}
   {{else}}
     <button
-      class="px-4 py-2 font-bold rounded text-grayPrimary bg-primary hover:bg-green-700 members-login"
+      class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-login"
       data-portal="signin"
     >
       Login
     </button>
     <button
-      class="px-4 py-2 font-bold rounded text-grayPrimary bg-mypink hover:bg-red-700 members-subscribe"
+      class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-mypink hover:bg-red-700 members-subscribe"
       data-portal="signup"
     >
       Subscribe
