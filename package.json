@@ -66,12 +66,12 @@
             "youtube_video_1_id":{
                 "type": "text",
                 "default": "jNQXAC9IVRw",
-                "group": "post"
+                "group": "Homepage"
             },
             "youtube_video_1_text":{
                 "type": "text",
                 "default": "Enter the title of the video, shown on top.",
-                "group": "post"
+                "group": "Homepage"
             },
             "youtube_video_2_id":{
                 "type": "text",
@@ -81,7 +81,7 @@
             "youtube_video_2_text":{
                 "type": "text",
                 "default": "Enter the title of the video, shown on top.",
-                "group": "post"
+                "group": "Homepage"
             },
             "homepage_text":{
                 "type": "text",
