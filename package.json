@@ -62,6 +62,33 @@
         "defaults"
     ],
     "config": {
+        "custom":{
+            "youtube_video_1_id":{
+                "type": "text",
+                "default": "jNQXAC9IVRw",
+                "group": "post"
+            },
+            "youtube_video_1_text":{
+                "type": "text",
+                "default": "Enter the title of the video, shown on top.",
+                "group": "post"
+            },
+            "youtube_video_2_id":{
+                "type": "text",
+                "default": "jNQXAC9IVRw",
+                "group": "Homepage"
+            },
+            "youtube_video_2_text":{
+                "type": "text",
+                "default": "Enter the title of the video, shown on top.",
+                "group": "post"
+            },
+            "homepage_text":{
+                "type": "text",
+                "group": "Homepage",
+                "default": "Enter the text shown in the homepage, like your website description"
+            }
+        },
         "posts_per_page": 15,
         "image_sizes": {
             "xxs": {
