@@ -1,8 +1,8 @@
 {
     "name": "ghostelli",
     "description": "A custom theme for ghost, made by Alessandro Belli",
-    "demo": "https://isthisup.eu",
-    "version": "0.0.1",
+    "demo": "https://alessandrobelli.it",
+    "version": "0.1.0",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
@@ -83,10 +83,10 @@
                 "default": "Enter the title of the video, shown on top.",
                 "group": "Homepage"
             },
-            "homepage_text":{
+            "homepage_text_with_html":{
                 "type": "text",
                 "group": "Homepage",
-                "default": "Enter the text shown in the homepage, like your website description"
+                "default": "Enter the text shown in the homepage, like your website description."
             }
         },
         "posts_per_page": 15,
