@@ -87,7 +87,11 @@
                 "type": "text",
                 "group": "Homepage",
                 "default": "Enter the text shown in the homepage, like your website description."
-            }
+            },
+            "default_image_posts":{
+                "type": "image",
+                "group": "post"
+                        }
         },
         "posts_per_page": 15,
         "image_sizes": {
