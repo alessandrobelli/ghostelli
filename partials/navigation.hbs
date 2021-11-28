@@ -1,4 +1,5 @@
 <div class="w-full pl-0 sm:pl-2">
+  {{#unless isSecondary}}
   <div class="w-full xs:hidden" onclick="mobileMenu()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -15,6 +16,7 @@
     ></path>
   </svg>
 </div>
+{{/unless}}
   <ul class="text-base text-center md:text-lg" id="myLinks">
 {{#unless isSecondary}}
 <li class="nav-{{slug}} md:py-0 py-2 md:inline mr-4 list-none">
