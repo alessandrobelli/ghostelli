@@ -47,8 +47,10 @@ progress.reading-progress-bar[value]::-webkit-progress-value {
     }
 }
 
-.home-template {
-    height: 100% !important;
+@media only screen and (min-width: 476px) {
+    .home-template {
+        height: 100% !important;
+    }
 }
 
 .page-template {
