@@ -17,7 +17,7 @@ module.exports = {
       },
       fontFamily:{
         'text': ['Karma','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
-        'header': ['"Fira-Sans"', 'cursive'],
+        'header': ['"Fira Sans"', 'cursive'],
         'subheader': ['"Crimson Pro"','serif'],
         'text-old': ['Prompt','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
         'header-old': ['Mukta', 'cursive'],
