@@ -67,15 +67,15 @@ li {
 }
 
 a {
-    color: #F061A8;
+    color: #61F0A9 ;
 }
 
 a:hover {
-    color: #6161F0 !important;
+    color: #F061A8 !important;
 }
 
 a:focus {
-    color: #6161F0 !important;
+    color: #F061A8 !important;
 }
 
 .youtube-player {
