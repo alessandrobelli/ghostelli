@@ -15,22 +15,23 @@ module.exports = {
         myyellow: '#F0F061'
 
       },
-      fontFamily:{
-        'text': ['Karma','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+      fontFamily: {
+        'text': ['Roboto', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
         'header': ['"Fira Sans"', 'cursive'],
-        'subheader': ['"Crimson Pro"','serif'],
-        'text-old': ['Prompt','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+        'subheader': ['"Crimson Pro"', 'serif'],
+        'text-old': ['Prompt', 'serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
         'header-old': ['Mukta', 'cursive'],
-        'subheader-old': ['"Libre Franklin"','serif'],
+        'subheader-old': ['"Libre Franklin"', 'serif'],
       },
       screens: {
-              'xs': '475px',
-              ...defaultTheme.screens,
-      }},
+        'xs': '475px',
+        ...defaultTheme.screens,
+      }
+    },
   },
   variants: {
     extend: {
-             borderWidth: ['hover', 'focus'],
+      borderWidth: ['hover', 'focus'],
     },
   },
   plugins: [
