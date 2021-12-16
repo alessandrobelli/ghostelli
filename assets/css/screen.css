@@ -30,6 +30,11 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+code {
+    background-color: #F0F061;
+    padding: 1px;
+}
+
 progress.reading-progress-bar {
     appearance: none;
     height: 3px;
