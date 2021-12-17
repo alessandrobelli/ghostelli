@@ -40,7 +40,7 @@
 
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
-    <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-solid hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="{{#if current}}text-mypink {{/if}} text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
+    <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-solid hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink{{/if}} text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
     <!-- End the loop -->
   </ul>
