@@ -2,7 +2,7 @@
     "name": "ghostelli",
     "description": "A custom theme for ghost, made by Alessandro Belli",
     "demo": "https://alessandrobelli.it",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
@@ -91,7 +91,13 @@
             "default_image_posts":{
                 "type": "image",
                 "group": "post"
-                        }
+            }
+            },
+            "dark_mode_selection":{
+                "type": "select",
+                "options": ["Always Dark", "Always Light","Let user decide"],
+                "default": "Always Dark"                       
+             }
         },
         "posts_per_page": 15,
         "image_sizes": {

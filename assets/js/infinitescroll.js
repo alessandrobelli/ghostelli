@@ -6,7 +6,7 @@ $(function ($) {
     var pathname = window.location.pathname;
     var $document = $(document);
     var $result = $('.gh-postfeed');
-    var buffer = 300;
+    var buffer = 10;
 
     var ticking = false;
     var isLoading = false;
@@ -74,7 +74,7 @@ $(function ($) {
         * we return and disable the listeners.
         */
         if (currentPage >= maxPages) {
-            window.removeEventListener('scroll', onScroll, {passive: true});
+            window.removeEventListener('scroll', onScroll, { passive: true });
             window.removeEventListener('resize', onResize);
             return;
         }
@@ -98,7 +98,7 @@ $(function ($) {
         }).fail(function (xhr) {
             // 404 indicates we've run out of pages
             if (xhr.status === 404) {
-                window.removeEventListener('scroll', onScroll, {passive: true});
+                window.removeEventListener('scroll', onScroll, { passive: true });
                 window.removeEventListener('resize', onResize);
             }
         }).always(function () {
@@ -108,7 +108,7 @@ $(function ($) {
         });
     }
 
-    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onResize);
 
     infiniteScroll();

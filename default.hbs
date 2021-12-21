@@ -90,57 +90,31 @@
     <!--/container-->
     {{ghost_foot}}
 
-    <script>
-  document.addEventListener('DOMContentLoaded', detectDarkMode);
+<script>
 
-        function detectDarkMode()
-        {
-
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
-  document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
-  localStorage.theme = 'dark'
-  document.getElementById("toggleDark").checked = true;
-} else {
-    document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
-    
-  localStorage.theme = 'light'
-  document.documentElement.classList.remove('dark')
-}
-
-        }
-document.addEventListener('click', function (event) {
-	// If the clicked element doesn't have the right selector, bail
-	if (event.target.matches('#toggleDark')){
-         let htmlClasses = document.querySelector('html').classList;
-
-  if(localStorage.theme === 'dark'){
-          document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
-                        htmlClasses.remove('dark');
-              localStorage.theme = 'light'
-  }else if (localStorage.theme === 'light'){
+  {{#match @custom.dark_mode_selection "Always Dark"}}
+ document.documentElement.classList.add('dark')
         document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
-            htmlClasses.add('dark');
-            localStorage.theme = 'dark';
+        localStorage.theme = 'dark'
+        document.getElementById("toggleDark").checked = true;
+{{/match}}
+{{#match @custom.dark_mode_selection "Always  Light"}}
+document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
+        localStorage.theme = 'light'
+        document.documentElement.classList.remove('dark')
+{{/match}}
 
-      localStorage.theme = 'dark'
-  }    
-    }
-
-
-}, false);
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function mobileMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
 }
-    </script>
+</script>
 </body>
 
 </html>
