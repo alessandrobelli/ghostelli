@@ -46,7 +46,7 @@
     "devDependencies": {
         "autoprefixer": "10.2.5",
         "cssnano": "5.0.1",
-        "gscan": "^4.2.1",
+        "gscan": "^4.20.0",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.0",
@@ -62,42 +62,45 @@
         "defaults"
     ],
     "config": {
-        "custom":{
-            "youtube_video_1_id":{
+        "custom": {
+            "youtube_video_1_id": {
                 "type": "text",
                 "default": "jNQXAC9IVRw",
                 "group": "Homepage"
             },
-            "youtube_video_1_text":{
+            "youtube_video_1_text": {
                 "type": "text",
                 "default": "Enter the title of the video, shown on top.",
                 "group": "Homepage"
             },
-            "youtube_video_2_id":{
+            "youtube_video_2_id": {
                 "type": "text",
                 "default": "jNQXAC9IVRw",
                 "group": "Homepage"
             },
-            "youtube_video_2_text":{
+            "youtube_video_2_text": {
                 "type": "text",
                 "default": "Enter the title of the video, shown on top.",
                 "group": "Homepage"
             },
-            "homepage_text_with_html":{
+            "homepage_text_with_html": {
                 "type": "text",
                 "group": "Homepage",
                 "default": "Enter the text shown in the homepage, like your website description."
             },
-            "default_image_posts":{
+            "default_image_posts": {
                 "type": "image",
                 "group": "post"
-            }
             },
-            "dark_mode_selection":{
+            "dark_mode_selection": {
                 "type": "select",
-                "options": ["Always Dark", "Always Light","Let user decide"],
-                "default": "Always Dark"                       
-             }
+                "options": [
+                    "Always Dark",
+                    "Always Light",
+                    "Let user decide"
+                ],
+                "default": "Always Dark"
+            }
         },
         "posts_per_page": 15,
         "image_sizes": {
@@ -123,7 +126,7 @@
     },
     "dependencies": {
         "@tailwindcss/typography": "^0.4.0",
-        "postcss": "^8.2.10",
-        "tailwindcss": "^2.2.15"
+        "postcss": "^8.4.5",
+        "tailwindcss": "^2.2.19"
     }
 }
