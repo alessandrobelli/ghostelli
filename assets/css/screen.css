@@ -31,8 +31,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 ol li{
-    list-style-type: inherit;
-    list-style: inherit;
+    list-style-type: decimal;
+    list-style: decimal;
 }
 code {
     background-color: #F0F061;
