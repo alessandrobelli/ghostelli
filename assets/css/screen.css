@@ -30,6 +30,10 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+ol{
+    list-style-type: inherit;
+    list-style: inherit;
+}
 code {
     background-color: #F0F061;
     padding: 1px;
