@@ -1,6 +1,6 @@
 <div class="w-full pl-0 sm:pl-2">
   {{#unless isSecondary}}
-  <div class="w-full xs:hidden" onclick="mobileMenu()">
+  <div class="sm:w-full xs:hidden" onclick="mobileMenu()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -17,7 +17,7 @@
   </svg>
 </div>
 {{/unless}}
-  <ul class="text-base text-center md:text-lg xs:hidden" id="myLinks">
+  <ul class="text-base text-center md:text-lg" id="myLinks">
 
     <!-- Loop through the navigation items -->
     {{#foreach navigation}}
