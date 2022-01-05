@@ -30,7 +30,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
-ol{
+ol li{
     list-style-type: inherit;
     list-style: inherit;
 }
