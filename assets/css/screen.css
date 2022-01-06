@@ -68,25 +68,25 @@ progress.reading-progress-bar[value]::-webkit-progress-value {
 
 @media only screen and (max-width: 475px) {
     .page-template {
-        max-height: 100% !important;
+        min-height: 100% !important;
     }
 }
 
 @media only screen and (min-width: 476px) {
     .page-template {
-        height: 100% !important;
+        min-height: 100% !important;
     }
 }
 
 @media only screen and (max-width: 475px) {
     .post-template {
-        max-height: 100% !important;
+        min-height: 100% !important;
     }
 }
 
 @media only screen and (min-width: 476px) {
     .post-template {
-        height: 100% !important;
+        min-height: 100% !important;
     }
 }
 
