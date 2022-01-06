@@ -3,6 +3,23 @@
 {{#post}}
 
 <script>
+    let processScroll = () => {
+  let docElem = document.documentElement, 
+    docBody = document.body,
+    scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
+      scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
+    scrollPercent = scrollTop / scrollBottom * 100 + '%';
+  
+  // console.log(scrollTop + ' / ' + scrollBottom + ' / ' + scrollPercent);
+  
+    document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
+}
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+document.addEventListener('scroll', processScroll);
+  }}
+  /*
     const readingProgress = (contentArea, progressBar) => {
     const content = document.querySelector(contentArea);
     const progress = document.querySelector(progressBar);
@@ -35,11 +52,11 @@ document.onreadystatechange = function () {
 readingProgress(".post-full-content", ".reading-progress-bar");
   }
 }
-
+*/
 
 </script>
 <article class="gh-article p-0 {{post_class}} font-text post-full-content">
-<progress class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></progress>
+<progress id="progress-bar" class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></progress>
     <header class="pb-2 text-center">
 
         <h1 class="text-4xl font-bold gh-title font-header">{{title}}</h1>

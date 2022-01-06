@@ -30,6 +30,21 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+/* Progress bar */
+#progress-bar {
+  --scrollAmount: 0%;
+  
+  background-image: linear-gradient(120deg, #61F0A9 0%, #8fd3f4 100%);
+  width: var(--scrollAmount);
+
+  /*  background: linear-gradient(to right, #F24E1E var(--scrollAmount), transparent 0);
+  width: 100%; */
+  
+  height: 25px;
+  position: fixed;
+  top: 0;
+}
+
 ol li{
     list-style-type: decimal;
     list-style: decimal;
