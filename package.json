@@ -44,7 +44,7 @@
         "url": "https://github.com/TryGhost/Starter.git"
     },
     "devDependencies": {
-        "autoprefixer": "10.2.5",
+        "autoprefixer": "^10.4.2",
         "cssnano": "5.0.1",
         "gscan": "^4.20.0",
         "gulp": "4.0.2",
@@ -55,8 +55,10 @@
         "gulp-util": "3.0.8",
         "gulp-watch": "5.0.1",
         "gulp-zip": "5.1.0",
+        "postcss": "^8.4.5",
         "postcss-color-mod-function": "3.0.3",
-        "postcss-easy-import": "3.0.0"
+        "postcss-easy-import": "3.0.0",
+        "tailwindcss": "^3.0.17"
     },
     "browserslist": [
         "defaults"
@@ -125,8 +127,6 @@
         }
     },
     "dependencies": {
-        "@tailwindcss/typography": "^0.4.0",
-        "postcss": "^8.4.5",
-        "tailwindcss": "^2.2.19"
+        "@tailwindcss/typography": "^0.5.1"
     }
 }
