@@ -21,7 +21,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,700;1,400&family=Fira+Sans:wght@400;700&family=Karma:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -321,19 +320,19 @@ html, .gh-viewport {
 }
 
 .gh-content h1 {
-    font-family: 'Mukta', 'cursive';
+    font-family: 'Inter', 'sans-serif';
     font-size: 2.25rem;
     line-height: 2.5rem;
 }
 
 .gh-content h2 {
-    font-family: 'Mukta', 'cursive';
+    font-family: 'Inter', 'sans-serif';
     font-size: 1.875rem;
     line-height: 2.25rem;
 }
 
 .gh-content h3 {
-    font-family: 'Mukta', 'cursive';
+    font-family: 'Inter', 'sans-serif';
     font-size: 1.5rem;
     line-height: 2rem;
 }
