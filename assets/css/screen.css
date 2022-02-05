@@ -107,6 +107,22 @@ a:focus {
     color: #F061A8 !important;
 }
 
+.fluid-width-video-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .youtube-player {
     position: relative;
     padding-bottom: 56.25%;
@@ -323,18 +339,21 @@ html, .gh-viewport {
     font-family: 'Inter', 'sans-serif';
     font-size: 2.25rem;
     line-height: 2.5rem;
+    font-weight: 700;
 }
 
 .gh-content h2 {
     font-family: 'Inter', 'sans-serif';
     font-size: 1.875rem;
     line-height: 2.25rem;
+       font-weight: 700;
 }
 
 .gh-content h3 {
     font-family: 'Inter', 'sans-serif';
     font-size: 1.5rem;
     line-height: 2rem;
+       font-weight: 700;
 }
 
 .gh-post-meta {
