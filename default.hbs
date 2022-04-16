@@ -10,13 +10,17 @@
 
     <title>{{meta_title}}</title>
     {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in
 
+    <head> --}}
 
     </head>
 
 <body class="{{body_class}} bg-white dark:bg-grayPrimary font-text leading-normal tracking-normal text-grayPrimary dark:text-graySecondary px-2 sm:px-0">
 
-    <nav id="header" class="relative flex items-center justify-between px-4 mx-auto max-w-7xl sm:px-6" aria-label="Global">
+    <nav id="header" class="fixed top-0 w-full h-auto bg-white dark:bg-grayPrimary">
+
+
         <div class="flex flex-wrap w-2/3 py-3 mx-auto mt-0">
 
             <div class="w-full pr-8 mx-auto text-center md:w-full lg:w-auto xl:w-auto">
