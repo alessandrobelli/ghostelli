@@ -14,11 +14,13 @@
     </head>
 
 <body class="{{body_class}} bg-white dark:bg-grayPrimary font-text leading-normal tracking-normal text-grayPrimary dark:text-graySecondary px-2 sm:px-0">
-
+<div class="relative overflow-hidden">
+  <div class="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
+    <div>
     <nav id="header" class="relative flex items-center justify-between px-4 mx-auto max-w-7xl sm:px-6" aria-label="Global">
-        <div class="flex flex-wrap w-2/3 py-3 mx-auto mt-0">
+        <div class="flex items-center flex-1">
 
-            <div class="w-full pr-8 mx-auto text-center md:w-full lg:w-auto xl:w-auto">
+            <div class="flex items-center justify-between w-full md:w-auto">
                 <a class="text-xl antialiased font-bold no-underline text-grayPrimary hover:no-underline font-header sm:text-center"
                     href="{{@site.url}}">
                     {{#if @site.logo}}
@@ -36,7 +38,7 @@
 
 
 
-            <div class="z-20 flex-shrink w-full mx-auto mt-2 text-right sm:text-sm md:flex md:items-center md:w-auto md:mt-0"
+            <div class="z-20 hidden md:block md:ml-10 md:space-x-10"
                 id="nav-content">
                 {{navigation}}
             </div>
