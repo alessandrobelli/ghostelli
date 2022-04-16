@@ -1,4 +1,3 @@
-<div class="w-full pl-0 sm:pl-2">
   {{#unless isSecondary}}
   <div class="w-full xs:hidden" onclick="mobileMenu()">
   <svg
@@ -17,7 +16,6 @@
   </svg>
 </div>
 {{/unless}}
-  <ul class="hidden text-base text-center sm:block md:text-lg" id="myLinks">
 
     <!-- Loop through the navigation items 
     {{#foreach navigation}}
@@ -28,8 +26,8 @@
 
          {{#foreach navigation}}
   
-   <li class="nav-{{slug}} list-none md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline text-grayPrimary dark:text-graySecondary " href="{{url absolute=" true"}}">{{label}}</a></li>
+   <a class="nav-{{slug}}  {{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline font-medium text-gray-500 hover:text-gray-900 " href="{{url absolute=" true"}}">{{label}}</a>
     {{/foreach}}
-  </ul>
-</div>
+
+
 
