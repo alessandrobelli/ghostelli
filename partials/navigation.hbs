@@ -1,3 +1,4 @@
+<div class="px-2 pt-2 pb-3 space-y-1">
   {{#unless isSecondary}}
   <div class="w-full xs:hidden" onclick="mobileMenu()">
   <svg
@@ -26,8 +27,8 @@
 
          {{#foreach navigation}}
   
-   <a class="nav-{{slug}}  {{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline font-medium text-gray-500 hover:text-gray-900 " href="{{url absolute=" true"}}">{{label}}</a>
+   <a class="nav-{{slug}}  {{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50" href="{{url absolute=" true"}}">{{label}}</a>
     {{/foreach}}
 
-
+</div>
 
