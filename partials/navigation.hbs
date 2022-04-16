@@ -1,4 +1,4 @@
-<div class="w-full pl-0 sm:pl-2">
+<div class="hidden md:block md:ml-10 md:space-x-10">
   {{#unless isSecondary}}
   <div class="w-full xs:hidden" onclick="mobileMenu()">
   <svg
@@ -28,8 +28,8 @@
 
          {{#foreach navigation}}
   
-   <li class="nav-{{slug}} list-none md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline text-grayPrimary dark:text-graySecondary " href="{{url absolute=" true"}}">{{label}}</a></li>
+   <li class="nav-{{slug}} list-none md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline font-medium text-gray-500 hover:text-gray-900" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
+            {{> subscribe}}
   </ul>
 </div>
-
