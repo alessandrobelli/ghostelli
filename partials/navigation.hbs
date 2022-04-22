@@ -1,5 +1,6 @@
-<div class="w-full pl-0 sm:pl-2">
   {{#unless isSecondary}}
+
+<div class="w-full pl-0 sm:pl-2">
   <div class="w-full xs:hidden" onclick="mobileMenu()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +17,7 @@
     ></path>
   </svg>
 </div>
-{{/unless}}
+
   <ul class="hidden text-base text-center sm:block md:text-lg" id="myLinks">
 
     <!-- Loop through the navigation items 
@@ -32,4 +33,15 @@
     {{/foreach}}
   </ul>
 </div>
-
+{{/unless}}
+{{#if isSecondary}}
+<nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
+    {{#foreach navigation}}
+    <div class="px-5 py-2">
+  <a href="{{url absolute=" true"}}" class="text-basetext-grayPrimary dark:text-graySecondary">
+   {{label}}
+  </a>
+</div>
+      {{/foreach}}
+</nav>
+{{/if}}
