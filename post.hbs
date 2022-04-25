@@ -22,27 +22,69 @@ document.addEventListener('scroll', processScroll);
 <div id="progress-bar" class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></div>
     <header class="pb-2 text-center">
 
-        <h1 class="text-4xl font-bold gh-title font-header">{{title}}</h1>
-        <span class="pt-2 m-1 text-xs font-subheader"><time datetime="{{date format="DD-MM-YYYY"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        {{#if custom_excerpt}}
-        <p class="text-sm font-bold gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
+
+
+{{#if tags}}
+
+    {{#foreach tags}}
+<span
+  class="inline-flex mb-4 items-center px-2.5 py-0.5 rounded-md text-sm font-monospace bg-primary text-grayPrimary"
+>
+  {{name}}
+</span>
+    {{/foreach}}
+
+{{/if}}
+
+
+
 
         {{#if feature_image}}
-        <img class="text-sm gh-feature-image font-header"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 1000px) 1000px, 2000px"
-            loading="lazy"
-            src="{{img_url feature_image size="xl"}}"
+        <div class="relative">
+  <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+        loading="lazy"
+          class="object-cover w-full h-full"
+         src="{{img_url feature_image size="xl"}}"
             alt="{{title}}"
         />
+        <div class="absolute inset-0 bg-primary mix-blend-multiply"></div>
+      </div>
+      <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+        <h1
+          class="text-4xl font-extrabold tracking-tight text-center text-transparent sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"
+        >
+{{title}}
+        </h1>
+
+    </div>
+  </div>
+</div>
+
+    
+        {{else}}
+        <h1
+  class="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl"
+>
+  {{title}}
+</h1>
         {{/if}}
+
+
+<span class="pt-2 m-1 text-xs font-subheader">
+  <time datetime="{{date format="DD-MM-YYYY"}}">
+    {{date format="D MMM YYYY"}}
+  </time>
+  <span class="bull">
+    •
+  </span>
+  {{reading_time}}
+</span>
     </header>
 
-    <div class="text-base gh-content font-text">
+    <div class="w-full text-base prose-graySecondary gh-content font-text">
         {{content}}
     </div>
 

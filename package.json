@@ -2,7 +2,7 @@
     "name": "ghostelli",
     "description": "A custom theme for ghost, made by Alessandro Belli",
     "demo": "https://alessandrobelli.it",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
@@ -44,6 +44,7 @@
         "url": "https://github.com/TryGhost/Starter.git"
     },
     "devDependencies": {
+        "@tailwindcss/typography": "^0.5.2",
         "autoprefixer": "^10.4.4",
         "cssnano": "5.0.1",
         "gscan": "^4.27.0",
@@ -70,19 +71,9 @@
                 "default": "jNQXAC9IVRw",
                 "group": "Homepage"
             },
-            "youtube_video_1_text": {
-                "type": "text",
-                "default": "Enter the title of the video, shown on top.",
-                "group": "Homepage"
-            },
             "youtube_video_2_id": {
                 "type": "text",
                 "default": "jNQXAC9IVRw",
-                "group": "Homepage"
-            },
-            "youtube_video_2_text": {
-                "type": "text",
-                "default": "Enter the title of the video, shown on top.",
                 "group": "Homepage"
             },
             "homepage_text_with_html": {
@@ -126,7 +117,5 @@
             }
         }
     },
-    "dependencies": {
-        "@tailwindcss/typography": "^0.5.2"
-    }
+    "dependencies": {}
 }

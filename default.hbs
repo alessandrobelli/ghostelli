@@ -73,17 +73,6 @@
 
 <script>
 
-  {{#match @custom.dark_mode_selection "Always Dark"}}
- document.documentElement.classList.add('dark')
-        document.querySelector('#textToggleDark').innerHTML = 'Feeling Light?';
-        localStorage.theme = 'dark'
-        document.getElementById("toggleDark").checked = true;
-{{/match}}
-{{#match @custom.dark_mode_selection "Always  Light"}}
-document.querySelector('#textToggleDark').innerHTML = 'Feeling Dark?';
-        localStorage.theme = 'light'
-        document.documentElement.classList.remove('dark')
-{{/match}}
 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
