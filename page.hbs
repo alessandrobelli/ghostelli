@@ -3,15 +3,38 @@
 {{#post}}
 <article class="gh-article {{post_class}}">
 
-    <header class="gh-header gh-canvas">
-        <h1 class="text-4xl gh-title font-header">{{title}}</h1>
+    <header class="gh-header">
+      {{#if feature_image}}
+        <div class="relative">
+  <div class="max-w-full mx-auto sm:px-6 lg:px-8">
+    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+        loading="lazy"
+          class="object-cover w-full h-full"
+         src="{{img_url feature_image size="xl"}}"
+            alt="{{title}}"
+        />
+        <div class="absolute inset-0 bg-grayPrimary mix-blend-hard-light"></div>
+      </div>
+      <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+        <h1
+          class="text-4xl font-extrabold tracking-tight text-center text-transparent sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"
+        >
+{{title}}
+        </h1>
 
-        {{#if custom_excerpt}}
-            <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
+    </div>
+  </div>
+</div>
 
-        {{#if feature_image}}
-            <img class="gh-feature-image" src="{{feature_image}}" alt="{{title}}" />
+    
+        {{else}}
+        <h1
+  class="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl"
+>
+  {{title}}
+</h1>
         {{/if}}
     </header>
 

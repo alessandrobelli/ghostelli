@@ -48,49 +48,6 @@ code {
     color: #28282F;
 }
 
-
-@media only screen and (max-width: 475px) {
-    .home-template {
-        max-height: 100% !important;
-    }
-}
-
-@media only screen and (min-width: 476px) {
-    .home-template {
-        height: 100% !important;
-    }
-}
-
-
-@media only screen and (max-width: 475px) {
-    .page-template {
-        min-height: 100% !important;
-    }
-}
-
-@media only screen and (min-width: 476px) {
-    .page-template {
-        min-height: 100% !important;
-    }
-}
-
-@media only screen and (max-width: 475px) {
-    .post-template {
-        min-height: 100% !important;
-    }
-}
-
-@media only screen and (min-width: 476px) {
-    .post-template {
-        min-height: 100% !important;
-    }
-}
-
-
-.tag-template {
-    min-height: 100%;
-}
-
 li {
     list-style: initial;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}" class="{{body_class}}">
+<html lang="{{@site.locale}}" class="bg-grayPrimary">
 
 <head>
 
@@ -16,9 +16,9 @@
 
     </head>
 
-<body class="{{body_class}} bg-white dark:bg-grayPrimary font-text leading-normal tracking-normal text-grayPrimary dark:text-graySecondary px-2 sm:px-0">
+<body class="{{body_class}} bg-grayPrimary font-text leading-normal tracking-normal text-graySecondary px-2 sm:px-0">
 
-    <nav id="header" class="fixed top-0 w-full h-auto bg-white dark:bg-grayPrimary">
+    <nav id="header" class="top-0 w-full h-auto bg-grayPrimary">
 
 
         <div class="flex flex-wrap w-2/3 py-3 mx-auto mt-0">
@@ -41,7 +41,7 @@
 
 
 
-            <div class="z-20 flex-shrink w-full mx-auto mt-2 text-right sm:text-sm md:flex md:items-center md:w-auto md:mt-0"
+            <div class="z-50 flex-shrink w-full mx-auto mt-2 text-right sm:text-sm md:flex md:items-center md:w-auto md:mt-0"
                 id="nav-content">
                 {{navigation}}
             </div>
@@ -49,13 +49,13 @@
     </nav>
 
     <!--Container-->
-    <div class="px-4 mx-auto mt-8 max-w-7xl sm:mt-24 sm:px-6 lg:mt-20">
+    <div class="z-20 px-4 mx-auto mt-8 max-w-7xl sm:mt-24 sm:px-6 lg:mt-20">
 
         {{{body}}}
 
     </div>
 
-<footer class="bg-white dark:bg-grayPrimary font-text text-grayPrimary dark:text-graySecondary">
+<footer class="bg-grayPrimary font-text text-graySecondary">
   <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
 
             {{navigation type="secondary"}}
