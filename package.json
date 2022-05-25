@@ -4,9 +4,8 @@
     "demo": "https://alessandrobelli.it",
     "version": "0.4.0",
     "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
-    },
+        "ghost": ">=4.0.0"
+        },
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg"
@@ -84,15 +83,6 @@
             "default_image_posts": {
                 "type": "image",
                 "group": "post"
-            },
-            "dark_mode_selection": {
-                "type": "select",
-                "options": [
-                    "Always Dark",
-                    "Always Light",
-                    "Let user decide"
-                ],
-                "default": "Always Dark"
             }
         },
         "posts_per_page": 15,
