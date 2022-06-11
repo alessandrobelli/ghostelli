@@ -36,11 +36,8 @@ document.addEventListener('scroll', processScroll);
 
 {{/if}}
 
-
-
-
         {{#if feature_image}}
-        <div class="relative">
+      
   <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
       <div class="absolute inset-0">
@@ -107,11 +104,11 @@ document.addEventListener('scroll', processScroll);
 <aside class="w-full pb-4 gh-readmore">
     <div class="text-base gh-readmore-inner gh-container font-header">
         <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <p>{{title}}</p></a>{{/next_post}}
+            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <p class="ml-1">{{title}}</p></a>{{/next_post}}
         </div>
         <div class="gh-readmore-prev">
             {{#prev_post}}<a href="{{url}}">
-                <p>{{title}}</p> {{> "icons/arrow-right"}}
+                <p class="mr-1">{{title}}</p> {{> "icons/arrow-right"}}
             </a>{{/prev_post}}
         </div>
     </div>
