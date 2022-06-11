@@ -19,13 +19,6 @@
 <div id="nav-content">
   <ul class="z-50 hidden text-base text-center align-middle sm:flex sm:-my-px sm:ml-8 sm:space-x-8" id="myLinks">
 
-    <!-- Loop through the navigation items 
-    {{#foreach navigation}}
-  
-   <li class="nav-{{slug}} list-none {{#if current}}border-b-4 border-primary nav-current font-bold border-solid {{/if}} border-solid hover:border-b-4 hover:border-primary md:py-0 py-2 md:inline mr-4 hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink{{/if}} text-grayPrimary dark:text-graySecondary" href="{{url absolute=" true"}}">{{label}}</a></li>
-    {{/foreach}}
-     End the loop -->
-
          {{#foreach navigation}}
   
    <li class="nav-{{slug}} block first:ml-0 list-none md:py-0 py-2 md:inline hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline text-grayPrimary dark:text-graySecondary inline-flex items-center pt-1" href="{{url absolute=" true"}}">{{label}}</a></li>

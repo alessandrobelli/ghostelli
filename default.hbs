@@ -1,90 +1,62 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}" class="bg-grayPrimary">
-
-<head>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-
-    <title>{{meta_title}}</title>
-    {{ghost_head}}
-    {{!-- Outputs important meta data and settings, should always be in
-
-    <head> --}}
-
-    </head>
-
-<body class="{{body_class}} bg-grayPrimary font-text leading-normal tracking-normal text-graySecondary px-2 sm:px-0">
-
-    <nav id="header" class="top-0 w-full h-auto bg-grayPrimary">
-
-
-   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div class="justify-between block lg:h-16 sm:flex">
-                  <div class="items-center flex-shrink-0 block sm:flex">
-        <div class="block text-center sm:flex">
-                <a class="text-xl antialiased font-bold no-underline text-graySecondary hover:no-underline font-header sm:text-center"
-                    href="{{@site.url}}">
-                    {{#if @site.logo}}
-
-                    <img class="w-64 h-12 pr-2" src="{{@site.logo}}" alt= "{{@site.title}}">
-       
-                    {{else}}
-                    {{@site.title}}
-                    {{/if}}
-        
-                </a>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+      <title>{{meta_title}}</title>
+      {{ghost_head}}
+      {{!-- Outputs important meta data and settings, should always be in
+      <head> --}}
+   </head>
+   <body class="{{body_class}} bg-grayPrimary font-text leading-normal tracking-normal text-graySecondary px-2 sm:px-0">
+      <nav id="header" class="top-0 w-full h-auto bg-grayPrimary">
+         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="justify-between block align-middle lg:h-16 sm:flex">
+               <div class="items-center flex-shrink-0 block sm:flex">
+                  <div class="block text-center sm:flex">
+                     <a class="text-xl antialiased font-bold no-underline text-graySecondary hover:no-underline font-header sm:text-center"
+                        href="{{@site.url}}">
+                     {{#if @site.logo}}
+                     <img class="w-64 h-12 pr-2" src="{{@site.logo}}" alt= "{{@site.title}}">
+                     {{else}}
+                     {{@site.title}}
+                     {{/if}}
+                     </a>
+                  </div>
+                  {{navigation}}
+               </div>
             </div>
-
-
-  {{navigation}}
-
-</div>
- </div>
-   
-       
-        </div>
-    </nav>
-
-    <!--Container-->
-    <div class="z-20 px-4 mx-auto max-w-7xl sm:mt-6 sm:px-6 lg:mt-10">
-
-        {{{body}}}
-
-    </div>
-
-<footer class="bg-grayPrimary font-text text-graySecondary">
-  <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
-
+         </div>
+      </nav>
+      <!--Container-->
+      <div class="z-20 px-4 mx-auto max-w-7xl sm:mt-6 sm:px-6 lg:mt-10">
+         {{{body}}}
+      </div>
+      <footer class="bg-grayPrimary font-text text-graySecondary">
+         <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
             {{navigation type="secondary"}}
-
-    <div class="flex justify-center mt-8 space-x-6">
-      Ghost theme template by&nbsp;
-      <a class="underline" href="https://www.alessandrobelli.it" target="_blank" rel="noopener">
-         Alessandro Belli.
-      </a>
-    </div>
- </div>
-</footer>
-    <!--/container-->
-    {{ghost_foot}}
-
-<script>
-
-
-
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function mobileMenu() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-</script>
-</body>
-
+            <div class="flex justify-center mt-8 space-x-6">
+               Ghost theme template by&nbsp;
+               <a class="underline" href="https://www.alessandrobelli.it" target="_blank" rel="noopener">
+               Alessandro Belli.
+               </a>
+            </div>
+         </div>
+      </footer>
+      <!--/container-->
+      {{ghost_foot}}
+      <script>
+         /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+         function mobileMenu() {
+             var x = document.getElementById("myLinks");
+             if (x.style.display === "block") {
+                 x.style.display = "none";
+             } else {
+                 x.style.display = "block";
+             }
+         }
+      </script>
+   </body>
 </html>

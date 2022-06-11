@@ -1,116 +1,111 @@
 {{!< default}} 
 <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-  <div
-    class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
-  >
-  <img
-  class="object-cover w-full rounded-lg sm:h-12 md:h-36"
-  src="{{@site.cover_image}}"
-  alt=""
-/>
-{{#match @custom.homepage_layout "With Video(s)"}}
-    <h1>
+   <div
+   class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
+   >
+   <img
+      class="object-cover w-full rounded-lg sm:h-12 md:h-36"
+      src="{{@site.cover_image}}"
+      alt=""
+      />
+   {{#match @custom.homepage_layout "With Video(s)"}}
+   <h1>
       <span
-        class="block mt-1 text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl"
-      >
-        <span class="block text-graySecondary">
-          {{@custom.homepage_gray_text}} 
-        </span>
-        <span class="block text-primary">
-          {{@custom.homepage_green_text}}
-        </span>
+         class="block mt-1 text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl"
+         >
+      <span class="block text-graySecondary">
+      {{@custom.homepage_gray_text}} 
       </span>
-    </h1>
-    {{/match}}
-    {{#match @custom.homepage_layout "Full Width"}}
-<h1>
-  <div
-    class="justify-between block mt-1 text-4xl font-extrabold tracking-tight sm:flex sm:text-5xl xl:text-6xl"
-  >
-    <div class="block sm:text-left sm:flex text-graySecondary">
-      {{@custom.homepage_gray_text}}
-    </div>
-    <div class="block ml-0 sm:text-right sm:flex text-primary">
+      <span class="block text-primary">
       {{@custom.homepage_green_text}}
-    </div>
-  </div>
-</h1>
-    {{/match}}
-
-    <p
+      </span>
+      </span>
+   </h1>
+   {{/match}}
+   {{#match @custom.homepage_layout "Full Width"}}
+   <h1>
+      <div
+         class="justify-between block mt-1 text-4xl font-extrabold tracking-tight sm:flex sm:text-5xl xl:text-6xl"
+         >
+         <div class="block sm:text-left sm:flex text-graySecondary">
+            {{@custom.homepage_gray_text}}
+         </div>
+         <div class="block ml-0 sm:text-right sm:flex text-primary">
+            {{@custom.homepage_green_text}}
+         </div>
+      </div>
+   </h1>
+   {{/match}}
+   <p
       class="mt-3 text-base text-graySecondary sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
-    >
-       {{{@custom.homepage_text_with_html}}}
-    </p>
-
-
-        {{> subscribe}}
-
-  </div>
- {{#match @custom.homepage_layout "With Video(s)"}}
-  <div
-    class="relative mt-12 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
-  >
+      >
+      {{{@custom.homepage_text_with_html}}}
+   </p>
+   {{> subscribe}}
+</div>
+{{#match @custom.homepage_layout "With Video(s)"}}
+<div
+   class="relative mt-12 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+   >
+   <div class="relative w-full mx-auto rounded-lg shadow-lg lg:max-w-md">
+      {{#if @custom.youtube_video_1_id}}
+      <div class="mb-4">
+         <div class="youtube-player" class="" data-id="{{@custom.youtube_video_1_id}}"></div>
+      </div>
+      {{/if}}
+      {{#if @custom.youtube_video_2_id}}
+      <div class="youtube-player" class="" data-id="{{@custom.youtube_video_2_id}}"></div>
+      {{/if}}
+   </div>
+</div>
+{{/match}}
+</div>
+<script>
+   function hideNotification() {
+     
+       var form = document.querySelector(".subscription-form");
+       form.classList.remove("error");
+       form.classList.remove("success");
    
-    <div class="relative w-full mx-auto rounded-lg shadow-lg lg:max-w-md">
-
-
-{{#if @custom.youtube_video_1_id}}
-<div class="mb-4"><div class="youtube-player" class="" data-id="{{@custom.youtube_video_1_id}}"></div>
-</div>
-{{/if}}
-{{#if @custom.youtube_video_2_id}}
-<div class="youtube-player" class="" data-id="{{@custom.youtube_video_2_id}}"></div>
-{{/if}}
-    </div>
-  </div>
-  {{/match}}
-</div>
-    <script>
-function hideNotification() {
-  
-    var form = document.querySelector(".subscription-form");
-    form.classList.remove("error");
-    form.classList.remove("success");
-
-}
-  function labnolIframe(div) {
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute(
-      'src',
-      'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
-    );
-    iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('allowfullscreen', '1');
-    iframe.setAttribute(
-      'allow',
-      'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-    );
-    div.parentNode.replaceChild(iframe, div);
-  }
-
-  function initYouTubeVideos() {
-    var playerElements = document.getElementsByClassName('youtube-player');
-    for (var n = 0; n < playerElements.length; n++) {
-      var videoId = playerElements[n].dataset.id;
-      var div = document.createElement('div');
-      div.setAttribute('data-id', videoId);
-      var thumbNode = document.createElement('img');
-      thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace(
-        'ID',
-        videoId
-      );
-      div.appendChild(thumbNode);
-      var playButton = document.createElement('div');
-      playButton.setAttribute('class', 'play');
-      div.appendChild(playButton);
-      div.onclick = function () {
-        labnolIframe(this);
-      };
-      playerElements[n].appendChild(div);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', initYouTubeVideos);
-
-    </script>
+   }
+     function labnolIframe(div) {
+       var iframe = document.createElement('iframe');
+       iframe.setAttribute(
+         'src',
+         'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
+       );
+       iframe.setAttribute('frameborder', '0');
+       iframe.setAttribute('allowfullscreen', '1');
+       iframe.setAttribute(
+         'allow',
+         'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+       );
+       div.parentNode.replaceChild(iframe, div);
+     }
+   
+     function initYouTubeVideos() {
+       var playerElements = document.getElementsByClassName('youtube-player');
+       for (var n = 0; n < playerElements.length; n++) {
+         var videoId = playerElements[n].dataset.id;
+         var div = document.createElement('div');
+         div.setAttribute('data-id', videoId);
+         var thumbNode = document.createElement('img');
+         thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace(
+           'ID',
+           videoId
+         );
+         div.appendChild(thumbNode);
+         var playButton = document.createElement('div');
+         playButton.setAttribute('class', 'play');
+         div.appendChild(playButton);
+         div.onclick = function () {
+           labnolIframe(this);
+         };
+         playerElements[n].appendChild(div);
+       }
+     }
+   
+     document.addEventListener('DOMContentLoaded', initYouTubeVideos);
+   
+       
+</script>

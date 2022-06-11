@@ -1,117 +1,103 @@
 {{!< default}}
-
 {{#post}}
-
 <script>
-    let processScroll = () => {
-  let docElem = document.documentElement, 
-    docBody = document.body,
-    scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
-      scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
-    scrollPercent = scrollTop / scrollBottom * 100 + '%';  
-    document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
-}
-
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-document.addEventListener('scroll', processScroll);
-  }}
-  
+   let processScroll = () => {
+   let docElem = document.documentElement, 
+   docBody = document.body,
+   scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
+     scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
+   scrollPercent = scrollTop / scrollBottom * 100 + '%';  
+   document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
+   }
+   
+   document.onreadystatechange = function () {
+   if (document.readyState == "complete") {
+   document.addEventListener('scroll', processScroll);
+   }}
+   
 </script>
 <article class="gh-article p-0 {{post_class}} font-text post-full-content">
-<div id="progress-bar" class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></div>
-    <header class="pb-2 text-center">
-
-
-
-{{#if tags}}
-
-    {{#foreach tags}}
-<span
-  class="inline-flex mb-4 items-center px-2.5 py-0.5 rounded-md text-sm font-monospace bg-primary text-grayPrimary"
->
-  {{name}}
-</span>
-    {{/foreach}}
-
-{{/if}}
-
-        {{#if feature_image}}
-      
-  <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-      <div class="absolute inset-0">
-        <img
-        loading="lazy"
-          class="object-cover w-full h-full"
-         src="{{img_url feature_image size="xl"}}"
-            alt="{{title}}"
-        />
-        <div class="absolute inset-0 bg-grayPrimary mix-blend-hard-light"></div>
+   <div id="progress-bar" class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></div>
+   <header class="pb-2 text-center">
+      {{#if tags}}
+      {{#foreach tags}}
+      <span
+         class="inline-flex mb-4 items-center px-2.5 py-0.5 rounded-md text-sm font-monospace bg-primary text-grayPrimary"
+         >
+      {{name}}
+      </span>
+      {{/foreach}}
+      {{/if}}
+      {{#if feature_image}}
+      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+         <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+            <div class="absolute inset-0">
+               <img
+               loading="lazy"
+               class="object-cover w-full h-full"
+               src="{{img_url feature_image size="xl"}}"
+               alt="{{title}}"
+               />
+               <div class="absolute inset-0 bg-grayPrimary mix-blend-hard-light"></div>
+            </div>
+            <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+               <h1
+                  class="text-4xl font-extrabold tracking-tight text-center text-transparent sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"
+                  >
+                  {{title}}
+               </h1>
+            </div>
+         </div>
       </div>
-      <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-        <h1
-          class="text-4xl font-extrabold tracking-tight text-center text-transparent sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"
-        >
-{{title}}
-        </h1>
-
-    </div>
-  </div>
-</div>
-
-    
-        {{else}}
-        <h1
-  class="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl"
->
-  {{title}}
-</h1>
-        {{/if}}
-
-
-<span class="pt-2 m-1 text-xs font-subheader">
-  <time datetime="{{date format="DD-MM-YYYY"}}">
-    {{date format="D MMM YYYY"}}
-  </time>
-  <span class="bull">
-    •
-  </span>
-  {{reading_time}}
-</span>
-    </header>
-
-    <div class="w-full text-base prose-graySecondary gh-content font-text">
-        {{content}}
-    </div>
-
-    <footer class="pt-4">
-
-        <div class="text-sm gh-post-authors text-header">
-            Written by {{#foreach authors}}<a href="{{url}}" class="font-bold">{{name}}</a>{{/foreach}}
-        </div>
-
-        {{!--
-        <section class="gh-post-comments">
-            If you want to embed comments, this is a good place to do it!
-        </section>
-        --}}
-
-    </footer>
-
+      {{else}}
+      <h1
+         class="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl"
+         >
+         {{title}}
+      </h1>
+      {{/if}}
+      <span class="pt-2 m-1 text-xs font-subheader">
+      <time datetime="{{date format="DD-MM-YYYY"}}">
+      {{date format="D MMM YYYY"}}
+      </time>
+      <span class="bull">
+      •
+      </span>
+      {{reading_time}}
+      </span>
+   </header>
+   <div class="w-full text-base prose-graySecondary gh-content font-text">
+      {{content}}
+   </div>
+   <footer class="pt-4">
+      <div class="text-sm gh-post-authors text-header">
+         Written by {{#foreach authors}}<a href="{{url}}" class="font-bold">{{name}}</a>{{/foreach}}
+      </div>
+      {{!--
+      <section class="gh-post-comments">
+         If you want to embed comments, this is a good place to do it!
+      </section>
+      --}}
+   </footer>
 </article>
-
 <aside class="w-full pb-4 gh-readmore">
-    <div class="text-base gh-readmore-inner gh-container font-header">
-        <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <p class="ml-1">{{title}}</p></a>{{/next_post}}
-        </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <p class="mr-1">{{title}}</p> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
-        </div>
-    </div>
+   <div class="text-base gh-readmore-inner gh-container font-header">
+      <div class="gh-readmore-next">
+         {{#next_post}}
+         <a href="{{url}}">
+            {{> "icons/arrow-left"}} 
+            <p class="ml-1">{{title}}</p>
+         </a>
+         {{/next_post}}
+      </div>
+      <div class="gh-readmore-prev">
+         {{#prev_post}}
+         <a href="{{url}}">
+            <p class="mr-1">{{title}}</p>
+            {{> "icons/arrow-right"}}
+         </a>
+         {{/prev_post}}
+      </div>
+   </div>
 </aside>
-
 {{/post}}
