@@ -28,6 +28,43 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.subscription-form input,
+.subscription-form button {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid #cecece;
+  margin-bottom: 1em;
+}
+
+.subscription-form .success-message,
+.subscription-form .error-message {
+  display: none;
+}
+
+.subscription-form.error .error-message,
+.subscription-form.success .success-message {
+  display: block
+}
+
+.subscription-box {
+    background-color: lightyellow;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
 /* Progress bar */
 #progress-bar {
   --scrollAmount: 0%;

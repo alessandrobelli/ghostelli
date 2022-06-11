@@ -1,8 +1,8 @@
 {
     "name": "ghostelli",
-    "description": "A custom theme for ghost, made by Alessandro Belli",
+    "description": "A Blog+Newesletter theme for ghost, made by Alessandro Belli",
     "demo": "https://alessandrobelli.it",
-    "version": "0.4.0",
+    "version": "0.6.0",
     "engines": {
         "ghost": ">=4.0.0"
     },
@@ -46,7 +46,7 @@
         "@tailwindcss/typography": "^0.5.2",
         "autoprefixer": "^10.4.7",
         "cssnano": "5.0.1",
-        "gscan": "^4.27.0",
+        "gscan": "^4.31.2",
         "gulp": "4.0.2",
         "gulp-livereload": "4.0.2",
         "gulp-postcss": "9.0.0",
@@ -58,31 +58,53 @@
         "postcss": "^8.4.14",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
-        "tailwindcss": "^3.0.24"
+        "tailwindcss": "^3.1.2"
     },
     "browserslist": [
         "defaults"
     ],
     "config": {
+        "card_assets": true,
         "custom": {
             "youtube_video_1_id": {
                 "type": "text",
                 "default": "jNQXAC9IVRw",
-                "group": "Homepage"
+                "group": "homepage"
             },
             "youtube_video_2_id": {
                 "type": "text",
                 "default": "jNQXAC9IVRw",
-                "group": "Homepage"
+                "group": "homepage"
             },
             "homepage_text_with_html": {
                 "type": "text",
-                "group": "Homepage",
+                "group": "homepage",
                 "default": "Enter the text shown in the homepage, like your website description."
+            },
+            "homepage_gray_text": {
+                "type": "text",
+                "group": "homepage",
+                "default": "This text will be gray"
+            },
+            "homepage_green_text": {
+                "type": "text",
+                "group": "homepage",
+                "default": "And this green."
             },
             "default_image_posts": {
                 "type": "image",
                 "group": "post"
+            },
+            "homepage_layout": {
+                "type": "select",
+                "options": ["Full Width", "With Video(s)"],
+                "group": "homepage",
+                "default": "With Video(s)"
+            },
+            "sub_homepage_text":{
+                "type":"text",
+                "group": "homepage",
+                "default": "Subscribe to my newsletter."
             }
         },
         "posts_per_page": 15,

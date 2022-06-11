@@ -33,36 +33,16 @@
     {{/if}}
   </div>
 {{/if}}
-<div
-  class="hidden w-2/3 py-2 mx-auto text-base antialiased text-center font-header md:block lg:block"
->
-  {{#if @member}}
-    <button
-      class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-account"
-      data-portal="account"
-    >
-      Account
-    </button>
-    {{#unless @member.paid}}
-      <button
-        class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-upgrade"
-        data-portal="account/plans"
-      >
-        Upgrade
-      </button>
-    {{/unless}}
-  {{else}}
-    <button
-      class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-primary hover:bg-green-700 members-login"
-      data-portal="signin"
-    >
-      Login
-    </button>
-    <button
-      class="px-4 py-2 font-bold rounded text-grayPrimary hover:text-graySecondary bg-mypink hover:bg-red-700 members-subscribe"
-      data-portal="signup"
-    >
-      Subscribe
-    </button>
-  {{/if}}
-</div>
+<form class="subscription-form" data-members-form="signup">
+  <input data-members-name type="text" placeholder="name" required />
+  <input data-members-email type="email" placeholder="email" required />
+  <button class="btn" type="submit">
+    Singup
+  </button>
+  <div class="success-message">
+    Great! Check your inbox and click the link.
+  </div>
+  <div class="error-message">
+    Sorry, something went wrong. Please try again.
+  </div>
+</form>

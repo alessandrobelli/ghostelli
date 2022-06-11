@@ -21,30 +21,30 @@
     <nav id="header" class="top-0 w-full h-auto bg-grayPrimary">
 
 
-        <div class="flex flex-wrap w-2/3 py-3 mx-auto mt-0">
-
-            <div class="w-full pr-8 mx-auto text-center md:w-full lg:w-auto xl:w-auto">
-                <a class="text-xl antialiased font-bold no-underline text-grayPrimary hover:no-underline font-header sm:text-center"
+   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+                  <div class="flex items-center flex-shrink-0">
+<div class="block sm:flex">
+                <a class="text-xl antialiased font-bold no-underline text-graySecondary hover:no-underline font-header sm:text-center"
                     href="{{@site.url}}">
                     {{#if @site.logo}}
-                    <picture>
-                    <source
-                    srcset="https://alessandrobelli.it/content/images/2021/10/Copy-of-Logo-Alessandro-Belli--1-.svg"
-                    media="(prefers-color-scheme: dark)">
+
                     <img class="w-64 h-12" src="{{@site.logo}}" alt= "{{@site.title}}">
-                    </picture>
+       
                     {{else}}
                     {{@site.title}}
                     {{/if}}
+        
                 </a>
             </div>
 
 
+  {{navigation}}
 
-            <div class="z-50 flex-shrink w-full mx-auto mt-2 text-right sm:text-sm md:flex md:items-center md:w-auto md:mt-0"
-                id="nav-content">
-                {{navigation}}
-            </div>
+</div>
+ </div>
+   
+       
         </div>
     </nav>
 
@@ -62,8 +62,8 @@
 
     <div class="flex justify-center mt-8 space-x-6">
       Ghost theme template by&nbsp;
-      <a class="underline" href="#" target="_blank" rel="noopener">
-         Me.
+      <a class="underline" href="https://www.alessandrobelli.it" target="_blank" rel="noopener">
+         Alessandro Belli.
       </a>
     </div>
  </div>

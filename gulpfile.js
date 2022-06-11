@@ -96,7 +96,9 @@ const hbsWatcher = () =>
 const watcher = parallel(cssWatcher, hbsWatcher);
 const build = series(css, js);
 const dev = series(build, serve, watcher);
+const all = series(css, js, hbs);
 
 exports.build = build;
+exports.all = all;
 exports.zip = series(build, zipper);
 exports.default = dev;
