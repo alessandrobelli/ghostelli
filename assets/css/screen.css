@@ -29,18 +29,12 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 .subscription-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 30rem;
 }
 
 .subscription-form input,
 .subscription-form button {
   padding: 10px;
-  border-radius: 5px;
   box-shadow: none;
-  border: 1px solid #cecece;
   margin-bottom: 1em;
 }
 
