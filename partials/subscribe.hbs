@@ -1,15 +1,17 @@
+<!-- If member, show the name + button for account -->
+<!-- If not, show the form to sign for the newsletter -->
 {{#if @member}}
-  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+  <div class="w-full px-4 py-12 mx-auto sm:max-w-7xl sm:px-6 lg:py-16 lg:px-8">
     <div class="flex items-center">
       <div>
         <img
           class="inline-block rounded-full h-9 w-9"
           src="{{@member.avatar_image}}"
-          alt=""
+          alt="Your Profile Picture"
         />
       </div>
       <div class="ml-3">
-        <p class="text-sm font-medium text-graySecondary">
+        <p class="font-medium text-graySecondary">
           {{#if @member.name}}
             {{@member.name}}
           {{else}}
@@ -17,8 +19,9 @@
           {{/if}}
         </p>
         <button
-          class="text-xs font-medium text-primary group-hover:text-graySecondary"
+          class="font-medium text-primary group-hover:text-graySecondary"
           data-portal="account"
+          title="your account"
         >
           View profile
         </button>

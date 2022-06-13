@@ -1,31 +1,32 @@
 {{!< default}} 
 <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+   <!-- Match tags are used when changing the layout -->
    <div
-   class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
+   class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-13 sm:col-start-2 sm:col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
    >
    <img
       class="object-cover w-full rounded-lg sm:h-12 md:h-36"
       src="{{@site.cover_image}}"
-      alt=""
+      alt="cover photo"
       />
    {{#match @custom.homepage_layout "With Video(s)"}}
    <h1>
-      <span
-         class="block mt-1 text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl"
+      <div
+         class="block mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl"
          >
-      <span class="block text-graySecondary">
+      <div class="block text-graySecondary">
       {{@custom.homepage_gray_text}} 
-      </span>
-      <span class="block text-primary">
+      </div>
+      <div class="block text-primary">
       {{@custom.homepage_green_text}}
-      </span>
-      </span>
+      </div>
+      </div>
    </h1>
    {{/match}}
    {{#match @custom.homepage_layout "Full Width"}}
    <h1>
       <div
-         class="justify-between block mt-1 text-4xl font-extrabold tracking-tight sm:flex sm:text-5xl xl:text-6xl"
+         class="justify-between block mt-1 text-4xl font-extrabold tracking-tight sm:flex sm:text-5xl"
          >
          <div class="block sm:text-left sm:flex text-graySecondary">
             {{@custom.homepage_gray_text}}
@@ -61,6 +62,7 @@
 {{/match}}
 </div>
 <script>
+   // function to hide notification box
    function hideNotification() {
      
        var form = document.querySelector(".subscription-form");
@@ -68,6 +70,7 @@
        form.classList.remove("success");
    
    }
+   // functions to use the thumbnail as image and not load the whole YouTube video when loading the webpage
      function labnolIframe(div) {
        var iframe = document.createElement('iframe');
        iframe.setAttribute(

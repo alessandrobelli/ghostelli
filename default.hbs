@@ -14,9 +14,8 @@
       <nav id="header" class="top-0 w-full h-auto bg-grayPrimary">
          <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="items-center justify-between flex-shrink-0 block align-middle lg:h-16 sm:flex">
-      
                   <div class="block text-center sm:flex">
-                     <a class="text-xl antialiased font-bold no-underline text-graySecondary hover:no-underline font-header sm:text-center"
+                     <a class="mt-2 text-2xl antialiased font-bold no-underline sm:mt-0 text-graySecondary hover:no-underline font-header sm:text-center"
                         href="{{@site.url}}">
                      {{#if @site.logo}}
                      <img class="w-64 h-12 pr-2" src="{{@site.logo}}" alt= "{{@site.title}}">
@@ -24,7 +23,6 @@
                      {{@site.title}}
                      {{/if}}
                      </a>
-        
                   {{navigation}}
                </div>
             </div>
@@ -33,18 +31,36 @@
       <!--Container-->
       <div class="z-20 px-4 mx-auto max-w-7xl sm:px-6 ">
          {{{body}}}
+         <footer class="bg-grayPrimary font-text text-graySecondary max-w-7xl">
+  <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
+    {{navigation type="secondary"}}
+    <div class="items-center justify-center block mt-8 text-center">
+      <div class="block w-full">
+        Published with
+        <a class="underline" href="https://www.ghost.org" title="Ghost">
+          Ghost
+        </a>
       </div>
-      <footer class="bg-grayPrimary font-text text-graySecondary">
-         <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
-            {{navigation type="secondary"}}
-            <div class="flex justify-center mt-8 space-x-6">
-               Ghost theme template by&nbsp;
-               <a class="underline" href="https://www.alessandrobelli.it" target="_blank" rel="noopener">
-               Alessandro Belli.
-               </a>
-            </div>
-         </div>
-      </footer>
+      {{#if @custom.theme_creator_attribution}}
+        <div class="block w-full">
+          Ghost theme template by
+          <a
+            class="underline"
+            href="https://www.alessandrobelli.it"
+            target="_blank"
+            rel="noopener"
+            title="Theme Creator"
+          >
+            Alessandro Belli
+          </a>
+          .
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</footer>
+      </div>
+ 
       <!--/container-->
       {{ghost_foot}}
       <script>

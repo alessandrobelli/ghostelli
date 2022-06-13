@@ -105,6 +105,10 @@
                 "type":"text",
                 "group": "homepage",
                 "default": "Subscribe to my newsletter."
+            },
+            "theme_creator_attribution": {
+                "type": "boolean",
+                "default": true
             }
         },
         "posts_per_page": 15,
