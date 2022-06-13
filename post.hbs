@@ -22,7 +22,7 @@
       {{#if tags}}
       {{#foreach tags}}
       <span
-         class="inline-flex mb-4 items-center px-2.5 py-0.5 rounded-md text-sm font-monospace bg-primary text-grayPrimary"
+         class="inline-flex items-center mb-4 text-base font-semibold tracking-wide uppercase text-graySecondary"
          >
       {{name}}
       </span>
@@ -51,7 +51,7 @@
       </div>
       {{else}}
       <h1
-         class="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl"
+         class="text-4xl font-extrabold leading-tight tracking-tight text-center sm:text-5xl lg:text-6xl"
          >
          {{title}}
       </h1>
@@ -66,7 +66,7 @@
       {{reading_time}}
       </span>
    </header>
-   <div class="w-full text-base prose-graySecondary gh-content font-text">
+   <div class="w-full text-base font-normal leading-normal sm:leading-relaxed prose-graySecondary md:prose-lg gh-content font-text ">
       {{content}}
    </div>
    <footer class="pt-4">

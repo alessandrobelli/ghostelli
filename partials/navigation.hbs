@@ -21,7 +21,7 @@
 
          {{#foreach navigation}}
   
-   <li class="nav-{{slug}} block first:ml-0 list-none md:py-0 py-2 md:inline hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline text-grayPrimary dark:text-graySecondary inline-flex items-center pt-1" href="{{url absolute=" true"}}">{{label}}</a></li>
+   <li class="nav-{{slug}} last:border-b-2 sm:last:border-b-0 sm:hover:bg-transparent hover:bg-primary/50 block first:ml-0 list-none md:py-0 py-2 md:inline hover:text-graySecondary"><a class="{{#if current}}dark:text-mypink text-mypink underline decoration-4 decoration-green-400{{/if}} hover:decoration-green-400 hover:underline text-grayPrimary dark:text-graySecondary inline-flex items-center pt-1" href="{{url absolute=" true"}}">{{label}}</a></li>
     {{/foreach}}
   </ul>
   </div>
