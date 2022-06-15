@@ -1,9 +1,7 @@
 {{!
 Re-usable card for linking to posts
 }}
-<article
-  class="z-0 flex flex-col overflow-hidden rounded-lg shadow-lg article-tag"
->
+<article class="z-0 flex flex-col overflow-hidden rounded-lg article-tag">
   <a class="" href="{{url}}">
     <div class="flex-shrink-0">
       {{#if feature_image}}
@@ -33,14 +31,14 @@ Re-usable card for linking to posts
     </div>
     <div class="flex flex-col justify-between flex-1 p-6 bg-white">
       <div class="flex-1">
-        <h2 class="text-xl font-semibold text-gray-900">
+        <h2 class="text-xl font-semibold text-grayPrimary">
           {{title}}
         </h2>
-        <p class="mt-3 text-base text-gray-500">
+        <p class="mt-3 text-base text-graySecondary">
           {{excerpt}}
         </p>
       </div>
-      <div class="flex my-4 space-x-1 text-sm text-gray-500">
+      <div class="flex my-4 space-x-1 text-sm text-graySecondary">
         <time datetime="{{date format="YYYY-MM-DD"}}">
           {{date format="DD.MM.YYYY"}}
         </time>

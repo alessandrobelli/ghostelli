@@ -66,6 +66,12 @@
     "config": {
         "card_assets": true,
         "custom": {
+            "homepage_layout": {
+                "type": "select",
+                "options": ["Full Width", "With Video(s)"],
+                "group": "homepage",
+                "default": "With Video(s)"
+            },
             "youtube_video_1_id": {
                 "type": "text",
                 "default": "jNQXAC9IVRw",
@@ -91,25 +97,25 @@
                 "group": "homepage",
                 "default": "And this green."
             },
-            "default_image_posts": {
-                "type": "image",
-                "group": "post"
-            },
-            "homepage_layout": {
-                "type": "select",
-                "options": ["Full Width", "With Video(s)"],
-                "group": "homepage",
-                "default": "With Video(s)"
-            },
             "sub_homepage_text":{
                 "type":"text",
                 "group": "homepage",
                 "default": "Subscribe to my newsletter."
             },
+           "featured_in_homepage": {
+                "type": "boolean",
+                "default": false,
+                "group": "homepage"
+            },
             "theme_creator_attribution": {
                 "type": "boolean",
                 "default": true
+            },
+                        "default_image_posts": {
+                "type": "image",
+                "group": "post"
             }
+
         },
         "posts_per_page": 15,
         "image_sizes": {
