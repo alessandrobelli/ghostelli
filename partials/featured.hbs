@@ -4,12 +4,13 @@
 
 {{#is "home"}}
 {{#get "posts" filter="featured:true" limit="3"}}
+
+{{#if posts}}
 <h2
   class="mt-8 text-3xl font-extrabold tracking-tight text-graySecondary gh-title sm:text-4xl"
 >
   Feautured Post(s)
 </h2>
-{{#if posts}}
 {{#foreach posts}}
 <div class="relative mt-8 bg-white rounded-lg first:mt-0">
    <div
@@ -69,12 +70,12 @@
 {{/get}}
 {{else}}
 {{#get "posts" filter="featured:true+tag:{{slug}}" limit="3"}}
+{{#if posts}}
 <h2
   class="mt-8 text-3xl font-extrabold tracking-tight text-graySecondary gh-title sm:text-4xl"
 >
   Feautured Post(s)
 </h2>
-{{#if posts}}
 {{#foreach posts}}
 <div class="relative mt-8 bg-white rounded-lg first:mt-0">
    <div
