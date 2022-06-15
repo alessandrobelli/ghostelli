@@ -1,5 +1,5 @@
   {{#unless isSecondary}}
-
+  <!-- mobile menu hamburger -->
   <div class="w-full sm:hidden" onclick="mobileMenu()">
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@
     ></path>
   </svg>
 </div>
+<!-- menu -->
 <div id="nav-content">
   <ul class="z-50 hidden text-base text-center align-middle select-none sm:flex sm:-my-px sm:ml-8 sm:space-x-8" id="myLinks">
 
@@ -34,6 +35,6 @@
    {{label}}
   </a>
 </div>
-      {{/foreach}}
+    {{/foreach}}
 </nav>
 {{/if}}
