@@ -1,13 +1,14 @@
 <!-- Featured posts: you can reuse this page anywhere to show featured -->
 <!-- or use it in tags/pages to show matching slug featured posts -->
 {{^is "paged"}}
-<h2
-   class="mt-8 text-3xl font-extrabold tracking-tight text-graySecondary gh-title sm:text-4xl"
-   >
-   Feautured Post(s)
-</h2>
+
 {{#is "home"}}
 {{#get "posts" filter="featured:true" limit="3"}}
+<h2
+  class="mt-8 text-3xl font-extrabold tracking-tight text-graySecondary gh-title sm:text-4xl"
+>
+  Feautured Post(s)
+</h2>
 {{#if posts}}
 {{#foreach posts}}
 <div class="relative mt-8 bg-white rounded-lg first:mt-0">
@@ -68,6 +69,11 @@
 {{/get}}
 {{else}}
 {{#get "posts" filter="featured:true+tag:{{slug}}" limit="3"}}
+<h2
+  class="mt-8 text-3xl font-extrabold tracking-tight text-graySecondary gh-title sm:text-4xl"
+>
+  Feautured Post(s)
+</h2>
 {{#if posts}}
 {{#foreach posts}}
 <div class="relative mt-8 bg-white rounded-lg first:mt-0">
