@@ -111,7 +111,7 @@
                 "type": "boolean",
                 "default": true
             },
-                        "default_image_posts": {
+            "default_image_posts": {
                 "type": "image",
                 "group": "post"
             }
