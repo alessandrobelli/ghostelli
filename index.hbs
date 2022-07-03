@@ -4,9 +4,10 @@
    <div
    class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-13 sm:col-start-2 sm:col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
    >
+
    <img
       class="object-cover w-full rounded-lg sm:h-12 md:h-36"
-      src="{{@site.cover_image}}"
+      src="{{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset 'images/ghostelli_default_cover.png'}}{{/if}}"
       alt="cover photo"
       />
    {{#match @custom.homepage_layout "With Video(s)"}}
