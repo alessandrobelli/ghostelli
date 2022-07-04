@@ -1,8 +1,8 @@
 {
     "name": "ghostelli",
-    "description": "A Blog+Newesletter theme for ghost, made by Alessandro Belli",
+    "description": "A higly customizable Blog+Newesletter theme for Ghost, made by Alessandro Belli",
     "demo": "https://alessandrobelli.it",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "engines": {
         "ghost": ">=4.0.0"
     },
@@ -85,7 +85,7 @@
             "homepage_text_with_html": {
                 "type": "text",
                 "group": "homepage",
-                "default": "Enter the text shown in the homepage, like your website description."
+                "default": "Enter the text shown in the homepage, such as your website description."
             },
             "homepage_gray_text": {
                 "type": "text",

@@ -1,8 +1,20 @@
 # Ghostelli
 
-📽️ Video Tutorial: coming soon!
+The Ghostelli project is a higly customizable theme for the Ghost framework. The theme's design and is designed to be easily customizable, starting with the homepage's layout:
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+Following, on the left you can see the `Full Width` layout, on the right the `With Video(s)` layout:
+
+![2 layout ghostelli](https://user-images.githubusercontent.com/3796324/177172138-71ef6980-90de-4c0e-b68c-14c739e07b9a.png)
+
+When using the `With Video(s)`  layout, you can add max 2 videos, but the theme works well also with 1 video, vertical centered on the right.
+
+## Featured articles
+
+When you feature an article, you'll see it in the homepage as well as on top of the `Tag` page.
+
+
+## Ghost General information
+[Ghost](https://ghost.org/) uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
 
 I developed this theme using this tutorial: https://dev.to/mattlehrer/how-to-setup-tailwindcss-with-a-custom-ghost-theme-5hmk
 
@@ -23,7 +35,10 @@ The image used in the homepage is the `Publication Cover` setting in Ghost.
     - `theme_creator_attribution` - decide if you want to link my website or not, your choice!
     - `default_image_posts` - insert your default image for the posts used in tags or favorite.
 
+If you don't set `default_image_posts`, Ghost will use the image `ghostelli_default_cover.png`, stored in `assets\images\`.
+
 # Custom pages
 - `subscribe.hbs` - contains the buttons used in the homepage "Login - Subscribe".
 - `featured.hbs` - show your featured on the tag page, filtered by that tag, or in any page, including all the featured.
+- `featured_content.hbs` - contains the actual loop for the featured posts.
 - `pagination.hbs` - custom pagination, show only next and previous.
