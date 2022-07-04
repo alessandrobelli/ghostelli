@@ -1,4 +1,13 @@
-# Ghostelli
+##### Table of Contents  
+
+[Ghostelli](#ghostelli)
+[Featured articles](#featured-articles)
+[Tag Image and Page Image](#tag-image-and-page-image)
+[Ghost General Information](#ghost-general-information)
+[Customization](#customization)
+[Custom Pages](#custom-pages)
+
+## Ghostelli
 
 The Ghostelli project is a higly customizable theme for the Ghost framework. The theme's design and is designed to be easily customizable, starting with the homepage's layout:
 
@@ -8,28 +17,20 @@ Following, on the left you can see the `Full Width` layout, on the right the `Wi
 
 When using the `With Video(s)`  layout, you can add max 2 videos, but the theme works well also with 1 video, vertical centered on the right.
 
-## Featured articles
+### Featured articles
 
 When you feature an article, you'll see it in the homepage as well as on top of the `Tag` page.
 
-## Tag Image and Page Image
+### Tag Image and Page Image
 
 On the Tag and generally in pages the image is set as [Hero Section](https://www.awebco.com/blog/hero-section/#:~:text=your%20own%20webpages.-,What%20is%20a%20Hero%20Section%3F,What%20you%20have%20to%20offer). You can see an example here:
 ![Hero Section](https://user-images.githubusercontent.com/3796324/177176739-22b94829-89a5-4ddf-ade7-e1222cf04090.png)
 
-With the image, the same example looks like this:
+Without the image, the same example looks like this:
 
 ![Without Hero Section](https://user-images.githubusercontent.com/3796324/177176852-6272011c-0fdd-4c1e-a0bc-15bf9ecb49cd.png)
 
-
-## Ghost General information
-[Ghost](https://ghost.org/) uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-I developed this theme using this tutorial: https://dev.to/mattlehrer/how-to-setup-tailwindcss-with-a-custom-ghost-theme-5hmk
-
-&nbsp;
-
-# Customization
+## Customization
 
 The image used in the homepage is the `Publication Cover` setting in Ghost.
 
@@ -46,26 +47,35 @@ The image used in the homepage is the `Publication Cover` setting in Ghost.
 
 If you don't set `default_image_posts`, Ghost will use the image `ghostelli_default_cover.png`, stored in `assets\images\`.
 
-# Custom pages
+## Custom pages
 - `subscribe.hbs` - contains the buttons used in the homepage "Login - Subscribe".
 - `featured.hbs` - show your featured on the tag page, filtered by that tag, or in any page, including all the featured.
 - `featured_content.hbs` - contains the actual loop for the featured posts.
 - `pagination.hbs` - custom pagination, show only next and previous.
 
-## Contributing
+
+## Misc
+
+### Ghost General information
+[Ghost](https://ghost.org/) uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+
+I developed this theme using this tutorial: https://dev.to/mattlehrer/how-to-setup-tailwindcss-with-a-custom-ghost-theme-5hmk
+
+&nbsp;
+### Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
+### Security
 
 If you discover any security related issues, please email info@alessandrobelli.it instead of using the issue tracker.
 
 
-## Credits
+### Credits
 
 - [Alessandro Belli](https://github.com/AlessandroBelli)
 - [All Contributors](../../contributors)
 
-## License
+### License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
