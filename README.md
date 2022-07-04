@@ -1,11 +1,16 @@
 ##### Table of Contents  
 
-1. [Ghostelli](#ghostelli)
-2. [Featured articles](#featured-articles)
-3. [Tag Image and Page Image](#tag-image-and-page-image)
-4. [Ghost General Information](#ghost-general-information)
-5. [Customization](#customization)
-6. [Custom Pages](#custom-pages)
+- [Ghostelli](#ghostelli)
+  - [Featured articles](#featured-articles)
+  - [Tag Image and Page Image](#tag-image-and-page-image)
+- [Customization](#customization)
+- [Custom pages](#custom-pages)
+- [Misc](#misc)
+  - [Ghost General information](#ghost-general-information)
+  - [Contributing](#contributing)
+  - [Security](#security)
+  - [Credits](#credits)
+  - [License](#license)
 
 ## Ghostelli
 
@@ -39,11 +44,12 @@ The image used in the homepage is the `Publication Cover` setting in Ghost.
     - `homepage_layout` - you can choose between the layout with 2 YouTube videos or a full-page. You can also show just 1 video, remember to change the default value!
     - `youtube_video_1_id` `youtube_video_2_id` - id of the video(s). You can find the id after the `watch?=` in the url, and eventually before a &.
     - `homepage_text_with_html` - Enter the text shown in the homepage. You can also enter html! Try the link anchor: `<a href="#" title="link">MyLink</a>`. Unfortunately Ghost doesn't provide a textarea, so it's a little uncomfortable to write here.
-    - `homepage_gray_text` - text shown in gray, the one on top in the youtube layout, or on the left in the full-width.
+    - `homepage_gray_text` - text shown in gray, the one on top in the youtube layout, or on the left in the full-width. In full-width, you can omit this to place the `homepage_green_text` on the left.
     - `homepage_green_text` - text shown in light green, the one on the bottom in the youtube layout, or on the right in the full-width.
     - `sub_homepage_text` - subscribe text shown in the homepage above the form.
     - `theme_creator_attribution` - decide if you want to link my website or not, your choice!
     - `default_image_posts` - insert your default image for the posts used in tags or favorite.
+    - `featured_posts_style` - Full Width is ideal for 1/2 featured articles, cards is the best when you have (max) 3.
 
 If you don't set `default_image_posts`, Ghost will use the image `ghostelli_default_cover.png`, stored in `assets\images\`.
 

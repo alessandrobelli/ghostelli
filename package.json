@@ -114,6 +114,11 @@
             "default_image_posts": {
                 "type": "image",
                 "group": "post"
+            },
+            "featured_posts_style": {
+                "type": "select",
+                "options": ["Full Width", "Classic Cards"],
+                "default": "Full Width"
             }
 
         },

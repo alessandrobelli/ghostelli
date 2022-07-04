@@ -36,10 +36,12 @@
       <div
          class="justify-between block mt-1 text-4xl font-extrabold tracking-tight sm:flex sm:text-5xl"
          >
+         {{#if @custom.homepage_gray_text}}
          <div class="block sm:text-left sm:flex text-graySecondary">
             {{@custom.homepage_gray_text}}
          </div>
-         <div class="block ml-0 sm:text-right sm:flex text-primary">
+         {{/if}}
+         <div class="block ml-0 {{#match @custom.homepage_gray_text ""}}sm:text-left{{else}}sm:text-right{{/match}} sm:flex text-primary">
             {{@custom.homepage_green_text}}
          </div>
       </div>
