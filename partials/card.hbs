@@ -22,7 +22,7 @@ Re-usable card for linking to posts
       {{else}}
         <img
           class="object-cover w-full h-48"
-          src="{{#if @custom.default_image_posts}}{{@custom.default_image_posts}}{{else}}{{asset "images/ghostelli_default_cover.png"}}{{/if}}"
+          src="{{#if @custom.default_image_posts}}{{@custom.default_image_posts}}{{else}}{{asset "images/default.jpg"}}{{/if}}"
           sizes="(max-width: 600px) 400px, 600px"
           src="{{img_url feature_image size="m"}}"
           alt="{{title}}"
@@ -52,7 +52,7 @@ Re-usable card for linking to posts
       <div class="w-full mx-auto mb-2 text-center">
         <a
           href="{{url}}"
-          class="text-base font-semibold text-grayPrimary transition-colors duration-300 ease-in-out hover:text-mypink "
+          class="text-base font-semibold transition-colors duration-300 ease-in-out text-grayPrimary hover:text-mypink "
         >
           Read more
           <span aria-hidden="true">

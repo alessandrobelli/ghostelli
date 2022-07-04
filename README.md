@@ -4,13 +4,22 @@ The Ghostelli project is a higly customizable theme for the Ghost framework. The
 
 Following, on the left you can see the `Full Width` layout, on the right the `With Video(s)` layout:
 
-![2 layout ghostelli](https://user-images.githubusercontent.com/3796324/177172138-71ef6980-90de-4c0e-b68c-14c739e07b9a.png)
+![2 layout ghostelli](https://user-images.githubusercontent.com/3796324/177175374-7e86832c-f2db-4626-a06e-049cfe359a8b.png)
 
 When using the `With Video(s)`  layout, you can add max 2 videos, but the theme works well also with 1 video, vertical centered on the right.
 
 ## Featured articles
 
 When you feature an article, you'll see it in the homepage as well as on top of the `Tag` page.
+
+## Tag Image and Page Image
+
+On the Tag and generally in pages the image is set as [Hero Section](https://www.awebco.com/blog/hero-section/#:~:text=your%20own%20webpages.-,What%20is%20a%20Hero%20Section%3F,What%20you%20have%20to%20offer). You can see an example here:
+![Hero Section](https://user-images.githubusercontent.com/3796324/177176739-22b94829-89a5-4ddf-ade7-e1222cf04090.png)
+
+With the image, the same example looks like this:
+
+![Without Hero Section](https://user-images.githubusercontent.com/3796324/177176852-6272011c-0fdd-4c1e-a0bc-15bf9ecb49cd.png)
 
 
 ## Ghost General information
@@ -42,3 +51,21 @@ If you don't set `default_image_posts`, Ghost will use the image `ghostelli_defa
 - `featured.hbs` - show your featured on the tag page, filtered by that tag, or in any page, including all the featured.
 - `featured_content.hbs` - contains the actual loop for the featured posts.
 - `pagination.hbs` - custom pagination, show only next and previous.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Security
+
+If you discover any security related issues, please email info@alessandrobelli.it instead of using the issue tracker.
+
+
+## Credits
+
+- [Alessandro Belli](https://github.com/AlessandroBelli)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
