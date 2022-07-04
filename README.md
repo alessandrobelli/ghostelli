@@ -1,11 +1,11 @@
 ##### Table of Contents  
 
-[Ghostelli](#ghostelli)
-[Featured articles](#featured-articles)
-[Tag Image and Page Image](#tag-image-and-page-image)
-[Ghost General Information](#ghost-general-information)
-[Customization](#customization)
-[Custom Pages](#custom-pages)
+1. [Ghostelli](#ghostelli)
+2. [Featured articles](#featured-articles)
+3. [Tag Image and Page Image](#tag-image-and-page-image)
+4. [Ghost General Information](#ghost-general-information)
+5. [Customization](#customization)
+6. [Custom Pages](#custom-pages)
 
 ## Ghostelli
 
@@ -61,7 +61,6 @@ If you don't set `default_image_posts`, Ghost will use the image `ghostelli_defa
 
 I developed this theme using this tutorial: https://dev.to/mattlehrer/how-to-setup-tailwindcss-with-a-custom-ghost-theme-5hmk
 
-&nbsp;
 ### Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
