@@ -12,8 +12,8 @@
    </head>
    <body class="{{body_class}} bg-grayPrimary font-text leading-normal tracking-normal text-graySecondary px-2 sm:px-0">
       <nav id="header" class="top-0 w-full h-auto bg-grayPrimary">
-         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="items-center justify-between flex-shrink-0 block align-middle lg:h-16 sm:flex">
+         <div class="items-center px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="items-center {{#match @custom.homepage_layout "Full Width"}}justify-center {{else}}justify-between {{/match}} flex-shrink-0 block align-middle lg:h-16 sm:flex">
                   <div class="block text-center sm:flex">
                      <a class="mt-2 text-2xl antialiased font-bold no-underline sm:mt-0 text-graySecondary hover:no-underline font-header sm:text-center"
                         href="{{@site.url}}">
