@@ -12,14 +12,18 @@
         >
           {{#if feature_image}}
             <img
-              class="object-cover w-full h-full"
-              src="{{img_url feature_image size="m"}}&sat=-100"
+              class="object-cover w-full h-full grayscale"
+              src="{{img_url feature_image size="m"}}"
               alt="{{title}}"
             />
           {{else}}
             <img
-              class="object-cover w-full h-full"
-              src="{{@custom.default_image_posts}}"
+              class="object-cover w-full h-full grayscale"
+              src="{{#if @custom.default_image_posts}}
+  {{@custom.default_image_posts}}
+{{else}}
+  {{asset "images/default.jpg"}}
+{{/if}}"
               alt=""
             />
           {{/if}}
@@ -77,7 +81,7 @@
     <div class="flex-shrink-0">
       {{#if feature_image}}
         <img
-          class="object-cover w-full h-48"
+          class="object-cover w-full h-48 grayscale"
           srcset="{{img_url feature_image size="s"}}
              150w,
             {{img_url feature_image size="m"}}
@@ -92,7 +96,7 @@
         />
       {{else}}
         <img
-          class="object-cover w-full h-48"
+          class="object-cover w-full h-48 grayscale"
           src="{{#if @custom.default_image_posts}}{{@custom.default_image_posts}}{{else}}{{asset "images/default.jpg"}}{{/if}}"
           sizes="(max-width: 600px) 400px, 600px"
           src="{{img_url feature_image size="m"}}"
