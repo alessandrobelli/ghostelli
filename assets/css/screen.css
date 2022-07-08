@@ -28,6 +28,26 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+/* youtube embed custom */
+
+.kg-embed-card iframe{
+height: 100% !important;
+width: 100% !important;
+
+aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+.kg-embed-card iframe{
+height: 100% !important;
+width: 100% !important;
+max-width: 50%;
+aspect-ratio: 16 / 9;
+}
+
+  }
+/* END youtube embed custom */
+
 .subscription-form {
 }
 
@@ -59,7 +79,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 }
 
 
-/* Progress bar */
+/* Custom Progress bar */
 #progress-bar {
   --scrollAmount: 0%;
   background-image: linear-gradient(120deg, #61F0A9 0%, #8fd3f4 100%);
