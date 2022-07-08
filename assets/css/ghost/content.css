@@ -290,6 +290,7 @@ color: #28282F;
     flex-grow: 1;
     margin-top: -32px !important;
     width: 25% !important;
+    min-width: 10% !important;
 }
 
 .kg-bookmark-thumbnail img {
