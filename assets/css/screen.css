@@ -30,7 +30,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 /* youtube embed custom */
 
-.kg-embed-card iframe{
+.kg-embed-card iframe:not([id^=twitter-widget]){
 height: 100% !important;
 width: 100% !important;
 
@@ -38,7 +38,7 @@ aspect-ratio: 16 / 9;
 }
 
 @media (min-width: 768px) {
-.kg-embed-card iframe{
+.kg-embed-card iframe:not([id^=twitter-widget]){
 height: 100% !important;
 width: 100% !important;
 max-width: 50%;
