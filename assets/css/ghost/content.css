@@ -132,10 +132,10 @@ li {
 }
 
 .kg-card figcaption {
-    font-family: 'Prompt','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: 'Inter','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     text-align: center;
     color: #A2A2A6;
-    line-height: 1.4em;
+    line-height: 1.2em;
 }
 
 .kg-card figcaption strong {
