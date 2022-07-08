@@ -135,7 +135,7 @@ li {
     font-family: 'Inter','serif','Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     text-align: center;
     color: #A2A2A6;
-    line-height: 1.2em;
+    font-size: 0.7em;
 }
 
 .kg-card figcaption strong {
@@ -251,10 +251,11 @@ color: #28282F;
 }
 
 .kg-bookmark-description {
-    display: -webkit-box;
+    height: auto !important;
+    max-height: 100% !important;
     margin: 0.5em 0 0 0;
-    font-size: 1rem;
-    line-height: 1.30em;
+    font-size: 1rem !important;
+    line-height: 1em !important;
     overflow: hidden;
     opacity: 0.8;
     -webkit-line-clamp: 2;
@@ -276,13 +277,6 @@ color: #28282F;
     text-overflow: ellipsis;
 }
 
-.kg-bookmark-description {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
 .kg-bookmark-icon {
     display: inline-block;
     width: 16px;
@@ -298,7 +292,7 @@ color: #28282F;
 
 .kg-bookmark-thumbnail img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     vertical-align: bottom;
     object-fit: cover;
 }
