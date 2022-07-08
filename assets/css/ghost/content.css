@@ -270,7 +270,7 @@ color: #28282F;
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1rem;
     white-space: nowrap;
     overflow: hidden;
@@ -287,7 +287,8 @@ color: #28282F;
     display: flex;
     flex-basis: 24rem;
     flex-grow: 1;
-    justify-content: flex-end;
+    margin-top: -32px;
+    width: 25%;
 }
 
 .kg-bookmark-thumbnail img {
