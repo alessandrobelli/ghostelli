@@ -90,16 +90,19 @@ li {
     font-style: italic;
     border-left: 4px solid #61F0A9;
     padding-left: 8px;
+    margin: 2rem 0;
+    padding: 1.5rem;
 }
 
 .gh-content blockquote::before {
     content: "";
     position: absolute;
     left: -1.5em;
-    top: 0;
+    top: 0em;
     bottom: 0;
     width: 0.3rem;
     background: var(--color-primary);
+
 }
 
 @media (max-width: 650px) {
@@ -218,7 +221,6 @@ li {
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: #A2A2A6;
-    
     border: 1px solid #F061A8;
     font-family: var(--font-text);
     text-decoration: none;
