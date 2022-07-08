@@ -221,7 +221,7 @@ li {
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: #A2A2A6;
-    border: 1px solid #F061A8;
+    border: 1px solid #F061A8 !important;
     font-family: var(--font-text);
     text-decoration: none;
     border-radius: 5px;
@@ -238,7 +238,7 @@ color: #28282F;
 }
 
 .kg-bookmark-content {
-    flex-basis: 0;
+    flex-basis: 0 !important;
     flex-grow: 999;
     padding: 20px;
     order: 1;
