@@ -47,7 +47,7 @@
          {{title}}
       </h1>
       {{/if}}
-      <div class="my-4 text-xs border-2 font-subheader border-primary">
+      <div class="py-2 my-4 text-xs font-subheader ">
       <time datetime="{{date format="DD-MM-YYYY"}}">
       {{date format="D MMM YYYY"}}
       </time>
@@ -61,7 +61,7 @@
       {{#if tags}}
   {{#foreach tags}}
     <span
-      class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs text-graySecondary"
+      class="inline-flex items-center text-xs text-graySecondary"
     >
       {{name}}
     </span>
@@ -73,7 +73,17 @@
 <span class="text-xs gh-post-authors text-header">
   Written by
   {{#foreach authors}}
-    <a href="{{url}}" class="font-bold">
+     <a href="{{url}}" class="font-bold">
+   {{#if profile_image}}
+  
+  <img
+    class="inline-block w-4 h-4 rounded-full"
+    src="{{profile_image}}"
+    alt="{{name}} Profile Picture"
+  />
+
+{{/if}}
+ 
       {{name}}
     </a>
   {{/foreach}}
