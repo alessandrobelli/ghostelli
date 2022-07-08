@@ -239,7 +239,7 @@ color: #28282F;
 
 .kg-bookmark-content {
     flex-basis: 0 !important;
-    flex-grow: 999;
+    flex-grow: 999 !important;
     padding: 20px;
     order: 1;
 }
