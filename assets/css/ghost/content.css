@@ -221,7 +221,7 @@ li {
     flex-wrap: wrap;
     flex-direction: row-reverse;
     color: #A2A2A6;
-    border: 1px solid #F061A8;
+    border: 1px solid #F061A8 !important;
     font-family: var(--font-text);
     text-decoration: none;
     border-radius: 5px;
@@ -238,8 +238,8 @@ color: #28282F;
 }
 
 .kg-bookmark-content {
-    flex-basis: 0;
-    flex-grow: 999;
+    flex-basis: 0 !important;
+    flex-grow: 999 !important;
     padding: 20px;
     order: 1;
 }
@@ -249,6 +249,7 @@ color: #28282F;
     font-size: 1.5rem;
     line-height: 1.3em;
 }
+
 
 .kg-bookmark-description {
     height: auto !important;
@@ -287,8 +288,9 @@ color: #28282F;
     display: flex;
     flex-basis: 24rem;
     flex-grow: 1;
-    margin-top: -32px;
-    width: 25%;
+    margin-top: -32px !important;
+    width: 25% !important;
+    min-width: 10% !important;
 }
 
 .kg-bookmark-thumbnail img {
