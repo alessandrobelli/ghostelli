@@ -18,18 +18,9 @@
 </script>
 <article class="gh-article p-0 {{post_class}} font-text post-full-content">
    <div id="progress-bar" class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></div>
-   <header class="pb-2 text-center">
-      {{#if tags}}
-      {{#foreach tags}}
-      <span
-         class="inline-flex items-center mb-4 text-base font-semibold tracking-wide uppercase text-graySecondary"
-         >
-      {{name}}
-      </span>
-      {{/foreach}}
-      {{/if}}
+   <header class="text-center">
       {{#if feature_image}}
-      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-full mx-auto">
          <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div class="absolute inset-0">
                <img
@@ -56,7 +47,7 @@
          {{title}}
       </h1>
       {{/if}}
-      <span class="pt-2 m-1 text-xs font-subheader">
+      <div class="my-4 text-xs border-2 font-subheader border-primary">
       <time datetime="{{date format="DD-MM-YYYY"}}">
       {{date format="D MMM YYYY"}}
       </time>
@@ -64,15 +55,36 @@
       •
       </span>
       {{reading_time}}
-      </span>
+      <span class="bull">
+  •
+</span>
+      {{#if tags}}
+  {{#foreach tags}}
+    <span
+      class="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs text-graySecondary"
+    >
+      {{name}}
+    </span>
+  {{/foreach}}
+{{/if}}
+<span class="bull">
+  •
+</span>
+<span class="text-xs gh-post-authors text-header">
+  Written by
+  {{#foreach authors}}
+    <a href="{{url}}" class="font-bold">
+      {{name}}
+    </a>
+  {{/foreach}}
+</span>
+      </div>
    </header>
    <div class="w-full text-base font-normal leading-normal sm:leading-relaxed prose-graySecondary md:prose-lg gh-content font-text ">
       {{content}}
    </div>
    <footer class="pt-4">
-      <div class="text-sm gh-post-authors text-header">
-         Written by {{#foreach authors}}<a href="{{url}}" class="font-bold">{{name}}</a>{{/foreach}}
-      </div>
+
       {{!--
       <section class="gh-post-comments">
          If you want to embed comments, this is a good place to do it!

@@ -20,7 +20,7 @@
             <img
               class="object-cover w-full h-full grayscale"
               src="{{#if @custom.default_image_posts}}
-  {{@custom.default_image_posts}}
+        {{@custom.default_image_posts}}
 {{else}}
   {{asset "images/default.jpg"}}
 {{/if}}"
@@ -76,12 +76,12 @@
  
       {{#foreach posts}}
 
-<article class="z-0 flex flex-col overflow-hidden rounded-lg article-tag">
+<article class="z-0 flex flex-col h-auto overflow-hidden rounded-lg article-tag">
   <a class="" href="{{url}}">
-    <div class="flex-shrink-0">
+    <div class="relative flex-shrink-0 w-full h-auto bg-white sm:h-80 md:left-0">
       {{#if feature_image}}
         <img
-          class="object-cover w-full h-48 grayscale"
+          class="object-cover w-full h-full grayscale"
           srcset="{{img_url feature_image size="s"}}
              150w,
             {{img_url feature_image size="m"}}
@@ -96,13 +96,17 @@
         />
       {{else}}
         <img
-          class="object-cover w-full h-48 grayscale"
+          class="object-cover w-full h-full grayscale"
           src="{{#if @custom.default_image_posts}}{{@custom.default_image_posts}}{{else}}{{asset "images/default.jpg"}}{{/if}}"
           sizes="(max-width: 600px) 400px, 600px"
           src="{{img_url feature_image size="m"}}"
           alt="{{title}}"
         />
       {{/if}}
+<div
+  aria-hidden="true"
+  class="absolute inset-0 bg-gradient-to-r from-primary to-graySecondary mix-blend-multiply"
+></div>
     </div>
     <div class="flex flex-col justify-between flex-1 p-6 bg-white">
       <div class="flex-1">
