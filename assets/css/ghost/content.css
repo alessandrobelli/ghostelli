@@ -93,6 +93,8 @@ li {
     margin: 2rem 0;
     padding: 1.5rem;
     background: rgba(97, 240, 169, 0.25);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .gh-content blockquote::before {
