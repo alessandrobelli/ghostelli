@@ -1,6 +1,7 @@
 ##### Table of Contents  
 
 - [Ghostelli](#ghostelli)
+  - [Installation](#installation)
   - [Featured articles](#featured-articles)
   - [Tag Image and Page Image](#tag-image-and-page-image)
 - [Customization](#customization)
@@ -14,7 +15,13 @@
 
 ## Ghostelli
 
-The Ghostelli project is a higly customizable theme for the Ghost framework. The theme's design was crafted to be easily customizable, starting with the homepage's layout:
+The Ghostelli project is a higly customizable theme for the Ghost framework. The theme's design was crafted to be easily customizable, starting with the homepage's layout.
+
+### Installation
+
+You can go on your Ghost installation, `settings→design→change theme (bottom left)→Upload Theme`.
+
+Right after that, go over settings and start to [personalize the theme](#customization)!
 
 On the left you can see the `Full Width` layout, on the right the `With Video(s)` layout:
 

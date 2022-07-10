@@ -30,6 +30,17 @@ Re-usable card for linking to posts
       {{/if}}
     </div>
     <div class="flex flex-col justify-between flex-1 p-6 bg-white">
+      <div class="mx-auto my-2 space-x-1 text-sm text-center text-graySecondary font-subheader max-w-7xl">
+  <time datetime="{{date format="YYYY-MM-DD"}}">
+    {{date format="DD.MM.YYYY"}}
+  </time>
+  <span aria-hidden="true">
+    ·
+  </span>
+  <span>
+    {{reading_time}}
+  </span>
+</div>
       <div class="flex-1">
         <h2 class="text-xl font-semibold transition-colors duration-300 ease-in-out text-grayPrimary hover:text-mypink">
           {{title}}
@@ -38,17 +49,7 @@ Re-usable card for linking to posts
           {{excerpt}}
         </p>
       </div>
-      <div class="flex my-4 space-x-1 text-sm text-graySecondary">
-        <time datetime="{{date format="YYYY-MM-DD"}}">
-          {{date format="DD.MM.YYYY"}}
-        </time>
-        <span aria-hidden="true">
-          ·
-        </span>
-        <span>
-          {{reading_time}}
-        </span>
-      </div>
+
       <div class="w-full mx-auto mb-2 text-center">
         <a
           href="{{url}}"
