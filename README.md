@@ -14,9 +14,9 @@
 
 ## Ghostelli
 
-The Ghostelli project is a higly customizable theme for the Ghost framework. The theme's design and is designed to be easily customizable, starting with the homepage's layout:
+The Ghostelli project is a higly customizable theme for the Ghost framework. The theme's design was crafted to be easily customizable, starting with the homepage's layout:
 
-Following, on the left you can see the `Full Width` layout, on the right the `With Video(s)` layout:
+On the left you can see the `Full Width` layout, on the right the `With Video(s)` layout:
 
 ![2 layout ghostelli](https://user-images.githubusercontent.com/3796324/177175374-7e86832c-f2db-4626-a06e-049cfe359a8b.png)
 
@@ -28,7 +28,7 @@ When you feature an article, you'll see it in the homepage as well as on top of 
 
 ### Tag Image and Page Image
 
-On the Tag and generally in pages the image is set as [Hero Section](https://www.awebco.com/blog/hero-section/#:~:text=your%20own%20webpages.-,What%20is%20a%20Hero%20Section%3F,What%20you%20have%20to%20offer). You can see an example here:
+On the Tag and generally in Pages. as well as the Author page, the Featured image is set as [Hero Section](https://www.awebco.com/blog/hero-section/#:~:text=your%20own%20webpages.-,What%20is%20a%20Hero%20Section%3F,What%20you%20have%20to%20offer). You can see an example here:
 ![Hero Section](https://user-images.githubusercontent.com/3796324/177176739-22b94829-89a5-4ddf-ade7-e1222cf04090.png)
 
 Without the image, the same example looks like this:
@@ -73,7 +73,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email info@alessandrobelli.it instead of using the issue tracker.
+If you discover any security related issues, please email alessandrobelli90@gmail.com instead of using the issue tracker.
 
 
 ### Credits
