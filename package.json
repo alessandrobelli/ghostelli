@@ -2,7 +2,7 @@
     "name": "ghostelli",
     "description": "A higly customizable Blog+Newesletter theme for Ghost, made by Alessandro Belli",
     "demo": "https://alessandrobelli.it",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "engines": {
         "ghost": ">=4.0.0"
     },
