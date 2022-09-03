@@ -28,6 +28,21 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Rebuild base elements like lists or anchors or video players
 /* ---------------------------------------------------------- */
 
+pre {
+padding: 10px !important;
+white-space: pre-wrap; 
+background: rgba(97, 240, 169, 0.55);
+line-height: 1.5;
+
+}
+code {
+    
+    padding: 2rem;
+    color: #28282F;
+    width:auto;
+    word-wrap: break-word;
+}
+
 /* youtube embed custom */
 
 .kg-embed-card iframe:not([id^=twitter-widget]){
@@ -93,11 +108,7 @@ ol li{
     list-style-type: decimal;
     list-style: decimal;
 }
-code {
-    background-color: #F0F061;
-    padding: 1px;
-    color: #28282F;
-}
+
 
 li {
     list-style: initial;
