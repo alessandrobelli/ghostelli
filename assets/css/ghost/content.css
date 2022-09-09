@@ -27,17 +27,22 @@ li {
     grid-column: main-start / main-end;
 }
 
-.kg-width-wide {
-    grid-column: wide-start / wide-end;
+figure.kg-card {
+    display:flex;
+    justify-content: center;
 }
 
-.kg-width-full {
-    grid-column: full-start / full-end;
+.kg-width-wide img {
+    margin:auto;
+    min-width: 50vw;
 }
 
 .kg-width-full img {
-    width: 100%;
+    margin:auto;
+    min-width: 100vw;
 }
+
+
 
 
 /* Content & Typography
