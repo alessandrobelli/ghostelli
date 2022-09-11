@@ -27,14 +27,16 @@ li {
     grid-column: main-start / main-end;
 }
 
-figure.kg-card {
+figure.kg-card.kg-width-wide, figure.kg-card.kg-width-full {
     display:flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
 
 .kg-width-wide img {
     margin:auto;
-    min-width: 50vw;
+    min-width: 65vw;
 }
 
 .kg-width-full img {
