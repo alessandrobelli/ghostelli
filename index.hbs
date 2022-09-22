@@ -4,6 +4,7 @@
       src="{{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset 'images/default.jpg'}}{{/if}}"
       alt="cover photo"
       />
+
 <div class="lg:grid lg:grid-cols-12 lg:gap-8">
    <!-- Match tags are used to build the layout that you can select in the backend -->
    <div
@@ -63,9 +64,9 @@
 </div>
 {{#match @custom.homepage_layout "With Video(s)"}}
 <div
-   class="relative mt-12 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+   class="relative mt-2 md:mt-12 sm:max-w-lg sm:mx-auto lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
    >
-   <div class="relative w-full mx-auto rounded-lg shadow-lg lg:max-w-md">
+   <div class="relative w-full mx-auto rounded-lg">
       {{#if @custom.youtube_video_1_id}}
       <div class="mb-4">
          <div class="youtube-player" class="" data-id="{{@custom.youtube_video_1_id}}"></div>
