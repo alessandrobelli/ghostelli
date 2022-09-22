@@ -1,15 +1,16 @@
 {{!< default}} 
+   <img
+      class="object-cover w-full rounded-lg sm:h-12 md:h-36"
+      src="{{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset 'images/default.jpg'}}{{/if}}"
+      alt="cover photo"
+      />
 <div class="lg:grid lg:grid-cols-12 lg:gap-8">
    <!-- Match tags are used to build the layout that you can select in the backend -->
    <div
    class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-13 sm:col-start-2 sm:col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
    >
 
-   <img
-      class="object-cover w-full rounded-lg sm:h-12 md:h-36"
-      src="{{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset 'images/default.jpg'}}{{/if}}"
-      alt="cover photo"
-      />
+
    {{#match @custom.homepage_layout "With Video(s)"}}
    <h1>
       <div
