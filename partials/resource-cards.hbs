@@ -1,0 +1,50 @@
+{{!
+Re-usable card for linking to posts
+}}
+<div
+  class="grid h-auto grid-cols-1 mb-10 gap-y-40 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8"
+>
+  {{#foreach posts}}
+    <a href="{{url}}" class="group">
+      <div
+        class="w-auto h-full overflow-hidden rounded-lg aspect-w-9 aspect-h-16 sm:aspect-w-2 sm:aspect-h-3"
+      >
+        <img
+          srcset="{{img_url feature_image size="s"}}
+             150w,
+            {{img_url feature_image size="m"}}
+             300w,
+            {{img_url feature_image size="l"}}
+             5000w,
+            {{img_url feature_image size="xl"}}
+             1000w"
+          alt="Person using a pen to cross a task off a productivity paper card."
+          class="object-cover object-center w-full h-full group-hover:opacity-75"
+          src="{{img_url feature_image size="m"}}"
+          alt="{{title}}"
+        />
+      </div>
+      <div
+        class="flex items-center justify-between mt-4 text-base font-medium text-white"
+      >
+        <h3>
+          {{title}}
+        </h3>
+        <p>
+          $13
+        </p>
+      </div>
+      <p class="mt-1 text-sm italic text-gray-500">
+        <time datetime="{{date format="YYYY-MM-DD"}}">
+          {{date format="DD.MM.YYYY"}}
+        </time>
+        <span aria-hidden="true">
+          ·
+        </span>
+        <span>
+          {{reading_time}}
+        </span>
+      </p>
+    </a>
+  {{/foreach}}
+</div>
