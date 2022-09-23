@@ -101,7 +101,8 @@
 <aside class="w-full pb-4 gh-readmore">
    <div class="flex justify-between text-base gh-readmore-inner gh-container font-header">
       <div class="gh-readmore-next">
-         {{#next_post}}
+         {{#next_post in="primary_tag"}}
+
          <a href="{{url}}">
             {{> "icons/arrow-left"}} 
             <p class="ml-1">{{title}}</p>
@@ -109,7 +110,7 @@
          {{/next_post}}
       </div>
       <div class="gh-readmore-prev">
-         {{#prev_post}}
+         {{#prev_post in="primary_tag"}}
          <a href="{{url}}">
             <p class="mr-1">{{title}}</p>
             {{> "icons/arrow-right"}}
