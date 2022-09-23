@@ -12,9 +12,16 @@
 
 <div class="mt-4">
 {{> "featured_content" posts=posts}}
-<div class="relative flex items-center py-5">
-  <div class="flex-grow border-t border-graySecondary"></div>
-  <div class="flex-grow border-t border-graySecondary"></div>
+
+<div class="relative mt-12">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-graySecondary"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <span class="px-3 text-lg font-medium text-graySecondary bg-grayPrimary">
+      Articles
+    </span>
+  </div>
 </div>
 </div>
 {{/get}}
