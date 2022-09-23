@@ -1,4 +1,5 @@
 {
   "html.format.contentUnformatted": "",
-  "search.useIgnoreFiles": false
+  "search.useIgnoreFiles": false,
+  "editor.formatOnSave": false
 }

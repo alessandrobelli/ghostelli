@@ -35,7 +35,7 @@
         {{/if}}
     </header>
 
-{{#get "posts" filter="tags:resources"}}
+{{#get "posts" filter="tags:resources" include='tags'}}
 
 {{> "resource-cards" posts=posts}} {{! partials/resource-cards.hbs }}
 
