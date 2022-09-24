@@ -84,13 +84,7 @@ figure.kg-card.kg-width-wide, figure.kg-card.kg-width-full {
     padding-left: 1.9em;
 }
 
-.gh-content hr {
-    margin-top: 6vmin;
-}
 
-.gh-content hr + * {
-    margin-top: 6vmin !important;
-}
 
 .gh-content blockquote {
     position: relative;
