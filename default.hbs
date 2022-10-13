@@ -51,6 +51,14 @@
       <!--/container-->
       {{ghost_foot}}
       <script>
+            // function to hide notification box
+   function hideNotification() {
+     
+       var form = document.querySelector(".subscription-form");
+       form.classList.remove("error");
+       form.classList.remove("success");
+   
+   }
          /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
          function mobileMenu() {
              var x = document.getElementById("myLinks");
