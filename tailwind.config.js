@@ -7,7 +7,11 @@ module.exports = {
         extend: {
             colors: {
                 graySecondary: "#A2A2A6",
-                grayPrimary: "#28282F",
+                grayPrimary: {
+                    DEFAULT: "#28282F",
+                    light: "#2B2B2E",
+                    dark: "#0C0C0E",
+                },
                 primary: "#61F0A9",
                 myblue: "#6161F0",
                 mypink: "#F061A8",

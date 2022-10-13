@@ -69,7 +69,10 @@
         "custom": {
             "homepage_layout": {
                 "type": "select",
-                "options": ["Full Width", "With Video(s)"],
+                "options": [
+                    "Full Width",
+                    "With Video(s)"
+                ],
                 "group": "homepage",
                 "default": "With Video(s)"
             },
@@ -98,12 +101,12 @@
                 "group": "homepage",
                 "default": "And this green."
             },
-            "sub_homepage_text":{
-                "type":"text",
+            "sub_homepage_text": {
+                "type": "text",
                 "group": "homepage",
                 "default": "Subscribe to my newsletter."
             },
-           "featured_in_homepage": {
+            "featured_in_homepage": {
                 "type": "boolean",
                 "default": false,
                 "group": "homepage"
@@ -118,10 +121,12 @@
             },
             "featured_posts_style": {
                 "type": "select",
-                "options": ["Full Width", "Classic Cards"],
+                "options": [
+                    "Full Width",
+                    "Classic Cards"
+                ],
                 "default": "Full Width"
             }
-
         },
         "posts_per_page": 15,
         "image_sizes": {
