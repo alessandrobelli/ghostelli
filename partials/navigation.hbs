@@ -80,7 +80,7 @@
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="sm:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1" id="myLinks">
+    <div class="px-2 pt-2 pb-3 space-y-1" id="myLinks" style="display: none;">
                   {{#foreach navigation}}
       <a href="{{url absolute=" true"}}" class="block px-3 py-2 text-base font-medium {{#if current}} text-white bg-gray-900 {{else}} text-gray-300 hover:bg-grayPrimary-light hover:text-white {{/if}} rounded-md" {{#if current}} aria-current="page" {{/if}}>{{label}}</a>
           {{/foreach}}
