@@ -403,6 +403,10 @@ html, .gh-viewport {
     margin: 2rem 0;
 }
 
+.gh-post-upgrade-cta-content > h2,.gh-post-upgrade-cta-content > a,.gh-post-upgrade-cta-content > p{
+    color: #28282F !important;
+}
+
 /* Author Archive
 /* ---------------------------------------------------------- */
 
