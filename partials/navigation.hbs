@@ -20,13 +20,13 @@
                      <a class="mt-2 text-2xl antialiased font-bold no-underline sm:mt-0 text-graySecondary hover:no-underline font-header sm:text-center"
                         href="{{@site.url}}">
                      {{#if @site.logo}}
-                     <img class="pb-2 pr-2" style="max-width: 600px;max-height: 72px" src="{{@site.logo}}" alt= "{{@site.title}}">
+                     <img class="p-2 w-xs sm:max-w-md" style="max-height: 72px" src="{{@site.logo}}" alt= "{{@site.title}}">
                      {{else}}
                      {{@site.title}}
                      {{/if}}
                      </a>
         </div>
-        <div class="hidden sm:ml-6 sm:block">
+        <div class="items-center hidden sm:ml-6 sm:flex">
           <div class="flex space-x-4">
 
                {{#foreach navigation}}
