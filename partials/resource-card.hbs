@@ -1,0 +1,21 @@
+      
+      <div class="relative group">
+        <div class="w-full overflow-hidden bg-gray-200 rounded-md min-h-80 aspect-w-1 aspect-h-1 group-hover:opacity-75 lg:aspect-none lg:h-80">
+          
+          <img src="{{#if feature_image}} {{img_url feature_image size="m"}} {{else}} {{#if @custom.default_image_posts}}{{@custom.default_image_posts}}{{else}}{{asset "images/default.jpg"}}{{/if}}{{/if}}" alt="{{title}}" class="object-cover object-center w-full h-full lg:h-full lg:w-full">
+         
+
+        </div>
+        <div class="flex justify-between mt-4">
+          <div>
+            <h3 class="text-sm text-gray-700">
+              <a href="{{url}}">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                {{title}}
+              </a>
+            </h3>
+            <p class="mt-1 text-sm text-gray-500">{{excerpt}}</p>
+          </div>
+          <p class="text-sm font-medium text-white">{{#foreach tags}}  {{^match name "=" "Resources"}}{{name}}{{/match}} {{/foreach}}</p>
+        </div>
+      </div>
