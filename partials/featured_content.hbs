@@ -43,6 +43,24 @@
                 {{title}}
               </h2>
             </a>
+                    <div>
+
+      {{#foreach tags}}
+       <span class="inline-flex items-center px-3 py-0.5 text-sm font-medium bg-primary text-grayPrimary">{{name}}</span>
+      {{/foreach}}
+           
+   {{#post}}
+  {{#if tags}}
+    <ul>
+    {{#foreach tags}}
+      <li>
+        <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+      </li>
+    {{/foreach}}
+    </ul>
+  {{/if}}
+{{/post}}
+        </div>
             <span>
               {{reading_time}}
             </span>

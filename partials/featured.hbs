@@ -3,8 +3,9 @@
 {{^is "paged"}}
 
 {{#is "home"}}
-{{#get "posts" filter="featured:true" limit="3"}}
-{{> "featured_content" posts=posts}}
+
+{{#get "posts" filter="featured:true" limit="3" include="tags"}}
+{{> "featured_content" posts=posts }}
 {{/get}}
 {{else}}
 
