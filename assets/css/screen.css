@@ -22,6 +22,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/footer.css";
 @import "ghost/badge.css";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -31,14 +32,13 @@ production stylesheet in assets/built/screen.css using: gulp dev
 pre {
 padding: 10px !important;
 white-space: pre-wrap; 
-background: rgba(97, 240, 169, 0.55);
 line-height: 1.5;
-
 }
+
 code {
-    
-    padding: 2rem;
-    color: #28282F;
+    padding: 0.1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgba(97, 240, 169, 0.55);
     width:auto;
     word-wrap: break-word;
 }
