@@ -21,8 +21,8 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/errors.css";
 @import "ghost/footer.css";
 @import "ghost/badge.css";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -30,37 +30,36 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* ---------------------------------------------------------- */
 
 pre {
-padding: 10px !important;
-white-space: pre-wrap; 
-line-height: 1.5;
+    padding: 10px !important;
+    white-space: pre-wrap;
+    line-height: 1.5;
 }
 
 code {
     padding: 0.1rem;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
     color: rgba(97, 240, 169, 0.55);
-    width:auto;
+    width: auto;
     word-wrap: break-word;
 }
 
 /* youtube embed custom */
 
-.kg-embed-card iframe:not([id^=twitter-widget]){
-height: 100% !important;
-width: 100% !important;
+.kg-embed-card iframe:not([id^="twitter-widget"]) {
+    height: 100% !important;
+    width: 100% !important;
 
-aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
 }
 
 @media (min-width: 768px) {
-.kg-embed-card iframe:not([id^=twitter-widget]){
-height: 100% !important;
-width: 100% !important;
-max-width: 50%;
-aspect-ratio: 16 / 9;
+    .kg-embed-card iframe:not([id^="twitter-widget"]) {
+        height: 100% !important;
+        width: 100% !important;
+        max-width: 50%;
+        aspect-ratio: 16 / 9;
+    }
 }
-
-  }
 /* END youtube embed custom */
 
 .subscription-form {
@@ -68,17 +67,16 @@ aspect-ratio: 16 / 9;
 
 .subscription-form input,
 .subscription-form button {
-
 }
 
 .subscription-form .success-message,
 .subscription-form .error-message {
-  display: none;
+    display: none;
 }
 
 .subscription-form.error .error-message,
 .subscription-form.success .success-message {
-  display: block
+    display: block;
 }
 
 .subscription-box {
@@ -91,55 +89,63 @@ aspect-ratio: 16 / 9;
     border-radius: 5px;
 }
 
-
 /* Custom Progress bar */
 #progress-bar {
-  --scrollAmount: 0%;
-  background-image: linear-gradient(120deg, #61F0A9 0%, #8fd3f4 100%);
-  width: var(--scrollAmount);
-  height: 7px;
-  position: fixed;
-  top: 0;
+    --scrollAmount: 0%;
+    background-image: linear-gradient(120deg, #61f0a9 0%, #8fd3f4 100%);
+    width: var(--scrollAmount);
+    height: 7px;
+    position: fixed;
+    top: 0;
 }
 
-ol li{
+ol li {
     list-style-type: decimal;
     list-style: decimal;
 }
-
 
 li {
     list-style: initial;
 }
 
-a {
-    color: #61F0A9 ;
-}
-.gh-readmore-next:hover{
-        color: #F061A8 !important;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .3s;
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
+a,
+.prose > a {
+    color: #61f0a9 !important;
 }
 
-.gh-readmore-prev:hover{
-        color: #F061A8 !important;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .3s;
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
+.kg-callout-text > strong {
+    font-family: "Inter", "sans-serif";
+    font-weight: 700 !important;
+    color: #A2A2A6 !important;
+}
+
+.gh-readmore-next:hover {
+    color: #f061a8 !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+    transition-property: color, background-color, border-color,
+        text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+}
+
+.gh-readmore-prev:hover {
+    color: #f061a8 !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+    transition-property: color, background-color, border-color,
+        text-decoration-color, fill, stroke, -webkit-text-decoration-color;
 }
 
 a:hover {
-    color: #F061A8 !important;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .3s;
-    transition-property: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
+    color: #f061a8 !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+    transition-property: color, background-color, border-color,
+        text-decoration-color, fill, stroke, -webkit-text-decoration-color;
 }
 
 a:focus {
-    color: #F061A8 !important;
+    color: #f061a8 !important;
 }
-
 
 .fluid-width-video-wrapper {
     position: relative;
@@ -207,25 +213,29 @@ a:focus {
     margin-left: -36px;
     margin-top: -36px;
     position: absolute;
-    background: url('//i.imgur.com/TxzC70f.png') no-repeat;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
     cursor: pointer;
 }
 
-
 /* ---------------------------------------------------------- */
 
-form[data-members-form] .message-loading, form[data-members-form] .message-success, form[data-members-form] .message-error {
+form[data-members-form] .message-loading,
+form[data-members-form] .message-success,
+form[data-members-form] .message-error {
     display: none;
 }
 
-form[data-members-form].loading .message-loading, form[data-members-form].success .message-success, form[data-members-form].error .message-error {
+form[data-members-form].loading .message-loading,
+form[data-members-form].success .message-success,
+form[data-members-form].error .message-error {
     display: block;
 }
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
-html, .gh-viewport {
+html,
+.gh-viewport {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -317,7 +327,7 @@ html, .gh-viewport {
     padding: 0 6vmin;
 }
 
-.gh-card-content>strong {
+.gh-card-content > strong {
     display: inline-block;
     padding: 1px 0;
     font-weight: 500;
@@ -338,7 +348,7 @@ html, .gh-viewport {
     margin: 2vmin 0 0 0;
 }
 
-.gh-page-head>p {
+.gh-page-head > p {
     max-width: 720px;
     margin: 0.3em auto 0;
     padding: 0 3vmin;
@@ -346,7 +356,7 @@ html, .gh-viewport {
 }
 
 @media (max-width: 700px) {
-    .gh-page-head>p {
+    .gh-page-head > p {
         font-size: 1.6rem;
     }
 }
@@ -360,24 +370,24 @@ html, .gh-viewport {
 }
 
 .gh-content h1 {
-    font-family: 'Inter', 'sans-serif';
+    font-family: "Inter", "sans-serif";
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
 }
 
 .gh-content h2 {
-    font-family: 'Inter', 'sans-serif';
+    font-family: "Inter", "sans-serif";
     font-size: 1.875rem;
     line-height: 2.25rem;
-       font-weight: 700;
+    font-weight: 700;
 }
 
 .gh-content h3 {
-    font-family: 'Inter', 'sans-serif';
+    font-family: "Inter", "sans-serif";
     font-size: 1.5rem;
     line-height: 2rem;
-       font-weight: 700;
+    font-weight: 700;
 }
 
 .gh-post-meta {
@@ -403,8 +413,10 @@ html, .gh-viewport {
     margin: 2rem 0;
 }
 
-.gh-post-upgrade-cta-content > h2,.gh-post-upgrade-cta-content > a,.gh-post-upgrade-cta-content > p{
-    color: #28282F !important;
+.gh-post-upgrade-cta-content > h2,
+.gh-post-upgrade-cta-content > a,
+.gh-post-upgrade-cta-content > p {
+    color: #28282f !important;
 }
 
 /* Author Archive
@@ -437,7 +449,7 @@ html, .gh-viewport {
     margin: 0 0.75vmin;
 }
 
-.gh-author-links a+a:before {
+.gh-author-links a + a:before {
     display: block;
     content: "";
     margin: 0 1.25vmin 0 0;
