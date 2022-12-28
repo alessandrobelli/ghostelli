@@ -46,7 +46,7 @@
                     <div>
 
       {{#foreach tags}}
-       <span class="inline-flex items-center px-3 py-0.5 text-sm font-medium bg-primary text-grayPrimary">{{name}}</span>
+       <span class="my-2 font-mono inline-flex items-center px-3 py-0.5 text-xs font-medium bg-primary text-grayPrimary">{{name}}</span>
       {{/foreach}}
            
    {{#post}}
@@ -61,6 +61,7 @@
   {{/if}}
 {{/post}}
         </div>
+        <div class="text-sm">
             <span>
               {{reading_time}}
             </span>
@@ -70,6 +71,7 @@
             <time datetime="{{date format="YYYY-MM-DD"}}">
               {{date format="DD.MM.YYYY"}}
             </time>
+            </div>
             <p
               class="p-0 mt-2 text-sm sm:mt-3 lg:text-base md:text-base sm:text-sm text-grayPrimary"
             >
