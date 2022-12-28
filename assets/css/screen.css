@@ -113,6 +113,10 @@ a,
     color: #61f0a9 !important;
 }
 
+.prose > blockquote{
+color: #A2A2A6 !important
+}
+
 .kg-callout-text > strong {
     font-family: "Inter", "sans-serif";
     font-weight: 700 !important;
