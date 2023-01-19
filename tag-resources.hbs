@@ -1,5 +1,5 @@
 {{!< default}}
-<div class="relative pt-4 pb-20 gh-page lg:pb-28">
+<div class="relative pt-4 pb-20 gh-page lg:pb-28 loading">
 <div class="relative mx-auto max-w-7xl">
    {{#tag}}
        <div class="relative bg-grayPrimary-light text-graySecondary">
@@ -34,6 +34,43 @@
       </div>
       {{/if}}
       {{/tag}}
+
+         <div class="relative mt-10">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <span class="px-2 text-sm text-white bg-grayPrimary">Categories</span>
+  </div>
+</div>
+<div class="flex flex-col justify-center p-2 md:flex-row">
+
+{{#foreach posts}}
+
+
+    {{#foreach tags}}
+  <p class="inline-block ml-10 text-sm text-center cursor-pointer text-graySecondary item" data-slug='{{slug}}'>{{ name }}</p>
+
+    {{/foreach}}
+
+
+{{/foreach}}
+</div>
+    <div class="relative">
+  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+    <div class="w-full border-t border-gray-300"></div>
+  </div>
+  <div class="relative flex justify-center">
+    <span class="px-2 text-white bg-grayPrimary">
+      <!-- Heroicon name: mini/plus -->
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+</svg>
+
+
+    </span>
+  </div>
+</div>
       <div class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
          {{#foreach posts}}
          {{> "resource-card"}} {{!-- partials/resource-card.hbs --}}
@@ -42,3 +79,29 @@
       {{pagination}}
    </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var found = {};
+  var items = document.querySelectorAll('.item');
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    var slug = item.getAttribute('data-slug');
+    if (found[slug]) {
+      item.parentNode.removeChild(item);
+    } else {
+      found[slug] = true;
+    }
+  }
+
+  //loop trough items and remove any slug that is equal to "resources", not case sensitive  
+   for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var slug = item.getAttribute('data-slug');
+      if (slug.toLowerCase() == "resources") {
+         item.parentNode.removeChild(item);
+      }
+   } 
+});
+
+</script>

@@ -1,5 +1,5 @@
       
-      <div class="relative group">
+      <div class="relative group post" data-slug="{{#foreach tags}}  {{^match name "=" "Resources"}}{{name}}{{/match}}{{/foreach}}">
         <div class="w-full overflow-hidden bg-gray-200 min-h-80 aspect-w-1 aspect-h-1 group-hover:opacity-75 lg:aspect-none lg:h-80">
           
           <img src="{{#if feature_image}} {{img_url feature_image size="m"}} {{else}} {{#if @custom.default_image_posts}}{{@custom.default_image_posts}}{{else}}{{asset "images/default.jpg"}}{{/if}}{{/if}}" alt="{{title}}" class="object-cover object-center w-full h-full lg:h-full lg:w-full">
