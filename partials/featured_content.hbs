@@ -46,21 +46,9 @@
                     <div>
 
       {{#foreach tags}}
-      there's a tag here
        <span class="my-2 font-mono inline-flex items-center px-3 py-0.5 text-xs font-medium bg-primary text-grayPrimary">{{name}}</span>
       {{/foreach}}
            
-   {{#post}}
-  {{#if tags}}
-    <ul>
-    {{#foreach tags}}
-      <li>
-        <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
-      </li>
-    {{/foreach}}
-    </ul>
-  {{/if}}
-{{/post}}
         </div>
         <div class="text-sm">
             <span>
