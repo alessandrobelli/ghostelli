@@ -33,7 +33,7 @@
             </div>
             <div class="relative px-4 py-14 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                <h1
-                  class="text-4xl font-extrabold leading-10 tracking-tight text-center text-transparent sm:leading-5 sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500"
+                  class="text-4xl font-extrabold leading-10 tracking-tight text-center text-transparent md:leading-10 sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 sm:tracking-normal"
                   >
                   {{title}}
                </h1>
@@ -61,7 +61,7 @@
       {{#if tags}}
   {{#foreach tags}}
     <span
-      class="inline-flex items-center text-xs text-graySecondary"
+      class="inline-flex items-center text-xs text-white"
     >
       {{name}}
     </span>
@@ -91,7 +91,7 @@
 </span>
       </div>
    </header>
-   <div class="w-full text-base antialiased font-normal leading-normal sm:leading-relaxed prose-graySecondary md:prose-lg gh-content font-text">
+   <div class="w-full text-base antialiased font-normal leading-normal prose prose-lg sm:leading-relaxed prose-code:text-primary prose-p:text-white prose-ul:text-white gh-content font-text prose-stone max-w-none">
       {{content}}
    </div>
    <footer class="pt-4">

@@ -1,66 +1,100 @@
 {{!< default}} 
-   <img
-      class="object-cover w-full mt-4 rounded-lg sm:h-12 md:h-36"
-      src="{{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset 'images/default.jpg'}}{{/if}}"
-      alt="cover photo"
-      />
 
-<div class="lg:grid lg:grid-cols-12 lg:gap-8">
+<div class="lg:grid lg:grid-cols-12 lg:gap-8 fade-in-point">
    <!-- Match tags are used to build the layout that you can select in the backend -->
    <div
    class="sm:text-center {{#match @custom.homepage_layout "Full Width"}} md:w-full col-start-1 col-end-13 sm:col-start-2 sm:col-end-12 lg:text-center {{/match}} {{#match @custom.homepage_layout "With Video(s)"}} md:max-w-2xl lg:col-span-6 lg:text-left{{/match}}  md:mx-auto  "
    >
 
 
-   {{#match @custom.homepage_layout "With Video(s)"}}
-   <h1>
-      <div
-         class="block mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl"
-         >
-      <div class="block text-graySecondary">
-      {{@custom.homepage_gray_text}} 
-      </div>
-      <div class="block text-primary">
-      {{@custom.homepage_green_text}}
-      </div>
-      </div>
-   </h1>
-      <p
-      class="mt-3 text-base leading-loose text-graySecondary sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
-      >
-      {{{@custom.homepage_text_with_html}}}
-   </p>
    
-   {{> subscribe}}
-   {{/match}}
-   {{#match @custom.homepage_layout "Full Width"}}
-   <h1 class="pt-6">
-      <div
-         class="justify-between block mt-1 text-4xl font-extrabold tracking-tight sm:flex sm:text-5xl"
-         >
-         {{#if @custom.homepage_gray_text}}
-         <div class="block sm:text-left sm:flex text-graySecondary">
-            {{@custom.homepage_gray_text}}
-         </div>
-         {{/if}}
-         <div class="block ml-0 {{#match @custom.homepage_gray_text ""}}sm:text-left{{else}}sm:text-right{{/match}} sm:flex text-primary">
-            {{@custom.homepage_green_text}}
-         </div>
+  <div class="container flex flex-col items-center px-5 py-12 mx-auto md:flex-row">
+    <div class="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
+      <h1 class="mb-4 text-3xl font-extrabold text-white sm:text-4xl">
+         {{@custom.homepage_text}}
+      </h1>
+      <p class="mb-8 leading-relaxed">
+          {{{@custom.homepage_text_with_html}}}
+      </p>
+    </div>
+    <div class="w-2/5 lg:w-2/5 md:w-2/5 sm:w-1/2">
+      <img class="object-cover object-center rounded " alt="hero" src="{{#if @site.cover_image}}{{@site.cover_image}}{{else}}{{asset 'images/default.jpg'}}{{/if}}">
+    </div>
+  </div>
+
+  <div class="px-5 py-12 mx-auto fade-in-point">
+    <div class="mb-20 text-center">
+      <h1 class="mb-4 text-2xl font-medium text-center text-white sm:text-3xl title-font">Who am I?</h1>
+      <p class="mx-auto text-base leading-relaxed xl:w-2/4 lg:w-3/4">Dive deep into the journey of Alessandro: a fusion of software developer prowess, content creation expertise, and a passion for sharing insights. Explore the essence behind Nexus Nook and the mind that powers its innovation.</p>
+    </div>
+    <div class="flex flex-wrap -mx-2 lg:w-4/5 sm:mx-auto sm:mb-2">
+      <div class="w-full p-2 sm:w-1/2 fade-in-point ">
+        <div class="flex items-center h-full p-4 border-2 border-solid rounded border-graySecondary">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="flex-shrink-0 w-6 h-6 mr-4 text-primary" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          <span class="font-medium text-white title-font">Laravel Mastery</span>
+        </div>
       </div>
-   </h1>
-   <p
-      class="mt-3 text-base leading-relaxed sm:leading-relaxed sm:text-xl text-graySecondary lg:text-lg xl:text-xl"
-      >
-      {{{@custom.homepage_text_with_html}}}
-   </p>
-   
+      <div class="w-full p-2 sm:w-1/2 fade-in-point">
+        <div class="flex items-center h-full p-4 border-2 border-solid rounded border-graySecondary">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="flex-shrink-0 w-6 h-6 mr-4 text-primary" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          <span class="font-medium text-white title-font">PHP & Python</span>
+        </div>
+      </div>
+      <div class="w-full p-2 sm:w-1/2 fade-in-point">
+        <div class="flex items-center h-full p-4 border-2 border-solid rounded border-graySecondary">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="flex-shrink-0 w-6 h-6 mr-4 text-primary" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          <span class="font-medium text-white title-font">Javascript & VueJS Expertise</span>
+        </div>
+      </div>
+      <div class="w-full p-2 sm:w-1/2 fade-in-point">
+        <div class="flex items-center h-full p-4 border-2 border-solid rounded border-graySecondary">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="flex-shrink-0 w-6 h-6 mr-4 text-primary" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          <span class="font-medium text-white title-font">Server Management</span>
+        </div>
+      </div>
+      <div class="w-full p-2 sm:w-1/2 fade-in-point">
+        <div class="flex items-center h-full p-4 border-2 border-solid rounded border-graySecondary">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="flex-shrink-0 w-6 h-6 mr-4 text-primary" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          <span class="font-medium text-white title-font">Research-Driven approach</span>
+        </div>
+      </div>
+      <div class="w-full p-2 sm:w-1/2 fade-in-point">
+        <div class="flex items-center h-full p-4 border-2 border-solid rounded border-graySecondary">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="flex-shrink-0 w-6 h-6 mr-4 text-primary" viewBox="0 0 24 24">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+            <path d="M22 4L12 14.01l-3-3"></path>
+          </svg>
+          <span class="font-medium text-white title-font">Full-Stack Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="fade-in-point">
+
+  
    {{> subscribe}}
-   {{#if @custom.featured_in_homepage}}
+ </div>
+   {{#if @custom.featured_posts_in_homepage}}
    {{> featured}}
    {{/if}}
    </div>
-  
-   {{/match}}
+
 </div>
 {{#match @custom.homepage_layout "With Video(s)"}}
 <div
@@ -78,12 +112,39 @@
    </div>
 </div>
 </div>
-   {{#if @custom.featured_in_homepage}}
+   {{#if @custom.featured_posts_in_homepage}}
    {{> featured}}
    {{/if}}
 {{/match}}
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeInPoints = document.querySelectorAll(".fade-in-point");
+
+    console.log(fadeInPoints);
+    const options = {
+        rootMargin: "-100px 0px -70px 0px",
+        threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Fade in when entering viewport
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            } else {
+                // Fade out when exiting viewport
+                entry.target.style.opacity = "0";
+                entry.target.style.transform = "translateY(20px)";
+            }
+        });
+    }, options);
+
+    fadeInPoints.forEach((point) => {
+        observer.observe(point);
+    });
+});
 
    // functions to use the thumbnail as image and not load the whole YouTube video when loading the webpage
      function labnolIframe(div) {

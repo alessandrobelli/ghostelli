@@ -61,15 +61,6 @@ module.exports = {
                 ],
                 header: ["Inter", "sans-serif", "cursive"],
                 subheader: ["Inter", "serif"],
-                "text-old": [
-                    "Prompt",
-                    "serif",
-                    "Apple Color Emoji",
-                    "Segoe UI Emoji",
-                    "Segoe UI Symbol",
-                ],
-                "header-old": ["Mukta", "cursive"],
-                "subheader-old": ['"Libre Franklin"', "serif"],
             },
             screens: {
                 xs: "475px",

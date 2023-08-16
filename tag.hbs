@@ -54,3 +54,33 @@
       {{pagination}}
    </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeInPoints = document.querySelectorAll(".fade-in-point");
+
+    console.log(fadeInPoints);
+    const options = {
+        rootMargin: "-100px 0px -70px 0px",
+        threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Fade in when entering viewport
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            } else {
+                // Fade out when exiting viewport
+                entry.target.style.opacity = "0";
+                entry.target.style.transform = "translateY(20px)";
+            }
+        });
+    }, options);
+
+    fadeInPoints.forEach((point) => {
+        observer.observe(point);
+    });
+});
+</script>

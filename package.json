@@ -2,7 +2,7 @@
     "name": "ghostelli",
     "description": "A higly customizable Blog+Newesletter theme for Ghost, made by Alessandro Belli",
     "demo": "https://alessandrobelli.it",
-    "version": "1.0.2",
+    "version": "1.1.0-beta",
     "engines": {
         "ghost": ">=4.0.0"
     },
@@ -74,7 +74,7 @@
                     "With Video(s)"
                 ],
                 "group": "homepage",
-                "default": "With Video(s)"
+                "default": "Full Width"
             },
             "youtube_video_1_id": {
                 "type": "text",
@@ -91,22 +91,17 @@
                 "group": "homepage",
                 "default": "Enter the text shown in the homepage, such as your website description."
             },
-            "homepage_gray_text": {
+            "homepage_text": {
                 "type": "text",
                 "group": "homepage",
-                "default": "This text will be gray"
+                "default": "Enter the text shown in the homepage, such as your website description."
             },
-            "homepage_green_text": {
-                "type": "text",
-                "group": "homepage",
-                "default": "And this green."
-            },
-            "sub_homepage_text": {
+            "subscribe_homepage_text": {
                 "type": "text",
                 "group": "homepage",
                 "default": "Subscribe to my newsletter."
             },
-            "featured_in_homepage": {
+            "featured_posts_in_homepage": {
                 "type": "boolean",
                 "default": false,
                 "group": "homepage"
@@ -125,7 +120,8 @@
                     "Full Width",
                     "Classic Cards"
                 ],
-                "default": "Full Width"
+                "default": "Full Width",
+                "group": "homepage"
             }
         },
         "posts_per_page": 15,
