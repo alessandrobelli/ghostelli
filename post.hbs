@@ -2,19 +2,19 @@
 {{#post}}
 <script>
    let processScroll = () => {
-   let docElem = document.documentElement, 
+   let docElem = document.documentElement,
    docBody = document.body,
    scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
      scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
-   scrollPercent = scrollTop / scrollBottom * 100 + '%';  
-   document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent); 
+   scrollPercent = scrollTop / scrollBottom * 100 + '%';
+   document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent);
    }
-   
+
    document.onreadystatechange = function () {
    if (document.readyState == "complete") {
    document.addEventListener('scroll', processScroll);
    }}
-   
+
 </script>
 <article class="gh-article p-0 {{post_class}} font-text post-full-content">
    <div id="progress-bar" class="fixed top-0 left-0 z-20 w-full reading-progress-bar"></div>
@@ -76,7 +76,7 @@
   {{#foreach authors}}
      <a href="{{url}}" class="font-bold">
    {{#if profile_image}}
-  
+
   <img
     class="inline-block w-4 h-4 rounded-full"
     src="{{profile_image}}"
@@ -84,7 +84,7 @@
   />
 
 {{/if}}
- 
+
       {{name}}
     </a>
   {{/foreach}}
@@ -106,7 +106,7 @@
          {{#next_post in="primary_tag"}}
 
          <a href="{{url}}">
-            {{> "icons/arrow-left"}} 
+            {{> "icons/arrow-left"}}
             <p class="ml-1">{{title}}</p>
          </a>
          {{/next_post}}
